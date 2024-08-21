@@ -1,0 +1,40 @@
+{
+  "RootObject": {
+    "__guid": "4eaa13bb-77e4-43c8-92c7-b864bbe53289",
+    "Flags": 0,
+    "Name": "damagepopuptemplate",
+    "Enabled": true,
+    "Components": [
+      {
+        "__type": "Sandbox.TextRenderer",
+        "__guid": "19f205d3-925e-4c46-857b-c5b60c481ea5",
+        "Color": "1,0,0,1",
+        "FontFamily": "Roboto",
+        "FontSize": 32,
+        "FontWeight": 800,
+        "Scale": 0.25,
+        "Text": "",
+        "TextAlignment": "Center"
+      },
+      {
+        "__type": "DamagePopup",
+        "__guid": "11f73ae5-8cf2-43f7-b6fe-f6429ccccde0"
+      },
+      {
+        "__type": "FadeOutAfterTime",
+        "__guid": "9f5fd56b-74d3-4056-9e35-0b11219e4cb7",
+        "DestroyAfter": 0.25,
+        "Speed": 10,
+        "TimeToWait": 0.25
+      }
+    ],
+    "Children": [],
+    "__variables": []
+  },
+  "ShowInMenu": false,
+  "MenuPath": null,
+  "MenuIcon": null,
+  "ResourceVersion": 1,
+  "__references": [],
+  "__version": 1
+}

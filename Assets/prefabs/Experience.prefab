@@ -1,0 +1,88 @@
+{
+  "RootObject": {
+    "__guid": "99a01a68-331b-45c3-843a-b73351c7b8a8",
+    "Flags": 0,
+    "Name": "experience",
+    "Scale": "0.25,0.25,0.25",
+    "Enabled": true,
+    "Children": [
+      {
+        "__guid": "22500a8d-7c8b-4faf-801d-8fcdb3aef37c",
+        "Flags": 0,
+        "Name": "Sphere",
+        "Tags": "collectable",
+        "Enabled": true,
+        "Components": [
+          {
+            "__type": "Sandbox.ModelRenderer",
+            "__guid": "d1548b25-1795-4294-af4a-ca8a95741a9c",
+            "BodyGroups": 18446744073709551615,
+            "Model": "models/dev/sphere.vmdl",
+            "RenderType": "On",
+            "Tint": "0,1,1,1"
+          },
+          {
+            "__type": "DrawColliderBox",
+            "__guid": "7281c26a-b84d-4023-9237-dc1a91e8b5b1"
+          },
+          {
+            "__type": "Sandbox.SphereCollider",
+            "__guid": "74c1c977-33ba-4886-85e5-5cdb0f365a97",
+            "Center": "0,0,0",
+            "IsTrigger": true,
+            "Radius": 75,
+            "Static": false
+          },
+          {
+            "__type": "Rotate",
+            "__guid": "4b15b54a-b810-42c0-be1a-bc8c0d809538",
+            "Speed": 50,
+            "Step": "0,50,0"
+          },
+          {
+            "__type": "Item",
+            "__guid": "4fab06c7-636a-472c-801a-2e602ffbe970",
+            "Type": "Experience",
+            "Value": 0
+          },
+          {
+            "__type": "Experience",
+            "__guid": "df6e06a4-20c9-4465-bfe8-d5417a0abc78"
+          }
+        ]
+      },
+      {
+        "__guid": "7cbbe8ab-00be-4b05-a08c-00e9a5e5dc78",
+        "Flags": 0,
+        "Name": "Attract",
+        "Tags": "follow_item_collector",
+        "Enabled": true,
+        "Components": [
+          {
+            "__type": "Sandbox.SphereCollider",
+            "__guid": "e2be6830-b08f-4ede-bb2f-aa7eafbd271a",
+            "Center": "0,0,0",
+            "IsTrigger": true,
+            "Radius": 300,
+            "Static": false
+          },
+          {
+            "__type": "FollowEntity",
+            "__guid": "6148c005-809e-486b-a391-8f401294271f",
+            "AttractedTags": "player",
+            "Force": 1,
+            "Size": 300,
+            "Speed": 1
+          }
+        ]
+      }
+    ],
+    "__variables": []
+  },
+  "ShowInMenu": false,
+  "MenuPath": null,
+  "MenuIcon": null,
+  "ResourceVersion": 1,
+  "__references": [],
+  "__version": 1
+}

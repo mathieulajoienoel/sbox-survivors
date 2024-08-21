@@ -1,0 +1,140 @@
+{
+  "RootObject": {
+    "__guid": "e4123d32-f7d2-4a86-b7fa-f69cdf749926",
+    "Flags": 0,
+    "Name": "enemy",
+    "Tags": "enemy",
+    "Enabled": true,
+    "Components": [
+      {
+        "__type": "Sandbox.Rigidbody",
+        "__guid": "5c89a1f6-9a6b-42a3-a6f5-8b2b2a6d47b7",
+        "AngularDamping": 0,
+        "Gravity": true,
+        "LinearDamping": 0,
+        "Locking": {
+          "Z": true,
+          "Pitch": true,
+          "Roll": true
+        },
+        "MassCenterOverride": "0,0,0",
+        "MassOverride": 0,
+        "MotionEnabled": true,
+        "OverrideMassCenter": false,
+        "RigidbodyFlags": "DisableCollisionSounds",
+        "StartAsleep": false
+      },
+      {
+        "__type": "EnemyStats",
+        "__guid": "1ace4e8c-06e4-48bf-9746-948d0a9b6861",
+        "Alive": true,
+        "ExperienceDrop": 1,
+        "MaxHealth": 15,
+        "MoveSpeed": 10
+      },
+      {
+        "__type": "EnemyMaster",
+        "__guid": "352e42ea-a943-496f-9497-d47cbb175315"
+      },
+      {
+        "__type": "EnemyController",
+        "__guid": "b7f35e69-e55a-49e9-8c48-76d4421af2e1"
+      },
+      {
+        "__type": "EnemyTarget",
+        "__guid": "e79715ef-fcba-46ce-9352-86f1a69cdb77"
+      },
+      {
+        "__type": "EnemyHealth",
+        "__guid": "4477da72-0c93-40ec-8872-c56edc89548d"
+      },
+      {
+        "__type": "DropExperience",
+        "__guid": "b234cacd-9610-4958-a80d-d911f65e9670"
+      }
+    ],
+    "Children": [
+      {
+        "__guid": "0e94c637-d6c9-40ce-ac4a-a162d1f907f6",
+        "Flags": 0,
+        "Name": "EnemyCharacter",
+        "Scale": "0.5,0.5,0.5",
+        "Tags": "enemy_character",
+        "Enabled": true,
+        "Components": [
+          {
+            "__type": "Sandbox.ModelRenderer",
+            "__guid": "eaed7be6-f434-4e73-9643-ecafcb389176",
+            "BodyGroups": 18446744073709551615,
+            "Model": "models/dev/box.vmdl",
+            "RenderType": "On",
+            "Tint": "1,1,1,1"
+          },
+          {
+            "__type": "Sandbox.BoxCollider",
+            "__guid": "f1329c24-5d21-414c-8f67-30587cc94839",
+            "Center": "0,0,0",
+            "IsTrigger": false,
+            "Scale": "50,50,50",
+            "Static": false
+          },
+          {
+            "__type": "EntityCharacter",
+            "__guid": "368f9dd2-1dab-44da-a6ae-e448a5c8be7a"
+          },
+          {
+            "__type": "ColorActor",
+            "__guid": "75e7b17a-b276-48b9-8767-ca0607648d9d"
+          }
+        ]
+      },
+      {
+        "__guid": "d910bbb6-7708-4f1c-9d4e-271798564278",
+        "Flags": 0,
+        "Name": "HealthPanel",
+        "Position": "0,0,12.5",
+        "Rotation": "-0.5,0.5,0.5,0.5",
+        "Enabled": true,
+        "Components": [
+          {
+            "__type": "Sandbox.WorldPanel",
+            "__guid": "00448570-c124-409b-9b02-1df8cecf9383",
+            "HorizontalAlign": "Center",
+            "InteractionRange": 1000,
+            "LookAtCamera": true,
+            "PanelSize": "512,512",
+            "RenderScale": 1,
+            "VerticalAlign": "Center"
+          },
+          {
+            "__type": "Sandbox.TextRenderer",
+            "__guid": "62a2ef05-4969-4262-b8a1-cd495f90035a",
+            "Color": "0,0,0,1",
+            "FontFamily": "Roboto Mono",
+            "FontSize": 32,
+            "FontWeight": 800,
+            "Scale": 0.25,
+            "Text": "health",
+            "TextAlignment": "Center"
+          }
+        ]
+      },
+      {
+        "__guid": "3bfda824-0abe-4834-a0ae-76d0894d138f",
+        "Flags": 0,
+        "Name": "enemymeleeweapon",
+        "Tags": "enemy_weapon,weapon",
+        "Enabled": true,
+        "__Prefab": "prefabs/enemymeleeweapon.prefab",
+        "__PrefabVariables": {}
+      }
+    ],
+    "__variables": []
+  },
+  "ShowInMenu": false,
+  "MenuPath": null,
+  "MenuIcon": null,
+  "ResourceVersion": 1,
+  "__references": [],
+  "__version": 1
+}

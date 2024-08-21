@@ -1,0 +1,535 @@
+{
+  "RootObject": {
+    "__guid": "d41290ac-df48-4fa2-abfc-30b68d8d0d83",
+    "Flags": 0,
+    "Name": "player",
+    "Tags": "player",
+    "Enabled": true,
+    "Components": [
+      {
+        "__type": "PlayerMaster",
+        "__guid": "de367f81-518c-44a1-8b76-5974a5ab1c88"
+      },
+      {
+        "__type": "PlayerController",
+        "__guid": "ce195659-f35f-46a5-8f17-7c0a7ef97f2f"
+      },
+      {
+        "__type": "Sandbox.Rigidbody",
+        "__guid": "e811ee64-3a47-4a8f-b3a9-6038487f92d7",
+        "AngularDamping": 0,
+        "Gravity": true,
+        "LinearDamping": 0,
+        "Locking": {
+          "Z": true,
+          "Pitch": true,
+          "Roll": true
+        },
+        "MassCenterOverride": "0,0,0",
+        "MassOverride": 0,
+        "MotionEnabled": true,
+        "OverrideMassCenter": false,
+        "RigidbodyFlags": "DisableCollisionSounds",
+        "StartAsleep": false
+      },
+      {
+        "__type": "PlayerStats",
+        "__guid": "0b58a64a-bd77-481a-8eda-32d14d232236",
+        "Alive": true,
+        "CollectRadius": 20,
+        "Experience": 0,
+        "MaxHealth": 100,
+        "MoveSpeed": 25
+      },
+      {
+        "__type": "PlayerHealth",
+        "__guid": "e1c7d78c-bc55-4880-984d-74d3e23c7927"
+      }
+    ],
+    "Children": [
+      {
+        "__guid": "3ee1c9f4-07be-4e0b-8b23-67bee2d8ec8a",
+        "Flags": 0,
+        "Name": "Camera",
+        "Position": "0,0,500",
+        "Rotation": "-0.4999999,0.5,0.4999999,0.5",
+        "Enabled": true,
+        "Components": [
+          {
+            "__type": "Sandbox.CameraComponent",
+            "__guid": "cf3cbf96-22b6-4be4-a5d0-672a96c17f9f",
+            "BackgroundColor": "0.33333,0.46275,0.52157,1",
+            "ClearFlags": "All",
+            "FieldOfView": 60,
+            "IsMainCamera": true,
+            "Orthographic": true,
+            "OrthographicHeight": 250,
+            "Priority": 1,
+            "RenderExcludeTags": "",
+            "RenderTags": "",
+            "TargetEye": "None",
+            "Viewport": "0,0,1,1",
+            "ZFar": 10000,
+            "ZNear": 10
+          },
+          {
+            "__type": "Sandbox.Bloom",
+            "__guid": "d73ef723-c888-41d4-802e-f797c79318be",
+            "BloomColor": {
+              "color": [
+                {
+                  "c": "1,1,1,1"
+                },
+                {
+                  "t": 1,
+                  "c": "1,1,1,1"
+                }
+              ],
+              "alpha": []
+            },
+            "BloomCurve": [
+              {
+                "y": 0.5
+              },
+              {
+                "x": 1,
+                "y": 1
+              }
+            ],
+            "Mode": "Additive",
+            "Strength": 0.5,
+            "Threshold": 0.5,
+            "ThresholdWidth": 0.5
+          },
+          {
+            "__type": "Sandbox.Tonemapping",
+            "__guid": "9d76f362-7227-40eb-a189-69353c780c46",
+            "__version": 1,
+            "ExposureBias": 2,
+            "ExposureCompensation": 0,
+            "ExposureMethod": "RGB",
+            "MaximumExposure": 2,
+            "MinimumExposure": 1,
+            "Mode": "Legacy",
+            "Rate": 1
+          },
+          {
+            "__type": "Sandbox.Sharpen",
+            "__guid": "0bffee5e-19f2-41c4-88f9-faefbcce6bf4",
+            "Scale": 0.2
+          },
+          {
+            "__type": "Sandbox.AmbientOcclusion",
+            "__guid": "2b18b6c5-b2e7-46aa-8c1a-a2c6d78b9858",
+            "FalloffDistance": 1,
+            "Intensity": 8,
+            "Quality": "Medium",
+            "Radius": 32
+          }
+        ]
+      },
+      {
+        "__guid": "3c2490ef-54a0-49bb-8f13-490e40aa51d1",
+        "Flags": 0,
+        "Name": "PlayerCharacter",
+        "Scale": "0.5,0.5,0.5",
+        "Tags": "player_character",
+        "Enabled": true,
+        "Components": [
+          {
+            "__type": "Sandbox.ModelRenderer",
+            "__guid": "b9121ffa-617c-4ccc-a2aa-8acc98727590",
+            "BodyGroups": 18446744073709551615,
+            "MaterialOverride": "materials/default.vmat",
+            "Model": "models/dev/box.vmdl",
+            "RenderType": "On",
+            "Tint": "1,0,0.93333,1"
+          },
+          {
+            "__type": "Sandbox.BoxCollider",
+            "__guid": "8bb3ebcf-1ec9-4b20-bf31-4aece0950008",
+            "Center": "0,0,0",
+            "IsTrigger": false,
+            "Scale": "50,50,50",
+            "Static": false
+          },
+          {
+            "__type": "EntityCharacter",
+            "__guid": "85ec8354-c0be-4977-b7af-00d8b2165c80"
+          },
+          {
+            "__type": "ColorActor",
+            "__guid": "07fb9c67-6b27-4f88-aada-6f77ac5b2b06"
+          }
+        ],
+        "Children": [
+          {
+            "__guid": "adbeb91a-def5-43c3-978e-c33938dc5261",
+            "Flags": 0,
+            "Name": "Spot Light",
+            "Position": "30.8389,0,0",
+            "Tags": "light_spot,light",
+            "Enabled": true,
+            "Components": [
+              {
+                "__type": "Sandbox.SpotLight",
+                "__guid": "8acf2678-2c0b-452a-a41c-67aa0f177774",
+                "Attenuation": 0,
+                "ConeInner": 24.7,
+                "ConeOuter": 19.29,
+                "FogMode": "Disabled",
+                "FogStrength": 0,
+                "LightColor": "0.32558,0.3593,1,1",
+                "Radius": 500,
+                "Shadows": true
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "__guid": "7a1f817d-76e3-4c93-8365-552e51b33f5c",
+        "Flags": 0,
+        "Name": "HealthPanel",
+        "Position": "0,0,12.5",
+        "Rotation": "-0.5,0.5,0.5,0.5",
+        "Enabled": true,
+        "Components": [
+          {
+            "__type": "Sandbox.WorldPanel",
+            "__guid": "594b5a82-faf6-4026-ab5c-a18ae9337c10",
+            "HorizontalAlign": "Center",
+            "InteractionRange": 1000,
+            "LookAtCamera": true,
+            "PanelSize": "512,512",
+            "RenderScale": 1,
+            "VerticalAlign": "Center"
+          },
+          {
+            "__type": "Sandbox.TextRenderer",
+            "__guid": "bc14af99-c4b9-4fc7-9e54-51b2c3ba6fed",
+            "Color": "0,0,0,1",
+            "FontFamily": "Roboto Mono",
+            "FontSize": 32,
+            "FontWeight": 800,
+            "Scale": 0.25,
+            "Text": "health",
+            "TextAlignment": "Center"
+          }
+        ]
+      },
+      {
+        "__guid": "c5a880d2-569c-4e32-a7cb-8c79d467e15a",
+        "Flags": 0,
+        "Name": "ItemCollector",
+        "Tags": "item_collector",
+        "Enabled": true,
+        "Components": [
+          {
+            "__type": "Sandbox.SphereCollider",
+            "__guid": "bc92b4a2-b785-4d3b-bc29-0f2627fabd4d",
+            "Center": "0,0,0",
+            "IsTrigger": true,
+            "Radius": 30,
+            "Static": false
+          },
+          {
+            "__type": "PlayerExperience",
+            "__guid": "7a1003a6-819b-4144-b508-7bcac5d1e19e"
+          },
+          {
+            "__type": "DrawColliderBox",
+            "__guid": "060b9b3e-a704-4fee-affd-d03557d2aec7"
+          }
+        ]
+      },
+      {
+        "__guid": "3908df89-3f32-4aec-8e69-6c3fef138af5",
+        "Flags": 0,
+        "Name": "WeaponArea",
+        "Tags": "weapon,player_weapon",
+        "Enabled": true,
+        "__Prefab": "prefabs/weaponarea.prefab",
+        "__PrefabVariables": {}
+      },
+      {
+        "__guid": "4cb440d5-f1a6-406f-a63d-869241a41117",
+        "Flags": 0,
+        "Name": "WeaponRotating",
+        "Enabled": true,
+        "__Prefab": "prefabs/weaponrotating.prefab",
+        "__PrefabVariables": {}
+      },
+      {
+        "__guid": "1f709214-0a8c-4439-a237-5cb9a5615103",
+        "Flags": 0,
+        "Name": "WeaponMoving (3)",
+        "Enabled": true,
+        "Children": [
+          {
+            "__guid": "71bf49af-dd56-4944-9c57-8b2197b0e049",
+            "Flags": 0,
+            "Name": "Weapon",
+            "Scale": "0.2,0.2,0.2",
+            "Tags": "player_weapon,weapon",
+            "Enabled": true,
+            "Components": [
+              {
+                "__type": "Sandbox.ModelRenderer",
+                "__guid": "471445b6-eef8-46c0-bd2e-8467f89008ee",
+                "BodyGroups": 18446744073709551615,
+                "Model": "models/dev/box.vmdl",
+                "RenderType": "On",
+                "Tint": "1,1,1,1"
+              },
+              {
+                "__type": "MoveTranslate",
+                "__guid": "c5d1bd74-7d6c-408d-a715-4657e577a37d",
+                "Length": "0,25,0",
+                "Speed": 25,
+                "Step": "0,25,0"
+              },
+              {
+                "__type": "Sandbox.BoxCollider",
+                "__guid": "879eeda2-55ca-4cdf-8e70-2e50c93f7a08",
+                "Center": "0,0,0",
+                "IsTrigger": true,
+                "Scale": "50,50,50",
+                "Static": false
+              },
+              {
+                "__type": "WeaponMoving",
+                "__guid": "e57b7f41-54e7-4a03-bfba-dd329e53e485",
+                "Cooldown": 0.15,
+                "Damage": -10,
+                "MaxTargets": 3,
+                "Position": "0,0,0",
+                "Range": "-75,-75,0",
+                "Size": "0.15,0.15,0.15",
+                "Speed": 10,
+                "StartRotation": "0,90,0",
+                "SubWeaponSpeed": 0
+              },
+              {
+                "__type": "Sandbox.TrailRenderer",
+                "__guid": "cec288db-bf3c-4e99-9544-fc3407479e7a",
+                "BlendMode": "Normal",
+                "CastShadows": false,
+                "Color": {
+                  "color": [
+                    {
+                      "t": 0.5,
+                      "c": "0,1,1,1"
+                    }
+                  ],
+                  "alpha": []
+                },
+                "LifeTime": 2,
+                "MaxPoints": 64,
+                "Opaque": true,
+                "PointDistance": 8,
+                "Texturing": {
+                  "WorldSpace": true,
+                  "UnitsPerTexture": 10,
+                  "Scale": 1
+                },
+                "Width": [
+                  {
+                    "x": 0.5,
+                    "y": 5
+                  }
+                ],
+                "Wireframe": false
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "__guid": "b1fe7908-8576-4454-ba54-135644ce73e2",
+        "Flags": 0,
+        "Name": "WeaponMoving (2)",
+        "Enabled": true,
+        "Children": [
+          {
+            "__guid": "e4bee2e3-a62f-4eaa-bb4c-87b2536845be",
+            "Flags": 0,
+            "Name": "Weapon",
+            "Scale": "0.2,0.2,0.2",
+            "Tags": "player_weapon,weapon",
+            "Enabled": true,
+            "Components": [
+              {
+                "__type": "Sandbox.ModelRenderer",
+                "__guid": "c2e2d508-fe6b-4aac-b2ba-4754ba47d814",
+                "BodyGroups": 18446744073709551615,
+                "Model": "models/dev/box.vmdl",
+                "RenderType": "On",
+                "Tint": "1,1,1,1"
+              },
+              {
+                "__type": "MoveTranslate",
+                "__guid": "ff4fb916-150f-4cf8-a487-acf747742ffa",
+                "Length": "0,25,0",
+                "Speed": 25,
+                "Step": "0,25,0"
+              },
+              {
+                "__type": "Sandbox.BoxCollider",
+                "__guid": "5fcc7f29-3002-47e1-912b-1004068b732c",
+                "Center": "0,0,0",
+                "IsTrigger": true,
+                "Scale": "50,50,50",
+                "Static": false
+              },
+              {
+                "__type": "WeaponMoving",
+                "__guid": "7ea015f0-a032-423b-ac8f-15de5efba68a",
+                "Cooldown": 0.15,
+                "Damage": -10,
+                "MaxTargets": 3,
+                "Position": "0,0,0",
+                "Range": "75,75,0",
+                "Size": "0.15,0.15,0.15",
+                "Speed": 10,
+                "StartRotation": "0,0,0",
+                "SubWeaponSpeed": 0
+              },
+              {
+                "__type": "Sandbox.TrailRenderer",
+                "__guid": "ec519889-6e82-4dcf-8034-648d96f0de54",
+                "BlendMode": "Normal",
+                "CastShadows": false,
+                "Color": {
+                  "color": [
+                    {
+                      "t": 0.5,
+                      "c": "0,1,1,1"
+                    }
+                  ],
+                  "alpha": []
+                },
+                "LifeTime": 2,
+                "MaxPoints": 64,
+                "Opaque": true,
+                "PointDistance": 8,
+                "Texturing": {
+                  "WorldSpace": true,
+                  "UnitsPerTexture": 10,
+                  "Scale": 1
+                },
+                "Width": [
+                  {
+                    "x": 0.5,
+                    "y": 5
+                  }
+                ],
+                "Wireframe": false
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "__guid": "43560c3e-fc03-4207-9b7f-7f22c4cd0d4a",
+        "Flags": 0,
+        "Name": "WeaponMoving (1)",
+        "Enabled": true,
+        "Children": [
+          {
+            "__guid": "f41465fa-e3cf-47d5-a441-16247bf9f961",
+            "Flags": 0,
+            "Name": "Weapon",
+            "Scale": "0.2,0.2,0.2",
+            "Tags": "player_weapon,weapon",
+            "Enabled": true,
+            "Components": [
+              {
+                "__type": "Sandbox.ModelRenderer",
+                "__guid": "44a98b45-0dbe-40a3-a8ad-ab5c101d69c3",
+                "BodyGroups": 18446744073709551615,
+                "Model": "models/dev/box.vmdl",
+                "RenderType": "On",
+                "Tint": "1,1,1,1"
+              },
+              {
+                "__type": "MoveTranslate",
+                "__guid": "ca5d2a97-80f8-4508-8477-32975c00295a",
+                "Length": "0,25,0",
+                "Speed": 25,
+                "Step": "0,25,0"
+              },
+              {
+                "__type": "Sandbox.BoxCollider",
+                "__guid": "88063808-6a0a-41cf-9072-bfb772586441",
+                "Center": "0,0,0",
+                "IsTrigger": true,
+                "Scale": "50,50,50",
+                "Static": false
+              },
+              {
+                "__type": "WeaponMoving",
+                "__guid": "b5578676-037e-404e-9a53-1e4e5132697f",
+                "Cooldown": 0.15,
+                "Damage": -10,
+                "MaxTargets": 3,
+                "Position": "0,0,0",
+                "Range": "75,0,0",
+                "Size": "0.15,0.15,0.15",
+                "Speed": 10,
+                "StartRotation": "0,0,0",
+                "SubWeaponSpeed": 0
+              },
+              {
+                "__type": "Sandbox.TrailRenderer",
+                "__guid": "0585303f-227b-48ea-bee9-b10625a57791",
+                "BlendMode": "Normal",
+                "CastShadows": false,
+                "Color": {
+                  "color": [
+                    {
+                      "t": 0.5,
+                      "c": "0,1,1,1"
+                    }
+                  ],
+                  "alpha": []
+                },
+                "LifeTime": 2,
+                "MaxPoints": 64,
+                "Opaque": true,
+                "PointDistance": 8,
+                "Texturing": {
+                  "WorldSpace": true,
+                  "UnitsPerTexture": 10,
+                  "Scale": 1
+                },
+                "Width": [
+                  {
+                    "x": 0.5,
+                    "y": 5
+                  }
+                ],
+                "Wireframe": false
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "__guid": "89f8b75c-6843-4e77-a57e-37e3a14cb30c",
+        "Flags": 0,
+        "Name": "WeaponMoving",
+        "Enabled": true,
+        "__Prefab": "prefabs/weaponmoving.prefab",
+        "__PrefabVariables": {}
+      }
+    ],
+    "__variables": []
+  },
+  "ShowInMenu": false,
+  "MenuPath": null,
+  "MenuIcon": null,
+  "ResourceVersion": 1,
+  "__references": [],
+  "__version": 1
+}

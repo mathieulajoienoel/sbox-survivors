@@ -1,0 +1,94 @@
+{
+  "RootObject": {
+    "__guid": "4cb440d5-f1a6-406f-a63d-869241a41117",
+    "Flags": 0,
+    "Name": "weaponrotating",
+    "Enabled": true,
+    "Components": [
+      {
+        "__type": "RotateFixed",
+        "__guid": "55dc96b7-e68d-4b25-b76f-99c7852950f4",
+        "Speed": 100,
+        "Step": "0,100,0"
+      }
+    ],
+    "Children": [
+      {
+        "__guid": "4d4c625e-53fe-4d7c-aecc-4be908bffa95",
+        "Flags": 0,
+        "Name": "Weapon",
+        "Scale": "0.15,0.15,0.15",
+        "Tags": "player_weapon,weapon",
+        "Enabled": true,
+        "Components": [
+          {
+            "__type": "Sandbox.BoxCollider",
+            "__guid": "d391fe60-0cfe-438f-a4e8-3296a5fd459c",
+            "Center": "0,0,0",
+            "IsTrigger": true,
+            "Scale": "50,50,50",
+            "Static": false
+          },
+          {
+            "__type": "Sandbox.ModelRenderer",
+            "__guid": "a181cc39-efc6-4caa-a3b8-94bb64774a8e",
+            "BodyGroups": 18446744073709551615,
+            "Model": "models/dev/box.vmdl",
+            "RenderType": "On",
+            "Tint": "1,1,1,1"
+          },
+          {
+            "__type": "WeaponRotating",
+            "__guid": "e319c0df-e5a4-4914-831a-dd3603e324e5",
+            "Cooldown": 0.5,
+            "Damage": -15,
+            "MaxTargets": -1,
+            "Position": "0,0,0",
+            "Range": "100,0,0",
+            "Size": "0.15,0.15,0.15",
+            "Speed": 150,
+            "SubWeaponSpeed": 0
+          },
+          {
+            "__type": "Sandbox.TrailRenderer",
+            "__guid": "042705e0-5f95-4493-9e98-2536b07e4257",
+            "BlendMode": "Normal",
+            "CastShadows": false,
+            "Color": {
+              "color": [
+                {
+                  "t": 0.5,
+                  "c": "0,1,1,1"
+                }
+              ],
+              "alpha": []
+            },
+            "LifeTime": 2,
+            "MaxPoints": 64,
+            "Opaque": true,
+            "PointDistance": 8,
+            "Texturing": {
+              "WorldSpace": true,
+              "UnitsPerTexture": 10,
+              "Scale": 1
+            },
+            "Width": [
+              {
+                "x": 0.5,
+                "y": 5
+              }
+            ],
+            "Wireframe": false
+          }
+        ]
+      }
+    ],
+    "__variables": []
+  },
+  "ShowInMenu": false,
+  "MenuPath": null,
+  "MenuIcon": null,
+  "ResourceVersion": 1,
+  "__references": [],
+  "__version": 1
+}

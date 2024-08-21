@@ -1,0 +1,36 @@
+{
+  "RootObject": {
+    "__guid": "a26534ee-f1fa-4c3f-86e4-b285af173db9",
+    "Flags": 0,
+    "Name": "enemymeleeweapon",
+    "Scale": "1,1,0.5",
+    "Tags": "enemy_weapon,weapon",
+    "Enabled": true,
+    "Components": [
+      {
+        "__type": "Sandbox.BoxCollider",
+        "__guid": "7dcfea35-3b23-4261-81e6-bf2d629f20a8",
+        "Center": "0,0,0",
+        "IsTrigger": true,
+        "Scale": "50,50,50",
+        "Static": false
+      },
+      {
+        "__type": "EnemyMeleeWeapon",
+        "__guid": "d5ef6d49-6ffd-4ded-adb6-a1450ba374fa"
+      },
+      {
+        "__type": "DrawColliderBox",
+        "__guid": "12f9f8d8-eea6-4931-8d52-7b06a898bcfc"
+      }
+    ],
+    "Children": [],
+    "__variables": []
+  },
+  "ShowInMenu": false,
+  "MenuPath": null,
+  "MenuIcon": null,
+  "ResourceVersion": 1,
+  "__references": [],
+  "__version": 1
+}

@@ -1,0 +1,41 @@
+{
+  "RootObject": {
+    "__guid": "3908df89-3f32-4aec-8e69-6c3fef138af5",
+    "Flags": 0,
+    "Name": "WeaponArea",
+    "Tags": "weapon,player_weapon",
+    "Enabled": true,
+    "Components": [
+      {
+        "__type": "Sandbox.BoxCollider",
+        "__guid": "6e6c9049-9619-4368-8b6c-aea53c716132",
+        "Center": "0,0,0",
+        "IsTrigger": true,
+        "Scale": "50,50,50",
+        "Static": false
+      },
+      {
+        "__type": "DrawColliderBox",
+        "__guid": "3b69491b-5b24-49d4-be8f-2f81762a4c54"
+      },
+      {
+        "__type": "WeaponArea",
+        "__guid": "8f9bb560-cb93-4c64-97b5-d7b97d5fa473",
+        "Cooldown": 0.75,
+        "Damage": -5,
+        "MaxTargets": 2,
+        "Position": "0,0,0",
+        "Range": "1.1,1.1,0.5",
+        "Size": "1.1,1.1,0.5",
+        "Speed": 0,
+        "SubWeaponSpeed": 0
+      }
+    ]
+  },
+  "ShowInMenu": false,
+  "MenuPath": null,
+  "MenuIcon": null,
+  "ResourceVersion": 1,
+  "__references": [],
+  "__version": 1
+}
