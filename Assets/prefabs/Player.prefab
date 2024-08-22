@@ -193,7 +193,6 @@
         "Name": "HealthPanel",
         "Position": "0,0,12.5",
         "Rotation": "-0.5,0.5,0.5,0.5",
-        "Enabled": true,
         "Components": [
           {
             "__type": "Sandbox.WorldPanel",
@@ -521,6 +520,16 @@
         "Name": "WeaponMoving",
         "Enabled": true,
         "__Prefab": "prefabs/weaponmoving.prefab",
+        "__PrefabVariables": {}
+      },
+      {
+        "__guid": "252b9c73-8aca-4dbe-8244-8ce7a710de34",
+        "Flags": 0,
+        "Name": "HealthScreen",
+        "Position": "0,-26,40",
+        "Rotation": "0,0.7071068,0,0.7071068",
+        "Enabled": true,
+        "__Prefab": "prefabs/healthscreen.prefab",
         "__PrefabVariables": {}
       }
     ],

@@ -1,0 +1,35 @@
+{
+  "RootObject": {
+    "__guid": "252b9c73-8aca-4dbe-8244-8ce7a710de34",
+    "Flags": 0,
+    "Name": "healthscreen",
+    "Enabled": true,
+    "Components": [
+      {
+        "__type": "HealthDisplay",
+        "__guid": "14edfe7d-659c-4c95-8739-378c6f1fe9d1",
+        "Health": "1",
+        "HealthPercentage": 100,
+        "MaxHealth": "100"
+      },
+      {
+        "__type": "Sandbox.WorldPanel",
+        "__guid": "04b67c90-f6cf-4b74-a8ce-b22e3cccd22a",
+        "HorizontalAlign": "Center",
+        "InteractionRange": 1000,
+        "LookAtCamera": true,
+        "PanelSize": "512,512",
+        "RenderScale": 1,
+        "VerticalAlign": "Center"
+      }
+    ],
+    "Children": [],
+    "__variables": []
+  },
+  "ShowInMenu": false,
+  "MenuPath": null,
+  "MenuIcon": null,
+  "ResourceVersion": 1,
+  "__references": [],
+  "__version": 1
+}

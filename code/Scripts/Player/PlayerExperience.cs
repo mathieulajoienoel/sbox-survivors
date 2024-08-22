@@ -1,3 +1,4 @@
+using System;
 public sealed class PlayerExperience : Component, Component.ITriggerListener {
   private PlayerMaster master;
   protected override void OnEnabled(){
@@ -37,6 +38,7 @@ public sealed class PlayerExperience : Component, Component.ITriggerListener {
   private void ShowExperiencePopup(float value){
     Vector3 position = master.GameObject.Transform.Position;
     position.z = 15;
+    position += new Vector3(GameMaster.Instance.Rand(-20,20),GameMaster.Instance.Rand(-20,20), 0);
     GameObject experiencePopup = GameMaster.Instance.ExperiencePopupPrefab.Clone(position);
     experiencePopup.Components.Get<ExperiencePopup>().Display(value);
   }

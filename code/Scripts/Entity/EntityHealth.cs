@@ -1,16 +1,14 @@
+using System;
+
 public abstract class EntityHealth<T> : Component, IEntityHealth where T : EntityMaster
 {
   private T master;
-  private TextRenderer HealthPanel { get; set; }
-  private float HealthAlertLimit { get; set; }
+
   public float CurrentHealth { get; set; }
   protected override void OnEnabled(){
     master = Components.Get<T>();
-
+    float maxHealth = master.Stats.MaxHealth;
     CurrentHealth = master.Stats.MaxHealth;
-    HealthAlertLimit = CurrentHealth * 20 / 100;
-    HealthPanel = Components.GetAll<TextRenderer>().FirstOrDefault(x => x.GameObject.Name == "HealthPanel");
-    UpdateHealthDisplay();
 
     master.EventReceiveDamage += OnReceiveDamage;
     master.EventHealthChanged += OnHealthChanged;
@@ -20,23 +18,16 @@ public abstract class EntityHealth<T> : Component, IEntityHealth where T : Entit
 	protected override void OnDisabled()
 	{
 		base.OnDisabled();
+    master.EventReceiveDamage -= OnReceiveDamage;
     master.EventHealthChanged -= OnHealthChanged;
     master.EventDeath -= OnDeath;
 	}
 
 	public void ChangeHealth(float value){
     CurrentHealth += value;
-    UpdateHealthDisplay();
+    master.CallEventUpdateHealthDisplay(CurrentHealth, master.Stats.MaxHealth);
   }
 
-  public void UpdateHealthDisplay(){
-    HealthPanel.Text = CurrentHealth.ToString();
-    if(CurrentHealth < HealthAlertLimit){
-      HealthPanel.Color = "#FF0000";
-    } else {
-      HealthPanel.Color = "#000000";
-    }
-  }
   public void OnHealthChanged(float value){
     if(!master.Stats.Alive) return;
     ChangeHealth(value);
@@ -50,6 +41,7 @@ public abstract class EntityHealth<T> : Component, IEntityHealth where T : Entit
   private void DisplayDamageReceived(float damage){
     Vector3 position = master.GameObject.Transform.Position;
     position.z = 15;
+    position += new Vector3(GameMaster.Instance.Rand(-20,20),GameMaster.Instance.Rand(-20,20), 0);
     GameObject damagePopup = GameMaster.Instance.DamagePopupPrefab.Clone(position);
     damagePopup.Components.Get<DamagePopup>().Display(damage);
   }

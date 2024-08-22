@@ -7,6 +7,8 @@ public abstract class EntityMaster : Component
   // Events & Delegates
   public delegate void HealthEventHandler(float healthChange);
 	public event HealthEventHandler EventHealthChanged;
+  public delegate void UpdateHealthDisplayEventHandler(float currentHealth, float maxHealth);
+	public event UpdateHealthDisplayEventHandler EventUpdateHealthDisplay;
   public delegate void DeathEventHandler();
   public event DeathEventHandler EventDeath;
   public delegate void DealDamageEventHandler(DamageInfo damage);
@@ -15,6 +17,9 @@ public abstract class EntityMaster : Component
   public event ReceiveDamageEventHandler EventReceiveDamage;
   public void CallEventHealthChanged(float healthChange){
 		EventHealthChanged?.Invoke( healthChange );
+	}
+  public void CallEventUpdateHealthDisplay(float currentHealth, float maxHealth){
+		EventUpdateHealthDisplay?.Invoke( currentHealth, maxHealth );
 	}
   public void CallEventDeath(){
 		EventDeath?.Invoke();

@@ -1,0 +1,41 @@
+@using Sandbox;
+@using Sandbox.UI;
+@inherits PanelComponent
+
+<root>
+	<div class="health_bar">
+		<span class="text">@Health/@MaxHealth</span>
+		<span class="health">
+			<span class="current_health" style="width:@HealthPercentage%;"></span>
+		</span>
+	</div>
+</root>
+
+@code
+{
+	[Property, TextArea] private string Health { get; set; } = "100";
+	[Property, TextArea] private string MaxHealth { get; set; } = "100";
+	[Property, TextArea] private int HealthPercentage { get; set; } = 100;
+
+	/// <summary>
+	/// the hash determines if the system should be rebuilt. If it changes, it will be rebuilt
+	/// </summary>
+	protected override int BuildHash() => System.HashCode.Combine( Health, MaxHealth, HealthPercentage );
+
+	private EntityMaster master;
+	protected override void OnEnabled(){
+		master = Components.GetInParent<EntityMaster>();
+		master.EventUpdateHealthDisplay += UpdateHealthDisplay;
+
+		master.CallEventUpdateHealthDisplay(master.Health.CurrentHealth, master.Stats.MaxHealth);
+	}
+	protected override void OnDisabled(){
+		master.EventUpdateHealthDisplay -= UpdateHealthDisplay;
+	}
+
+	private void UpdateHealthDisplay(float currentHealth, float maxHealth){
+		Health = currentHealth.ToString();
+		MaxHealth = maxHealth.ToString();
+		HealthPercentage = (currentHealth * 100 / maxHealth).FloorToInt();
+	}
+}

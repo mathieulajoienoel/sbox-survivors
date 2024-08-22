@@ -94,7 +94,6 @@
         "Name": "HealthPanel",
         "Position": "0,0,12.5",
         "Rotation": "-0.5,0.5,0.5,0.5",
-        "Enabled": true,
         "Components": [
           {
             "__type": "Sandbox.WorldPanel",
@@ -126,6 +125,16 @@
         "Tags": "enemy_weapon,weapon",
         "Enabled": true,
         "__Prefab": "prefabs/enemymeleeweapon.prefab",
+        "__PrefabVariables": {}
+      },
+      {
+        "__guid": "72a8d3bb-950f-41ed-a9bc-5a28ba471225",
+        "Flags": 0,
+        "Name": "HealthScreen",
+        "Position": "0,-26,40",
+        "Rotation": "0,0.7071068,0,0.7071068",
+        "Enabled": true,
+        "__Prefab": "prefabs/healthscreen.prefab",
         "__PrefabVariables": {}
       }
     ],

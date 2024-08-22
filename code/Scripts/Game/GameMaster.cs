@@ -1,3 +1,4 @@
+using System;
 public sealed class GameMaster : Component {
 
   public static GameMaster Instance;
@@ -10,6 +11,8 @@ public sealed class GameMaster : Component {
   [Property] public GameObject DamagePopupPrefab { get; set; }
   [Property] public GameObject ExperiencePopupPrefab { get; set; }
   [Property] public GameObject ExperiencePrefab { get; set; }
+
+  public Random RandomGenerator = new Random();
 
   //private Vector3 ObjectPoolSpawnPoint { get; set; } = new Vector3(-100,-100,-100);
 
@@ -25,4 +28,7 @@ public sealed class GameMaster : Component {
 
     Instance = this;
 	}
+  public int Rand(int min, int max){
+    return RandomGenerator.Next(min, max);
+  }
 }
