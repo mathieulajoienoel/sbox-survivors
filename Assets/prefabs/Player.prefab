@@ -188,36 +188,6 @@
         ]
       },
       {
-        "__guid": "7a1f817d-76e3-4c93-8365-552e51b33f5c",
-        "Flags": 0,
-        "Name": "HealthPanel",
-        "Position": "0,0,12.5",
-        "Rotation": "-0.5,0.5,0.5,0.5",
-        "Components": [
-          {
-            "__type": "Sandbox.WorldPanel",
-            "__guid": "594b5a82-faf6-4026-ab5c-a18ae9337c10",
-            "HorizontalAlign": "Center",
-            "InteractionRange": 1000,
-            "LookAtCamera": true,
-            "PanelSize": "512,512",
-            "RenderScale": 1,
-            "VerticalAlign": "Center"
-          },
-          {
-            "__type": "Sandbox.TextRenderer",
-            "__guid": "bc14af99-c4b9-4fc7-9e54-51b2c3ba6fed",
-            "Color": "0,0,0,1",
-            "FontFamily": "Roboto Mono",
-            "FontSize": 32,
-            "FontWeight": 800,
-            "Scale": 0.25,
-            "Text": "health",
-            "TextAlignment": "Center"
-          }
-        ]
-      },
-      {
         "__guid": "c5a880d2-569c-4e32-a7cb-8c79d467e15a",
         "Flags": 0,
         "Name": "ItemCollector",

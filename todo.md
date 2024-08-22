@@ -52,8 +52,12 @@ Features :
   * [ ] Player levelling and rewards
   * [ ] Item & Weapon Shop
   * [ ] XP display
-  * [ ] Health display
+  * [x] Health display
   * [ ] Kill display
+  * [ ] Money
+    * [ ] Spending
+    * [ ] Display
+    * [ ] Powerups
   * [ ] Weapon knockback
   * [ ] Object pooling
     * [ ] Projectiles
