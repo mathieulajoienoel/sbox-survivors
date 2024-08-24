@@ -1,0 +1,29 @@
+@using Sandbox;
+@using Sandbox.UI;
+@inherits PanelComponent
+
+<root>
+	<div class="title">☠️ @Kills</div>
+</root>
+
+@code
+{
+
+	[Property, TextArea] public int Kills { get; set; }
+
+	/// <summary>
+	/// the hash determines if the system should be rebuilt. If it changes, it will be rebuilt
+	/// </summary>
+	protected override int BuildHash() => System.HashCode.Combine( Kills );
+
+	protected override void OnEnabled(){
+		GameMaster.Instance.EnemyDeathEvent += UpdateKillCounter;
+	}
+	protected override void OnDisabled(){
+		GameMaster.Instance.EnemyDeathEvent -= UpdateKillCounter;
+	}
+
+	private void UpdateKillCounter(){
+		Kills += 1;
+	}
+}

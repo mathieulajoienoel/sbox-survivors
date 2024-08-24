@@ -34,7 +34,6 @@ Basic :
   * [ ] States :
     * [ ] Win
     * [ ] Loose
-  * [ ] After game results
   * [ ] Scene selection
   * [ ] Sounds
 
@@ -53,7 +52,7 @@ Features :
   * [ ] Item & Weapon Shop
   * [ ] XP display
   * [x] Health display
-  * [ ] Kill display
+  * [x] Kill display
   * [ ] Money
     * [ ] Spending
     * [ ] Display
@@ -63,6 +62,8 @@ Features :
     * [ ] Projectiles
     * [ ] Enemies
     * [ ] Popups
+  * [ ] After game results
+
 Maybe :
   * [ ] Beakables with loot
   * [ ] Status effects
@@ -87,3 +88,6 @@ Content :
   * [ ] Powerups
   * [ ] Collectables
   * [ ] Followers/Minions
+  * [ ] Inventory?
+  * [ ] Equipment with stats?
+  * [ ] Loadout before game ?

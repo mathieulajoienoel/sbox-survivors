@@ -52,7 +52,7 @@ public abstract class EntityHealth<T> : Component, IEntityHealth where T : Entit
     }
   }
 
-  public void OnDeath(){
+  public virtual void OnDeath(){
     if(!master.Stats.Alive) return;
     master.Stats.Alive = false;
     FadeOutAfterTime comp = Components.Create<FadeOutAfterTime>(false);

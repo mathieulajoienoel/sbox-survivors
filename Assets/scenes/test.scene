@@ -335,6 +335,27 @@
           ]
         }
       ]
+    },
+    {
+      "__guid": "10db2c4b-a922-473f-89fc-681ed5565253",
+      "Flags": 0,
+      "Name": "Object",
+      "Enabled": true,
+      "Components": [
+        {
+          "__type": "KillCounter",
+          "__guid": "bc84a6b7-67be-4f6d-8a9d-476ba3c08d17",
+          "Kills": 0
+        },
+        {
+          "__type": "Sandbox.ScreenPanel",
+          "__guid": "76b8a1cd-f45a-43ae-b123-a4b5f1ce4b25",
+          "AutoScreenScale": true,
+          "Opacity": 1,
+          "Scale": 1,
+          "ZIndex": 100
+        }
+      ]
     }
   ],
   "SceneProperties": {

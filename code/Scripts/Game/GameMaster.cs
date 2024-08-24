@@ -16,6 +16,12 @@ public sealed class GameMaster : Component {
 
   //private Vector3 ObjectPoolSpawnPoint { get; set; } = new Vector3(-100,-100,-100);
 
+  public delegate void EnemyDeathEventHandler();
+  public event EnemyDeathEventHandler EnemyDeathEvent;
+  public void CallEnemyDeathEvent(){
+		EnemyDeathEvent?.Invoke();
+	}
+
 	protected override void OnAwake()
 	{
 		base.OnAwake();
