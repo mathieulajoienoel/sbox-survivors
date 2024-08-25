@@ -33,6 +33,8 @@ public sealed class PlayerExperience : Component, Component.ITriggerListener {
 
   private void OnExperienceGain(float value){
     master.Stats.Experience += value;
+
+    GameMaster.Instance.CallExperienceGainEvent(value);
   }
 
   private void ShowExperiencePopup(float value){

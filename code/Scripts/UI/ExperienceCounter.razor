@@ -1,0 +1,37 @@
+@using Sandbox;
+@using Sandbox.UI;
+@inherits PanelComponent;
+@using System;
+
+<root>
+	<div class="experience_bar">
+		<span class="text">🔷 @CurrentExperience</span>
+		<span class="experience">
+			<span class="current_experience" style="width:@ExperiencePercentage%;"></span>
+		</span>
+	</div>
+</root>
+
+@code
+{
+	[Property] public float CurrentExperience { get; set; } = 0;
+	[Property] private float ExperienceForNextLevel { get; set; } = 10; // @@TODO add Leveling system
+	[Property] private int ExperiencePercentage { get; set; }
+
+	/// <summary>
+	/// the hash determines if the system should be rebuilt. If it changes, it will be rebuilt
+	/// </summary>
+	protected override int BuildHash() => System.HashCode.Combine( CurrentExperience,ExperienceForNextLevel,ExperiencePercentage );
+
+	protected override void OnEnabled(){
+		GameMaster.Instance.ExperienceGainEvent += UpdateExperienceCounter;
+	}
+	protected override void OnDisabled(){
+		GameMaster.Instance.ExperienceGainEvent -= UpdateExperienceCounter;
+	}
+
+	private void UpdateExperienceCounter(float value){
+		CurrentExperience += value;
+		ExperiencePercentage = ((CurrentExperience * 100) / ExperienceForNextLevel).FloorToInt();
+	}
+}

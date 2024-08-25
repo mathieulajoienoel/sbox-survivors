@@ -8,8 +8,7 @@
 
 @code
 {
-
-	[Property, TextArea] public int Kills { get; set; }
+	[Property] public long Kills { get; set; } = 0;
 
 	/// <summary>
 	/// the hash determines if the system should be rebuilt. If it changes, it will be rebuilt

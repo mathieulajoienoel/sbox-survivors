@@ -1,0 +1,67 @@
+{
+  "RootObject": {
+    "__guid": "e7667bea-b253-4813-8e13-1b2780b39e38",
+    "Flags": 0,
+    "Name": "GameMaster",
+    "Enabled": true,
+    "Components": [
+      {
+        "__type": "GameMaster",
+        "__guid": "8f8c589e-a0a7-4c1b-bcc0-c119b9750040",
+        "DamagePopupPrefab": {
+          "_type": "gameobject",
+          "prefab": "prefabs/damagepopuptemplate.prefab"
+        },
+        "DebugMode": true,
+        "EnemyPrefab": {
+          "_type": "gameobject",
+          "prefab": "prefabs/enemy.prefab"
+        },
+        "EnemySpawnPoints": [
+          {
+            "_type": "gameobject",
+            "go": "e7ebe56b-2e84-4dad-8686-c469e264944f"
+          },
+          {
+            "_type": "gameobject",
+            "go": "070cff82-41c1-41c8-b9c0-36700850811a"
+          },
+          {
+            "_type": "gameobject",
+            "go": "2e4bce19-5114-4877-bf40-2b6a032d7616"
+          },
+          {
+            "_type": "gameobject",
+            "go": "f404fac4-6b44-4850-9b18-2884c6777795"
+          },
+          {
+            "_type": "gameobject",
+            "go": "9f8bcec8-536f-4c39-830b-184811a10313"
+          }
+        ],
+        "ExperiencePopupPrefab": {
+          "_type": "gameobject",
+          "prefab": "prefabs/experiencepopuptemplate.prefab"
+        },
+        "ExperiencePrefab": {
+          "_type": "gameobject",
+          "prefab": "prefabs/experience.prefab"
+        },
+        "PlayerPrefab": {
+          "_type": "gameobject",
+          "prefab": "prefabs/player.prefab"
+        },
+        "PlayerSpawnPoint": {
+          "_type": "gameobject",
+          "go": "085ab8a1-1827-43db-a9d3-e0c09ad9ed93"
+        }
+      }
+    ]
+  },
+  "ShowInMenu": false,
+  "MenuPath": null,
+  "MenuIcon": null,
+  "ResourceVersion": 1,
+  "__references": [],
+  "__version": 1
+}

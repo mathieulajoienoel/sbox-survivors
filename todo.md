@@ -14,6 +14,7 @@ Basic :
     * [ ] ProjectileWeapon
     * [ ] BarWeapon
     * [ ] CircleWeapon
+    * [ ] Raycast Weapon
   * [ ] Experience
     * [x] Attract
     * [x] Drop
@@ -50,7 +51,7 @@ Features :
   * [ ] Choosing character
   * [ ] Player levelling and rewards
   * [ ] Item & Weapon Shop
-  * [ ] XP display
+  * [x] XP display
   * [x] Health display
   * [x] Kill display
   * [ ] Money

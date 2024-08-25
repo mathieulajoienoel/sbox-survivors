@@ -1,0 +1,33 @@
+{
+  "RootObject": {
+    "__guid": "8ec1da0e-12a0-4dcd-94ca-6d650439f4ce",
+    "Flags": 0,
+    "Name": "experiencecounter",
+    "Enabled": true,
+    "Components": [
+      {
+        "__type": "ExperienceCounter",
+        "__guid": "07d615e4-fd01-489d-9840-83296ea67853",
+        "CurrentExperience": 0,
+        "ExperienceForNextLevel": 10,
+        "ExperiencePercentage": 0
+      },
+      {
+        "__type": "Sandbox.ScreenPanel",
+        "__guid": "f082f2a0-1229-42d6-a262-af50ae60e930",
+        "AutoScreenScale": true,
+        "Opacity": 0.55,
+        "Scale": 1,
+        "ZIndex": 100
+      }
+    ],
+    "Children": [],
+    "__variables": []
+  },
+  "ShowInMenu": false,
+  "MenuPath": null,
+  "MenuIcon": null,
+  "ResourceVersion": 1,
+  "__references": [],
+  "__version": 1
+}

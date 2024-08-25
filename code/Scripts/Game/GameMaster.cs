@@ -18,8 +18,13 @@ public sealed class GameMaster : Component {
 
   public delegate void EnemyDeathEventHandler();
   public event EnemyDeathEventHandler EnemyDeathEvent;
+  public delegate void ExperienceGainEventHandler(float value);
+  public event ExperienceGainEventHandler ExperienceGainEvent;
   public void CallEnemyDeathEvent(){
 		EnemyDeathEvent?.Invoke();
+	}
+  public void CallExperienceGainEvent(float value){
+		ExperienceGainEvent?.Invoke(value);
 	}
 
 	protected override void OnAwake()
