@@ -501,6 +501,79 @@
         "Enabled": true,
         "__Prefab": "prefabs/healthscreen.prefab",
         "__PrefabVariables": {}
+      },
+      {
+        "__guid": "e06ceb83-3e40-400b-a404-d3766844b4cb",
+        "Flags": 0,
+        "Name": "EnemySpawnPoints",
+        "Position": "0.00005364418,0,12.5",
+        "Enabled": true,
+        "Children": [
+          {
+            "__guid": "d819fef3-b166-4d3f-8e4c-564608b1c256",
+            "Flags": 0,
+            "Name": "SpawnPoint (5)",
+            "Position": "375.949,203.9128,0",
+            "Scale": "0.5,0.5,0.5",
+            "Enabled": true
+          },
+          {
+            "__guid": "57bd087f-d695-49a0-9b4d-1d8d7c8521d2",
+            "Flags": 0,
+            "Name": "SpawnPoint (6)",
+            "Position": "-0.2825549,230.1451,0",
+            "Scale": "0.5,0.5,0.5",
+            "Enabled": true
+          },
+          {
+            "__guid": "08a7cd81-c678-444a-94a1-5744b6571eb6",
+            "Flags": 0,
+            "Name": "SpawnPoint (7)",
+            "Position": "-495.3439,190.0753,0",
+            "Scale": "0.5,0.5,0.5",
+            "Enabled": true
+          },
+          {
+            "__guid": "e325412e-616e-47e5-baa8-b499d22d60d9",
+            "Flags": 0,
+            "Name": "SpawnPoint (4)",
+            "Position": "-538.3668,-1.053024,0",
+            "Scale": "0.5,0.5,0.5",
+            "Enabled": true
+          },
+          {
+            "__guid": "0dfc90e7-c0fb-4ca7-936f-ba6b100d474c",
+            "Flags": 0,
+            "Name": "SpawnPoint (8)",
+            "Position": "-538.3668,-337.2838,0",
+            "Scale": "0.5,0.5,0.5",
+            "Enabled": true
+          },
+          {
+            "__guid": "0c0b79b5-e12d-4d64-92db-84da0c9f923c",
+            "Flags": 0,
+            "Name": "SpawnPoint (2)",
+            "Position": "-0.00005364418,-421.1609,0",
+            "Scale": "0.5,0.5,0.5",
+            "Enabled": true
+          },
+          {
+            "__guid": "357a0518-806a-465c-a4b7-b15778e5b347",
+            "Flags": 0,
+            "Name": "SpawnPoint (1)",
+            "Position": "477.0113,-353.4487,0",
+            "Scale": "0.5,0.5,0.5",
+            "Enabled": true
+          },
+          {
+            "__guid": "b12e9c9b-dc5b-4be8-bb8e-586b9f840ea7",
+            "Flags": 0,
+            "Name": "SpawnPoint (3)",
+            "Position": "569.6608,0,0",
+            "Scale": "0.5,0.5,0.5",
+            "Enabled": true
+          }
+        ]
       }
     ],
     "__variables": []

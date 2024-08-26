@@ -5,12 +5,14 @@ public sealed class GameMaster : Component {
 
   [Property] public bool DebugMode { get; set; } = false;
   [Property] private GameObject PlayerPrefab { get; set; }
-  [Property] private GameObject EnemyPrefab { get; set; }
+  [Property] public GameObject EnemyPrefab { get; set; }
   [Property] private GameObject PlayerSpawnPoint { get; set; }
   [Property] private GameObject[] EnemySpawnPoints { get; set; }
   [Property] public GameObject DamagePopupPrefab { get; set; }
   [Property] public GameObject ExperiencePopupPrefab { get; set; }
   [Property] public GameObject ExperiencePrefab { get; set; }
+
+  [Property] public GameObject Player { get; set; }
 
   public Random RandomGenerator = new Random();
 
@@ -30,12 +32,20 @@ public sealed class GameMaster : Component {
 	protected override void OnAwake()
 	{
 		base.OnAwake();
-    PlayerPrefab.Clone(PlayerSpawnPoint.Transform.Position);
+    Player = PlayerPrefab.Clone(PlayerSpawnPoint.Transform.Position);
+
+    /*GameObject player = PlayerPrefab.Clone(PlayerSpawnPoint.Transform.Position);
+
+    // If no EnemySpawnPoints are defined, use the ones on the player
+    if(EnemySpawnPoints.Length < 1){
+      EnemySpawnPoints = player.Children.Find(x => x.Name == "EnemySpawnPoints")?.Children?.ToArray();
+    }
 
     foreach (var spawnPoint in EnemySpawnPoints)
     {
+      Log.Info(spawnPoint.Transform.Position);
       EnemyPrefab.Clone(spawnPoint.Transform.Position);
-    }
+    }*/
 
     Instance = this;
 	}

@@ -5,7 +5,7 @@ public sealed class DestroyAfterTime : Component {
     Done = Time.Now + TimeToWait;
   }
 
-  protected override void OnFixedUpdate() {
+  protected override void OnUpdate() {
     if(Time.Now > Done) {
       GameObject.Destroy();
     }

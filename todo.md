@@ -64,6 +64,9 @@ Features :
     * [ ] Enemies
     * [ ] Popups
   * [ ] After game results
+  * [ ] Stats https://docs.facepunch.com/s/sbox-dev/doc/stats-As30shVf3K
+    * [ ] Sandbox stats send
+    * [ ] Sandbox stats screen
 
 Maybe :
   * [ ] Beakables with loot
@@ -79,6 +82,7 @@ Maybe :
   * [ ] Scripted events ?
   * [ ] Teleporters
   * [ ] Looping map
+  * [ ] Leaderboard https://docs.facepunch.com/s/sbox-dev/doc/leaderboards-HLSCo50GWh
 
 
 Content :

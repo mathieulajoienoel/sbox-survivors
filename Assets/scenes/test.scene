@@ -86,8 +86,54 @@
       "Flags": 0,
       "Name": "GameMaster",
       "Enabled": true,
-      "__Prefab": "prefabs/gamemaster.prefab",
-      "__PrefabVariables": {}
+      "Components": [
+        {
+          "__type": "GameMaster",
+          "__guid": "7041a6c0-d167-4939-bdf3-238560e1c346",
+          "DamagePopupPrefab": {
+            "_type": "gameobject",
+            "prefab": "prefabs/damagepopuptemplate.prefab"
+          },
+          "DebugMode": true,
+          "EnemyPrefab": {
+            "_type": "gameobject",
+            "prefab": "prefabs/enemy.prefab"
+          },
+          "EnemySpawnPoints": [],
+          "ExperiencePopupPrefab": {
+            "_type": "gameobject",
+            "prefab": "prefabs/experiencepopuptemplate.prefab"
+          },
+          "ExperiencePrefab": {
+            "_type": "gameobject",
+            "prefab": "prefabs/experience.prefab"
+          },
+          "PlayerPrefab": {
+            "_type": "gameobject",
+            "prefab": "prefabs/player.prefab"
+          },
+          "PlayerSpawnPoint": {
+            "_type": "gameobject",
+            "go": "085ab8a1-1827-43db-a9d3-e0c09ad9ed93"
+          }
+        },
+        {
+          "__type": "LevelData",
+          "__guid": "11e6e78a-73ea-46da-8aa6-4794a6c8d9ba",
+          "DifficultyMultiplier": 1.5,
+          "EnemiesPerWave": 50,
+          "TotalWaves": 10
+        },
+        {
+          "__type": "WaveSpawner",
+          "__guid": "9e066e46-5351-4a3a-8901-05aefb73d093",
+          "CurrentEnemyCount": 0,
+          "CurrentWave": 0,
+          "EnemySpawnPoints": [],
+          "MaximumEnemiesOnScreen": 100,
+          "TotalEnemiesThisWave": 0
+        }
+      ]
     },
     {
       "__guid": "085ab8a1-1827-43db-a9d3-e0c09ad9ed93",

@@ -30,7 +30,7 @@ public sealed class FollowEntity : Component, Component.ITriggerListener {
     return false;
   }
 
-	protected override void OnFixedUpdate()
+	protected override void OnUpdate()
   {
       if(Target != null){
         OnTriggerUpdate(Target);

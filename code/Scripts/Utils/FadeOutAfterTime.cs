@@ -9,7 +9,7 @@ public sealed class FadeOutAfterTime : Component {
     DestroyAt = WaitTo + DestroyAfter;
   }
 
-  protected override void OnFixedUpdate() {
+  protected override void OnUpdate() {
     if(Time.Now > WaitTo) {
       Transform.Scale = Transform.Scale.LerpTo(Transform.Scale - Transform.Scale * 0.1f, Time.Delta * Speed);
     }

@@ -43,7 +43,7 @@
             "__type": "Item",
             "__guid": "4fab06c7-636a-472c-801a-2e602ffbe970",
             "Type": "Experience",
-            "Value": 0
+            "Value": 1
           },
           {
             "__type": "Experience",
@@ -73,6 +73,32 @@
             "Force": 1,
             "Size": 300,
             "Speed": 1
+          },
+          {
+            "__type": "ExperienceMerge",
+            "__guid": "c817873d-e17f-42f7-9e2b-8e1b1e2e778c"
+          }
+        ]
+      },
+      {
+        "__guid": "d767a68b-2fc3-4025-b1cd-dc92874f5691",
+        "Flags": 0,
+        "Name": "Merge",
+        "Tags": "experience",
+        "Components": [
+          {
+            "__type": "ExperienceMerge",
+            "__guid": "e49e27af-040f-42a0-bd71-ad8a6d780694",
+            "__enabled": false
+          },
+          {
+            "__type": "Sandbox.SphereCollider",
+            "__guid": "c6c555de-7f35-4d36-893b-338d3d997411",
+            "__enabled": false,
+            "Center": "0,0,0",
+            "IsTrigger": true,
+            "Radius": 200,
+            "Static": false
           }
         ]
       }
