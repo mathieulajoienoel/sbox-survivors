@@ -1,3 +1,4 @@
+using System;
 public sealed class EnemyMeleeWeapon : EnemyWeaponBase {
   [Property] protected override float Damage { get; set; } = -3f;
   [Property] protected override float Cooldown { get; set; } = 1.5f;
@@ -8,4 +9,11 @@ public sealed class EnemyMeleeWeapon : EnemyWeaponBase {
   [Property] protected override Angles StartRotation { get; set; } = new Angles(0,0,0);
   [Property] protected override int Speed { get; set; } = 0;
   [Property] protected override int SubWeaponSpeed { get; set; } = 0;
+
+  protected override void OnAwake()
+	{
+		float difficulty = (float)GameMaster.Instance.LevelData.DifficultyMultiplier;
+    Damage = (float)Math.Floor(Damage * difficulty);
+		base.OnAwake();
+	}
 }

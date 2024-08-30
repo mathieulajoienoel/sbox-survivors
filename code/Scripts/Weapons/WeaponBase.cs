@@ -15,9 +15,9 @@ where Y : EntityMaster
 
   protected abstract string OpponentTag { get; set; }
 
-  private float NextHit { get; set; } = 0f;
-  private HashSet<Collider> Colliders = new HashSet<Collider>();
-  private T master;
+  protected float NextHit { get; set; } = 0f;
+  protected HashSet<Collider> Colliders = new HashSet<Collider>();
+  protected T master;
 
   protected override void OnEnabled(){
     master = Components.GetInAncestorsOrSelf<T>();
@@ -44,7 +44,7 @@ where Y : EntityMaster
     Transform.LocalScale = Size;
   }
 
-  public void OnTriggerEnter( Collider other )
+  public virtual void OnTriggerEnter( Collider other )
   {
     Colliders.Add( other );
   }
@@ -70,7 +70,16 @@ where Y : EntityMaster
   public bool OnTriggerUpdate( Collider collider )
   {
       if(!master.Stats.Alive) return false;
-      if(collider.GameObject == null || !collider.GameObject.Parent.Tags.Has(OpponentTag)) return false;
+      //Log.Info(GameObject);
+      //if(GameObject.Tags.Has("enemy")){
+        //Log.Info(collider);
+        //Log.Info(collider.GameObject);
+        //Log.Info(collider.GameObject.Parent);
+        //Log.Info(collider.GameObject.Parent.Tags);
+      //}
+      //Log.Info(collider.GameObject);
+
+      if(collider == null || collider.GameObject == null || collider.GameObject.Parent == null || !collider.GameObject.Parent.Tags.Has(OpponentTag)) return false;
 
       Y otherMaster = GetMasterFromCollider(collider);
       if ( otherMaster == null) return false;

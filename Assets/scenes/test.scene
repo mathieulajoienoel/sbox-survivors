@@ -1,5 +1,5 @@
 {
-  "__guid": "325a4042-0696-43dd-a79d-dcc314299ba3",
+  "__guid": "477e90fa-0aaa-4456-a343-3b23af84521c",
   "GameObjects": [
     {
       "__guid": "bfc59c12-1ed2-4f91-8956-a95a315eac3c",
@@ -95,11 +95,6 @@
             "prefab": "prefabs/damagepopuptemplate.prefab"
           },
           "DebugMode": true,
-          "EnemyPrefab": {
-            "_type": "gameobject",
-            "prefab": "prefabs/enemy.prefab"
-          },
-          "EnemySpawnPoints": [],
           "ExperiencePopupPrefab": {
             "_type": "gameobject",
             "prefab": "prefabs/experiencepopuptemplate.prefab"
@@ -122,6 +117,12 @@
           "__guid": "11e6e78a-73ea-46da-8aa6-4794a6c8d9ba",
           "DifficultyMultiplier": 1.5,
           "EnemiesPerWave": 50,
+          "EnemyPrefabs": [
+            {
+              "_type": "gameobject",
+              "prefab": "prefabs/enemy.prefab"
+            }
+          ],
           "TotalWaves": 10
         },
         {
@@ -200,16 +201,59 @@
       "Enabled": true,
       "Children": [
         {
-          "__guid": "600a16d9-9698-4bce-b04e-3ae4ec9a6c11",
+          "__guid": "bc312549-1526-4183-a05f-2e7d4d501ccd",
+          "Flags": 0,
+          "Name": "Cube (5)",
+          "Position": "507.6386,108.4594,-636.7227",
+          "Tags": "solid",
+          "Enabled": true,
+          "Components": [
+            {
+              "__type": "Sandbox.ModelRenderer",
+              "__guid": "27b9207e-41b8-483f-ac77-11a18d64e6c4",
+              "__enabled": false,
+              "BodyGroups": 18446744073709551615,
+              "Model": "models/dev/box.vmdl",
+              "RenderType": "On",
+              "Tint": "1,1,1,1"
+            },
+            {
+              "__type": "Sandbox.BoxCollider",
+              "__guid": "25bd194f-cc1d-49e7-83a7-8f3649f00536",
+              "Center": "0,0,0",
+              "IsTrigger": false,
+              "Scale": "50,50,50",
+              "Static": true
+            },
+            {
+              "__type": "Sandbox.SpriteRenderer",
+              "__guid": "e57fbdab-6589-47c8-8195-96eaade2314b",
+              "Additive": false,
+              "CastShadows": false,
+              "Color": "1,1,1,1",
+              "DepthFeather": 0,
+              "FlipHorizontal": false,
+              "FlipVertical": false,
+              "FogStrength": 1,
+              "Lighting": true,
+              "Opaque": false,
+              "Size": "100,100",
+              "Texture": "sprites/rock.vtex"
+            }
+          ]
+        },
+        {
+          "__guid": "17363c6a-7d4e-4939-a0b5-1fa93b95bce4",
           "Flags": 0,
           "Name": "Cube (4)",
-          "Position": "396.6689,92.84796,-636.7227",
+          "Position": "363.6054,-144.7168,-636.7227",
           "Tags": "solid",
           "Enabled": true,
           "Components": [
             {
               "__type": "Sandbox.ModelRenderer",
-              "__guid": "aebeb821-ed3f-40a8-b6c8-032163c1fb1a",
+              "__guid": "f0da47f8-ad14-4fff-af9a-0d23c7164a23",
+              "__enabled": false,
               "BodyGroups": 18446744073709551615,
               "Model": "models/dev/box.vmdl",
               "RenderType": "On",
@@ -217,25 +261,41 @@
             },
             {
               "__type": "Sandbox.BoxCollider",
-              "__guid": "178213ec-1d3a-4fe6-839e-d524b7b7cf59",
+              "__guid": "4d0b0ff4-47d6-4f6c-b632-2d175be2fe79",
               "Center": "0,0,0",
               "IsTrigger": false,
               "Scale": "50,50,50",
               "Static": true
+            },
+            {
+              "__type": "Sandbox.SpriteRenderer",
+              "__guid": "f3a1ebe8-0e43-4ff3-930c-0e50f73447ea",
+              "Additive": false,
+              "CastShadows": false,
+              "Color": "1,1,1,1",
+              "DepthFeather": 0,
+              "FlipHorizontal": false,
+              "FlipVertical": false,
+              "FogStrength": 1,
+              "Lighting": true,
+              "Opaque": false,
+              "Size": "100,100",
+              "Texture": "sprites/rock.vtex"
             }
           ]
         },
         {
-          "__guid": "13105dc4-96cb-459b-9b1d-186dae669ead",
+          "__guid": "17ca4407-67ba-45a0-ae86-12dffc56b9a0",
           "Flags": 0,
           "Name": "Cube (3)",
-          "Position": "432.7495,-320.0616,-636.7227",
+          "Position": "102.3775,226.5488,-636.7227",
           "Tags": "solid",
           "Enabled": true,
           "Components": [
             {
               "__type": "Sandbox.ModelRenderer",
-              "__guid": "7849000f-fde5-413a-9d19-07f2aa58ceb0",
+              "__guid": "d1053650-4498-4cb8-8db0-0f8d9441d904",
+              "__enabled": false,
               "BodyGroups": 18446744073709551615,
               "Model": "models/dev/box.vmdl",
               "RenderType": "On",
@@ -243,25 +303,41 @@
             },
             {
               "__type": "Sandbox.BoxCollider",
-              "__guid": "d31dcdbf-4fb1-4fae-a612-511c11c3a3ca",
+              "__guid": "f6cfa9ee-8070-4b0d-a68d-7202d4dbddb9",
               "Center": "0,0,0",
               "IsTrigger": false,
               "Scale": "50,50,50",
               "Static": true
+            },
+            {
+              "__type": "Sandbox.SpriteRenderer",
+              "__guid": "0e4f3e25-89f7-4de2-8ca9-fc004c8b6a80",
+              "Additive": false,
+              "CastShadows": false,
+              "Color": "1,1,1,1",
+              "DepthFeather": 0,
+              "FlipHorizontal": false,
+              "FlipVertical": false,
+              "FogStrength": 1,
+              "Lighting": true,
+              "Opaque": false,
+              "Size": "100,100",
+              "Texture": "sprites/rock.vtex"
             }
           ]
         },
         {
-          "__guid": "23258b4a-8223-4b35-9013-8b58eaeaf421",
+          "__guid": "c1523229-d76f-4397-b694-2b1a2513dc4b",
           "Flags": 0,
           "Name": "Cube (2)",
-          "Position": "-51.4964,326.6145,-636.7227",
+          "Position": "-222.368,136.1925,-636.7227",
           "Tags": "solid",
           "Enabled": true,
           "Components": [
             {
               "__type": "Sandbox.ModelRenderer",
-              "__guid": "de977d2b-975b-4795-83a8-596bcaf79b37",
+              "__guid": "2f8d63d1-cfb6-499c-8ae7-fb36a9c4f8c5",
+              "__enabled": false,
               "BodyGroups": 18446744073709551615,
               "Model": "models/dev/box.vmdl",
               "RenderType": "On",
@@ -269,25 +345,83 @@
             },
             {
               "__type": "Sandbox.BoxCollider",
-              "__guid": "2119a882-2cb3-4c96-8400-6785bc2d7a0d",
+              "__guid": "319e218a-1420-412b-816c-e9100b3ce0b0",
               "Center": "0,0,0",
               "IsTrigger": false,
               "Scale": "50,50,50",
               "Static": true
+            },
+            {
+              "__type": "Sandbox.SpriteRenderer",
+              "__guid": "6ecdc08f-c924-430c-82a5-021ba10f1d96",
+              "Additive": false,
+              "CastShadows": false,
+              "Color": "1,1,1,1",
+              "DepthFeather": 0,
+              "FlipHorizontal": false,
+              "FlipVertical": false,
+              "FogStrength": 1,
+              "Lighting": true,
+              "Opaque": false,
+              "Size": "100,100",
+              "Texture": "sprites/rock.vtex"
+            }
+          ]
+        },
+        {
+          "__guid": "3948d4dd-6634-48e3-bb07-b35752b7fae7",
+          "Flags": 0,
+          "Name": "Cube (1)",
+          "Position": "-278.7289,-156.3469,-636.7227",
+          "Tags": "solid",
+          "Enabled": true,
+          "Components": [
+            {
+              "__type": "Sandbox.ModelRenderer",
+              "__guid": "1672bbe2-fe6f-43d3-9253-61a24137d6d5",
+              "__enabled": false,
+              "BodyGroups": 18446744073709551615,
+              "Model": "models/dev/box.vmdl",
+              "RenderType": "On",
+              "Tint": "1,1,1,1"
+            },
+            {
+              "__type": "Sandbox.BoxCollider",
+              "__guid": "49bbd4b1-339a-4a43-9173-ae90b1503b8b",
+              "Center": "0,0,0",
+              "IsTrigger": false,
+              "Scale": "50,50,50",
+              "Static": true
+            },
+            {
+              "__type": "Sandbox.SpriteRenderer",
+              "__guid": "47a927b3-c7d0-403d-89b0-ae0bb3ff0c6a",
+              "Additive": false,
+              "CastShadows": false,
+              "Color": "1,1,1,1",
+              "DepthFeather": 0,
+              "FlipHorizontal": false,
+              "FlipVertical": false,
+              "FogStrength": 1,
+              "Lighting": true,
+              "Opaque": false,
+              "Size": "100,100",
+              "Texture": "sprites/rock.vtex"
             }
           ]
         },
         {
           "__guid": "c3375ee1-d8d0-47da-8bfe-ce9c2478cd1a",
           "Flags": 0,
-          "Name": "Cube (1)",
-          "Position": "-51.49641,-320.0616,-636.7227",
+          "Name": "Cube",
+          "Position": "-8.442802,-320.0616,-636.7227",
           "Tags": "solid",
           "Enabled": true,
           "Components": [
             {
               "__type": "Sandbox.ModelRenderer",
               "__guid": "ee6ef943-54ce-4fde-9085-e9f38e8942fd",
+              "__enabled": false,
               "BodyGroups": 18446744073709551615,
               "Model": "models/dev/box.vmdl",
               "RenderType": "On",
@@ -300,32 +434,93 @@
               "IsTrigger": false,
               "Scale": "50,50,50",
               "Static": true
+            },
+            {
+              "__type": "Sandbox.SpriteRenderer",
+              "__guid": "e8edd5b7-4fe9-4a00-b43f-95487d91b457",
+              "Additive": false,
+              "CastShadows": false,
+              "Color": "1,1,1,1",
+              "DepthFeather": 0,
+              "FlipHorizontal": false,
+              "FlipVertical": false,
+              "FogStrength": 1,
+              "Lighting": true,
+              "Opaque": false,
+              "Size": "100,100",
+              "Texture": "sprites/rock.vtex"
             }
           ]
         },
         {
-          "__guid": "ae1035c7-b0c3-4355-86aa-4805b9f2bf62",
+          "__guid": "0098c26b-9c4b-4014-87e3-296d660bc67a",
           "Flags": 0,
-          "Name": "Cube",
-          "Position": "206.7171,25.73848,-636.7227",
-          "Tags": "solid",
+          "Name": "Grass (1)",
+          "Position": "-78.20003,-70.10002,-17.00001",
           "Enabled": true,
           "Components": [
             {
-              "__type": "Sandbox.ModelRenderer",
-              "__guid": "326cc855-5274-4597-98ca-5499a2b4a504",
-              "BodyGroups": 18446744073709551615,
-              "Model": "models/dev/box.vmdl",
-              "RenderType": "On",
-              "Tint": "1,1,1,1"
-            },
+              "__type": "Sandbox.SpriteRenderer",
+              "__guid": "551fe8e7-ab06-48a6-95bd-5a6fc4dd6470",
+              "Additive": false,
+              "CastShadows": false,
+              "Color": "1,1,1,1",
+              "DepthFeather": 0,
+              "FlipHorizontal": false,
+              "FlipVertical": false,
+              "FogStrength": 1,
+              "Lighting": false,
+              "Opaque": false,
+              "Size": "60,60",
+              "Texture": "sprites/grass_patch.vtex"
+            }
+          ]
+        },
+        {
+          "__guid": "ff5be5c4-1f9c-4219-9b9d-541cf979c49f",
+          "Flags": 0,
+          "Name": "Grass (2)",
+          "Position": "82.16376,13.40844,1",
+          "Enabled": true,
+          "Components": [
             {
-              "__type": "Sandbox.BoxCollider",
-              "__guid": "45867cae-d82a-4152-8cf2-4df4bce9d969",
-              "Center": "0,0,0",
-              "IsTrigger": false,
-              "Scale": "50,50,50",
-              "Static": true
+              "__type": "Sandbox.SpriteRenderer",
+              "__guid": "7cabb993-9421-4188-bd5a-f001d51467d3",
+              "Additive": false,
+              "CastShadows": false,
+              "Color": "1,1,1,1",
+              "DepthFeather": 0,
+              "FlipHorizontal": false,
+              "FlipVertical": false,
+              "FogStrength": 1,
+              "Lighting": false,
+              "Opaque": false,
+              "Size": "60,60",
+              "Texture": "sprites/grass_patch.vtex"
+            }
+          ]
+        },
+        {
+          "__guid": "9f7bae86-5c25-4d87-a260-a5e8e57bae4b",
+          "Flags": 0,
+          "Name": "Grass",
+          "Position": "6.400035,-70.10002,0",
+          "Enabled": true,
+          "Components": [
+            {
+              "__type": "Sandbox.SpriteRenderer",
+              "__guid": "95554411-81ab-4841-a321-ab075db80774",
+              "Additive": false,
+              "CastShadows": false,
+              "Color": "1,1,1,1",
+              "DepthFeather": 0,
+              "FlipHorizontal": false,
+              "FlipVertical": false,
+              "FogStrength": 1,
+              "Lighting": false,
+              "Opaque": false,
+              "Size": "60,60",
+              "Texture": "sprites/grass_patch.vtex"
             }
           ]
         }

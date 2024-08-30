@@ -22,10 +22,6 @@
             "Tint": "0,1,1,1"
           },
           {
-            "__type": "DrawColliderBox",
-            "__guid": "7281c26a-b84d-4023-9237-dc1a91e8b5b1"
-          },
-          {
             "__type": "Sandbox.SphereCollider",
             "__guid": "74c1c977-33ba-4886-85e5-5cdb0f365a97",
             "Center": "0,0,0",
@@ -73,10 +69,6 @@
             "Force": 1,
             "Size": 300,
             "Speed": 1
-          },
-          {
-            "__type": "ExperienceMerge",
-            "__guid": "c817873d-e17f-42f7-9e2b-8e1b1e2e778c"
           }
         ]
       },

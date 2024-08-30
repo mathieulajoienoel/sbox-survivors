@@ -29,8 +29,8 @@
         "__guid": "1ace4e8c-06e4-48bf-9746-948d0a9b6861",
         "Alive": true,
         "ExperienceDrop": 1,
-        "MaxHealth": 15,
-        "MoveSpeed": 10
+        "MaxHealth": 10,
+        "MoveSpeed": 7
       },
       {
         "__type": "EnemyMaster",
@@ -51,6 +51,16 @@
       {
         "__type": "DropExperience",
         "__guid": "b234cacd-9610-4958-a80d-d911f65e9670"
+      },
+      {
+        "__type": "EnemyWeaponGiver",
+        "__guid": "7c5b5788-9da4-4721-864c-97de919b3b6e",
+        "Weapons": [
+          {
+            "_type": "gameobject",
+            "prefab": "prefabs/enemymeleeweapon.prefab"
+          }
+        ]
       }
     ],
     "Children": [
@@ -87,15 +97,6 @@
             "__guid": "75e7b17a-b276-48b9-8767-ca0607648d9d"
           }
         ]
-      },
-      {
-        "__guid": "3bfda824-0abe-4834-a0ae-76d0894d138f",
-        "Flags": 0,
-        "Name": "enemymeleeweapon",
-        "Tags": "enemy_weapon,weapon",
-        "Enabled": true,
-        "__Prefab": "prefabs/enemymeleeweapon.prefab",
-        "__PrefabVariables": {}
       },
       {
         "__guid": "72a8d3bb-950f-41ed-a9bc-5a28ba471225",

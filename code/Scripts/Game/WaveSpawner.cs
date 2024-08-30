@@ -38,8 +38,10 @@ public sealed class WaveSpawner : Component {
     {
       Vector3 position = EnemySpawnPoints[GameMaster.Instance.Rand(0,EnemySpawnPoints.Length - 1)].Transform.Position;
       position += new Vector3(GameMaster.Instance.Rand(-100,100),GameMaster.Instance.Rand(-100,100), 0);
-      GameMaster.Instance.EnemyPrefab.Clone(position);
-      // @@TODO set enemy stats with difficulty modifier
+      //GameMaster.Instance.EnemyPrefab.Clone(position);
+      // Spawn a random enemy from the possible enemies for this level
+      LevelData.EnemyPrefabs[GameMaster.Instance.Rand(0, LevelData.EnemyPrefabs.Length - 1)].Clone(position);
+
       CurrentEnemyCount++;
       TotalEnemiesThisWave++;
     }
@@ -49,6 +51,7 @@ public sealed class WaveSpawner : Component {
     Log.Info("Spawning wave" + waveNumber);
     TotalEnemiesThisWave = 0;
 
+    LevelData.DifficultyMultiplier += 0.5f;
     LevelData.EnemiesPerWave = (int)(LevelData.EnemiesPerWave * LevelData.DifficultyMultiplier);
 
     return waveNumber + 1;

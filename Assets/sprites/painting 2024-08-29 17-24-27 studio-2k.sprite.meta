@@ -1,0 +1,20 @@
+{
+  "publish": {
+    "Enabled": false,
+    "ProjectConfig": {
+      "Title": "painting 2024-08-29 17-24-27 studio-2k",
+      "Type": "asset",
+      "Org": "local",
+      "Ident": "painting2024-08-2917-24-27studio",
+      "Schema": 0,
+      "IncludeSourceFiles": true,
+      "Resources": null,
+      "PackageReferences": null,
+      "EditorReferences": null,
+      "IsWhitelistDisabled": false,
+      "Metadata": {
+        "SingleAssetSource": "sprites/painting 2024-08-29 17-24-27 studio-2k.sprite"
+      }
+    }
+  }
+}

@@ -1,0 +1,107 @@
+{
+  "FilePath": "sprites/grass.png",
+  "TileSize": "256,256",
+  "TileSeparation": "0,0",
+  "TileScale": 1,
+  "Tiles": [
+    {
+      "Id": "c261bbd6-f8dc-4980-aa53-e31f19b1060e",
+      "Name": "",
+      "Size": "1,1"
+    },
+    {
+      "Id": "ad35b449-9b93-40b1-b788-370efcd4c393",
+      "Name": "",
+      "Position": "1,0",
+      "Size": "1,1"
+    },
+    {
+      "Id": "25e72240-768a-4547-9a0f-802deda0f92e",
+      "Name": "",
+      "Position": "2,0",
+      "Size": "1,1"
+    },
+    {
+      "Id": "56aa9830-9942-4862-86fa-90ec9bcd6c5f",
+      "Name": "",
+      "Position": "3,0",
+      "Size": "1,1"
+    },
+    {
+      "Id": "ba974aab-043b-411d-9cfa-0c02bc8c6ee7",
+      "Name": "",
+      "Position": "0,1",
+      "Size": "1,1"
+    },
+    {
+      "Id": "14828bf3-9cd5-420e-ae1a-493089a34734",
+      "Name": "",
+      "Position": "1,1",
+      "Size": "1,1"
+    },
+    {
+      "Id": "2b403bd6-1cef-413c-86d1-3ed37fc07bc9",
+      "Name": "",
+      "Position": "2,1",
+      "Size": "1,1"
+    },
+    {
+      "Id": "ecab5a6b-8d8d-40df-b4e3-9b7d122437c4",
+      "Name": "",
+      "Position": "3,1",
+      "Size": "1,1"
+    },
+    {
+      "Id": "a4858a16-fa7e-4e68-80a0-2bd86a4d210d",
+      "Name": "",
+      "Position": "0,2",
+      "Size": "1,1"
+    },
+    {
+      "Id": "bb00db96-cc71-4ab9-a942-85ea15c6496d",
+      "Name": "",
+      "Position": "1,2",
+      "Size": "1,1"
+    },
+    {
+      "Id": "da667f3f-3b0c-4531-8250-4f792107259d",
+      "Name": "",
+      "Position": "2,2",
+      "Size": "1,1"
+    },
+    {
+      "Id": "89e716cb-0c49-42fb-929e-12a91269316b",
+      "Name": "",
+      "Position": "3,2",
+      "Size": "1,1"
+    },
+    {
+      "Id": "b584aa33-f21e-4b82-bc24-4907f93749d4",
+      "Name": "",
+      "Position": "0,3",
+      "Size": "1,1"
+    },
+    {
+      "Id": "723ad175-3e38-4601-a67e-9a9eb286984a",
+      "Name": "",
+      "Position": "1,3",
+      "Size": "1,1"
+    },
+    {
+      "Id": "6b32a2f5-d54a-45ac-8c31-270c29a3d056",
+      "Name": "",
+      "Position": "2,3",
+      "Size": "1,1"
+    },
+    {
+      "Id": "22defc5a-b75c-4048-8581-818b93fdf2e7",
+      "Name": "",
+      "Position": "3,3",
+      "Size": "1,1"
+    }
+  ],
+  "CurrentTextureSize": "1024,1024",
+  "CurrentTileSize": "256,256",
+  "__references": [],
+  "__version": 0
+}
