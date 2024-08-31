@@ -7,11 +7,27 @@ public abstract class EntityController<T> : Component where T : EntityMaster
   protected bool canMove = true;
 
   protected override void OnEnabled(){
+
     master = Components.Get<T>();
 
     float step = master.Stats.MoveSpeed;
     // Set the move speed to use
     Speed = new Vector3(step, step, 0);
+
+    master.EventKnockback += OnKnockback;
+    master.EventKnockbackRelease += OnKnockbackRelease;
+  }
+
+  protected override void OnDisabled(){
+    master.EventKnockback -= OnKnockback;
+    master.EventKnockbackRelease -= OnKnockbackRelease;
+  }
+
+  private void OnKnockback (float KnockbackDuration){
+    canMove = false;
+  }
+  private void OnKnockbackRelease (){
+    canMove = true;
   }
 
   public void ToggleMove(){

@@ -1,0 +1,48 @@
+{
+  "RootObject": {
+    "__guid": "7ddb4abe-878a-469e-a85e-5ccbf583fb9e",
+    "Flags": 0,
+    "Name": "Teleporter",
+    "Tags": "teleporter",
+    "Enabled": true,
+    "Components": [
+      {
+        "__type": "Teleporter",
+        "__guid": "162ac737-4b92-4e61-b27c-52db7242ebb6",
+        "Cooldown": 5
+      },
+      {
+        "__type": "Sandbox.CapsuleCollider",
+        "__guid": "c15085ac-d703-4162-83c5-f6197977f99a",
+        "End": "0,0,10",
+        "IsTrigger": true,
+        "Radius": 10,
+        "Start": "0,0,0",
+        "Static": false
+      },
+      {
+        "__type": "Sandbox.SpriteRenderer",
+        "__guid": "91fd3963-1f64-4566-b24d-6a2837c5a719",
+        "Additive": false,
+        "CastShadows": false,
+        "Color": "1,1,1,1",
+        "DepthFeather": 0,
+        "FlipHorizontal": false,
+        "FlipVertical": false,
+        "FogStrength": 1,
+        "Lighting": false,
+        "Opaque": false,
+        "Size": "49.10001,30",
+        "Texture": "sprites/blue.vtex"
+      }
+    ],
+    "Children": [],
+    "__variables": []
+  },
+  "ShowInMenu": false,
+  "MenuPath": null,
+  "MenuIcon": null,
+  "ResourceVersion": 1,
+  "__references": [],
+  "__version": 1
+}

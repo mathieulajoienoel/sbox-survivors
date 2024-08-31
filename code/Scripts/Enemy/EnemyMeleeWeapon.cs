@@ -9,6 +9,8 @@ public sealed class EnemyMeleeWeapon : EnemyWeaponBase {
   [Property] protected override Angles StartRotation { get; set; } = new Angles(0,0,0);
   [Property] protected override int Speed { get; set; } = 0;
   [Property] protected override int SubWeaponSpeed { get; set; } = 0;
+  [Property] protected override float Knockback { get; set; } = 0f;
+  [Property] protected override float KnockbackDuration { get; set; } = 0f;
 
   protected override void OnAwake()
 	{

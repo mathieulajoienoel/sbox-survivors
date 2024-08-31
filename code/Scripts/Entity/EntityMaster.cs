@@ -5,6 +5,10 @@ public abstract class EntityMaster : Component
   public IEntityHealth Health { get; set; }
 
   // Events & Delegates
+  public delegate void KnockbackEventHandler(float KnockbackDuration);
+	public event KnockbackEventHandler EventKnockback;
+  public delegate void KnockbackReleaseEventHandler();
+	public event KnockbackReleaseEventHandler EventKnockbackRelease;
   public delegate void HealthEventHandler(float healthChange);
 	public event HealthEventHandler EventHealthChanged;
   public delegate void UpdateHealthDisplayEventHandler(float currentHealth, float maxHealth);
@@ -23,6 +27,12 @@ public abstract class EntityMaster : Component
 	}
   public void CallEventDeath(){
 		EventDeath?.Invoke();
+	}
+  public void CallEventKnockback(float KnockbackDuration){
+		EventKnockback?.Invoke(KnockbackDuration);
+	}
+  public void CallEventKnockbackRelease(){
+		EventKnockbackRelease?.Invoke();
 	}
   public void CallEventDealDamage(DamageInfo damage){
 		EventDealDamage?.Invoke(damage);

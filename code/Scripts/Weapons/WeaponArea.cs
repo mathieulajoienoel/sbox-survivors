@@ -8,4 +8,7 @@ public sealed class WeaponArea : PlayerWeaponBase {
   [Property] protected override Angles StartRotation { get; set; } = new Angles(0,0,0);
   [Property] protected override int Speed { get; set; } = 0;
   [Property] protected override int SubWeaponSpeed { get; set; } = 0;
+
+  [Property] protected override float Knockback { get; set; } = 50000f;
+  [Property] protected override float KnockbackDuration { get; set; } = 1f;
 }

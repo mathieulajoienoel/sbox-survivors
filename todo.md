@@ -1,12 +1,12 @@
 Basic :
   * [x] GameMaster
-  * [ ] Player
+  * [x] Player
     * [x] Movement
     * [x] Weapons
     * [x] Health
     * [x] Damage Popup
     * [x] Stats
-    * [ ] Death
+    * [x] Death
   * [ ] Weapons
     * [x] LineWeapon
     * [x] AreaWeapon
@@ -33,18 +33,26 @@ Basic :
     * [x] Item
     * [x] Experience
   * [ ] States :
-    * [ ] Win
-    * [ ] Loose
+    * [x] Win manager
+    * [x] Game over manager
+    * [ ] Win screen
+    * [ ] Game over screen
+    * [ ] Send player to menu after game end
   * [ ] Scene selection
   * [ ] Sounds
+  * [ ] Menus
+    * [ ] Main menu
+    * [ ] Level selection
+
 
 Features :
   * [ ] Modifiers :
     * [ ] Attribute modifiers
     * [ ] OnStatsUpdated for components that need it
-  * [ ] Levels and Waves
+  * [x] Levels and Waves
+  * [ ] Waves with specific enemies, for better variety
   * [ ] Automated spawners
-    * [ ] Enemies
+    * [x] Enemies
     * [ ] Loot
   * [ ] Choosing weapons
   * [ ] Choosing items
@@ -58,12 +66,13 @@ Features :
     * [ ] Spending
     * [ ] Display
     * [ ] Powerups
-  * [ ] Weapon knockback
+  * [x] Weapon knockback
   * [ ] Object pooling
     * [ ] Projectiles
     * [ ] Enemies
     * [ ] Popups
   * [ ] After game results
+    * [ ] Show last game stats panel
   * [ ] Stats https://docs.facepunch.com/s/sbox-dev/doc/stats-As30shVf3K
     * [ ] Sandbox stats send
     * [ ] Sandbox stats screen
@@ -80,7 +89,7 @@ Maybe :
     * [ ] Enemies
   * [ ] Story ?
   * [ ] Scripted events ?
-  * [ ] Teleporters
+  * [x] Teleporters
   * [ ] Looping map
   * [ ] Leaderboard https://docs.facepunch.com/s/sbox-dev/doc/leaderboards-HLSCo50GWh
 

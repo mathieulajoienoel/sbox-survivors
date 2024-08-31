@@ -456,7 +456,7 @@
           "__guid": "0098c26b-9c4b-4014-87e3-296d660bc67a",
           "Flags": 0,
           "Name": "Grass (1)",
-          "Position": "-78.20003,-70.10002,-17.00001",
+          "Position": "141.4955,1.890601,1",
           "Enabled": true,
           "Components": [
             {
@@ -504,7 +504,7 @@
           "__guid": "9f7bae86-5c25-4d87-a260-a5e8e57bae4b",
           "Flags": 0,
           "Name": "Grass",
-          "Position": "6.400035,-70.10002,0",
+          "Position": "85.09039,-49.65507,1",
           "Enabled": true,
           "Components": [
             {
@@ -541,6 +541,178 @@
       "Enabled": true,
       "__Prefab": "prefabs/experiencecounter.prefab",
       "__PrefabVariables": {}
+    },
+    {
+      "__guid": "7ddb4abe-878a-469e-a85e-5ccbf583fb9e",
+      "Flags": 0,
+      "Name": "Teleporter",
+      "Position": "86.52248,-372.0869,12.5",
+      "Tags": "teleporter",
+      "Enabled": true,
+      "Components": [
+        {
+          "__type": "Teleporter",
+          "__guid": "986d166c-194a-4a1c-a275-e7b0f5524bca",
+          "Cooldown": 5,
+          "OtherEnd": {
+            "_type": "gameobject",
+            "go": "04da61c0-0eed-496b-9a0d-ab341a892cd4"
+          }
+        },
+        {
+          "__type": "Sandbox.CapsuleCollider",
+          "__guid": "9b2d0a5e-3b6f-4c2d-9d72-3fbc0b8c8bd9",
+          "End": "0,0,10",
+          "IsTrigger": true,
+          "Radius": 10,
+          "Start": "0,0,0",
+          "Static": false
+        },
+        {
+          "__type": "Sandbox.SpriteRenderer",
+          "__guid": "17937f55-1f34-4dd4-bfda-8d2ac91892b8",
+          "Additive": false,
+          "CastShadows": false,
+          "Color": "1,1,1,1",
+          "DepthFeather": 0,
+          "FlipHorizontal": false,
+          "FlipVertical": false,
+          "FogStrength": 1,
+          "Lighting": false,
+          "Opaque": false,
+          "Size": "49.10001,30",
+          "Texture": "sprites/blue.vtex"
+        }
+      ]
+    },
+    {
+      "__guid": "04da61c0-0eed-496b-9a0d-ab341a892cd4",
+      "Flags": 0,
+      "Name": "Teleporter (3)",
+      "Position": "-278.5047,-301.9536,12.5",
+      "Tags": "teleporter",
+      "Enabled": true,
+      "Components": [
+        {
+          "__type": "Teleporter",
+          "__guid": "563a3d42-e023-4ea7-bfb8-aa2735f4723f",
+          "Cooldown": 5,
+          "OtherEnd": {
+            "_type": "gameobject",
+            "go": "0749b058-4e3f-4e6c-ac54-10abdab01a55"
+          }
+        },
+        {
+          "__type": "Sandbox.CapsuleCollider",
+          "__guid": "5cf79c99-b1f9-4b91-8a88-58a05053ab9c",
+          "End": "0,0,10",
+          "IsTrigger": true,
+          "Radius": 10,
+          "Start": "0,0,0",
+          "Static": false
+        },
+        {
+          "__type": "Sandbox.SpriteRenderer",
+          "__guid": "4112ceb9-0d02-4dfc-848a-d2de00c9fcb0",
+          "Additive": false,
+          "CastShadows": false,
+          "Color": "1,1,1,1",
+          "DepthFeather": 0,
+          "FlipHorizontal": false,
+          "FlipVertical": false,
+          "FogStrength": 1,
+          "Lighting": false,
+          "Opaque": false,
+          "Size": "49.10001,30",
+          "Texture": "sprites/blue.vtex"
+        }
+      ]
+    },
+    {
+      "__guid": "0749b058-4e3f-4e6c-ac54-10abdab01a55",
+      "Flags": 0,
+      "Name": "Teleporter (2)",
+      "Position": "191.9806,64.83646,12.5",
+      "Tags": "teleporter",
+      "Enabled": true,
+      "Components": [
+        {
+          "__type": "Teleporter",
+          "__guid": "a122f079-1f80-4179-b717-c7a966293768",
+          "Cooldown": 5,
+          "OtherEnd": {
+            "_type": "gameobject",
+            "go": "0bc4b0b9-8817-47fe-bfd8-5260ffb165a6"
+          }
+        },
+        {
+          "__type": "Sandbox.CapsuleCollider",
+          "__guid": "3284ede6-2689-44d2-bfa3-02af8fe8fa6b",
+          "End": "0,0,10",
+          "IsTrigger": true,
+          "Radius": 10,
+          "Start": "0,0,0",
+          "Static": false
+        },
+        {
+          "__type": "Sandbox.SpriteRenderer",
+          "__guid": "250bbfe0-3d2e-42b3-8bd8-ce878f93d569",
+          "Additive": false,
+          "CastShadows": false,
+          "Color": "1,1,1,1",
+          "DepthFeather": 0,
+          "FlipHorizontal": false,
+          "FlipVertical": false,
+          "FogStrength": 1,
+          "Lighting": false,
+          "Opaque": false,
+          "Size": "49.10001,30",
+          "Texture": "sprites/blue.vtex"
+        }
+      ]
+    },
+    {
+      "__guid": "0bc4b0b9-8817-47fe-bfd8-5260ffb165a6",
+      "Flags": 0,
+      "Name": "Teleporter (1)",
+      "Position": "-197.3022,124.1356,12.5",
+      "Tags": "teleporter",
+      "Enabled": true,
+      "Components": [
+        {
+          "__type": "Teleporter",
+          "__guid": "be832235-dae0-4ccb-a4d2-323de34c2462",
+          "Cooldown": 5,
+          "OtherEnd": {
+            "_type": "gameobject",
+            "go": "7ddb4abe-878a-469e-a85e-5ccbf583fb9e"
+          }
+        },
+        {
+          "__type": "Sandbox.CapsuleCollider",
+          "__guid": "1e9d5f99-b4d9-4864-9d5b-fc948894c031",
+          "End": "0,0,10",
+          "IsTrigger": true,
+          "Radius": 10,
+          "Start": "0,0,0",
+          "Static": false
+        },
+        {
+          "__type": "Sandbox.SpriteRenderer",
+          "__guid": "05114e27-90ca-4143-9f40-42ad62a5b40d",
+          "Additive": false,
+          "CastShadows": false,
+          "Color": "1,1,1,1",
+          "DepthFeather": 0,
+          "FlipHorizontal": false,
+          "FlipVertical": false,
+          "FogStrength": 1,
+          "Lighting": false,
+          "Opaque": false,
+          "Size": "49.10001,30",
+          "Texture": "sprites/blue.vtex"
+        }
+      ]
     }
   ],
   "SceneProperties": {

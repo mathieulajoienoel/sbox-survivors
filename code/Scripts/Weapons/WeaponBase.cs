@@ -15,6 +15,9 @@ where Y : EntityMaster
 
   protected abstract string OpponentTag { get; set; }
 
+  protected abstract float Knockback { get; set; }
+  protected abstract float KnockbackDuration { get; set; }
+
   protected float NextHit { get; set; } = 0f;
   protected HashSet<Collider> Colliders = new HashSet<Collider>();
   protected T master;
@@ -70,19 +73,13 @@ where Y : EntityMaster
   public bool OnTriggerUpdate( Collider collider )
   {
       if(!master.Stats.Alive) return false;
-      //Log.Info(GameObject);
-      //if(GameObject.Tags.Has("enemy")){
-        //Log.Info(collider);
-        //Log.Info(collider.GameObject);
-        //Log.Info(collider.GameObject.Parent);
-        //Log.Info(collider.GameObject.Parent.Tags);
-      //}
-      //Log.Info(collider.GameObject);
 
       if(collider == null || collider.GameObject == null || collider.GameObject.Parent == null || !collider.GameObject.Parent.Tags.Has(OpponentTag)) return false;
 
       Y otherMaster = GetMasterFromCollider(collider);
-      if ( otherMaster == null) return false;
+      if ( otherMaster == null || otherMaster == master) return false;
+
+      if(Knockback > 0f) ApplyKnockback(otherMaster);
 
       DamageInfo damage = new DamageInfo(Damage, master.GameObject, GameObject);
       otherMaster.CallEventReceiveDamage(damage);
@@ -90,10 +87,22 @@ where Y : EntityMaster
       return true;
   }
 
+  protected virtual void ApplyKnockback(Y otherMaster){
+    GameObject otherGameObject = otherMaster.GameObject;
+    Rigidbody rigidbody = otherGameObject.Components.Get<Rigidbody>();
+    if(rigidbody == null) return;
+
+    Vector3 direction = (otherGameObject.Transform.Position - master.GameObject.Transform.Position).Normal;
+    direction.z = 0;
+
+    otherMaster.CallEventKnockback(KnockbackDuration);
+
+    rigidbody.ApplyImpulse(direction * Knockback);
+  }
+
   protected Y GetMasterFromCollider(Collider collider) {
     if(collider.GameObject == null) return null;
     Y otherMaster = collider.GameObject.Components.GetInAncestorsOrSelf<Y>() ?? collider.GameObject.Components.GetInChildrenOrSelf<Y>();
     return otherMaster;
   }
-
 }

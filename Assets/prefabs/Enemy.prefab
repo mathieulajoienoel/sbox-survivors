@@ -61,6 +61,10 @@
             "prefab": "prefabs/enemymeleeweapon.prefab"
           }
         ]
+      },
+      {
+        "__type": "EnemyKnockback",
+        "__guid": "461b5502-4798-4afe-9455-e78dc8380de5"
       }
     ],
     "Children": [

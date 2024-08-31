@@ -44,6 +44,10 @@
       {
         "__type": "PlayerHealth",
         "__guid": "e1c7d78c-bc55-4880-984d-74d3e23c7927"
+      },
+      {
+        "__type": "PlayerKnockback",
+        "__guid": "d0502772-aedc-4e3f-a36d-04bb044af1b8"
       }
     ],
     "Children": [
@@ -267,6 +271,8 @@
                 "__guid": "e57b7f41-54e7-4a03-bfba-dd329e53e485",
                 "Cooldown": 0.15,
                 "Damage": -10,
+                "Knockback": 50000,
+                "KnockbackDuration": 1,
                 "MaxTargets": 3,
                 "Position": "0,0,0",
                 "Range": "-75,-75,0",
@@ -352,6 +358,8 @@
                 "__guid": "7ea015f0-a032-423b-ac8f-15de5efba68a",
                 "Cooldown": 0.15,
                 "Damage": -10,
+                "Knockback": 50000,
+                "KnockbackDuration": 1,
                 "MaxTargets": 3,
                 "Position": "0,0,0",
                 "Range": "75,75,0",
@@ -437,6 +445,8 @@
                 "__guid": "b5578676-037e-404e-9a53-1e4e5132697f",
                 "Cooldown": 0.15,
                 "Damage": -10,
+                "Knockback": 50000,
+                "KnockbackDuration": 1,
                 "MaxTargets": 3,
                 "Position": "0,0,0",
                 "Range": "75,0,0",
@@ -509,7 +519,7 @@
             "__guid": "d819fef3-b166-4d3f-8e4c-564608b1c256",
             "Flags": 0,
             "Name": "SpawnPoint (5)",
-            "Position": "318.631,223.9881,0",
+            "Position": "382.7589,285.6175,0",
             "Scale": "0.5,0.5,0.5",
             "Enabled": true
           },
@@ -517,7 +527,7 @@
             "__guid": "57bd087f-d695-49a0-9b4d-1d8d7c8521d2",
             "Flags": 0,
             "Name": "SpawnPoint (6)",
-            "Position": "-0.2825549,222.7848,0",
+            "Position": "-0.2825549,285.2469,0",
             "Scale": "0.5,0.5,0.5",
             "Enabled": true
           },
@@ -525,7 +535,7 @@
             "__guid": "08a7cd81-c678-444a-94a1-5744b6571eb6",
             "Flags": 0,
             "Name": "SpawnPoint (7)",
-            "Position": "-319.7886,221.7834,0",
+            "Position": "-384.7494,286.7441,0",
             "Scale": "0.5,0.5,0.5",
             "Enabled": true
           },
@@ -533,7 +543,7 @@
             "__guid": "e325412e-616e-47e5-baa8-b499d22d60d9",
             "Flags": 0,
             "Name": "SpawnPoint (4)",
-            "Position": "-320.5887,-1.053024,0",
+            "Position": "-384.7167,-1.053024,0",
             "Scale": "0.5,0.5,0.5",
             "Enabled": true
           },
@@ -541,7 +551,7 @@
             "__guid": "0dfc90e7-c0fb-4ca7-936f-ba6b100d474c",
             "Flags": 0,
             "Name": "SpawnPoint (8)",
-            "Position": "-317.2157,-223.6757,0",
+            "Position": "-383.8421,-288.6364,0",
             "Scale": "0.5,0.5,0.5",
             "Enabled": true
           },
@@ -549,7 +559,7 @@
             "__guid": "0c0b79b5-e12d-4d64-92db-84da0c9f923c",
             "Flags": 0,
             "Name": "SpawnPoint (2)",
-            "Position": "-0.00005364418,-224.0726,0",
+            "Position": "-0.00005364418,-286.5348,0",
             "Scale": "0.5,0.5,0.5",
             "Enabled": true
           },
@@ -557,7 +567,7 @@
             "__guid": "357a0518-806a-465c-a4b7-b15778e5b347",
             "Flags": 0,
             "Name": "SpawnPoint (1)",
-            "Position": "320.0071,-224.1597,0",
+            "Position": "382.4694,-288.2876,0",
             "Scale": "0.5,0.5,0.5",
             "Enabled": true
           },
@@ -565,7 +575,7 @@
             "__guid": "b12e9c9b-dc5b-4be8-bb8e-586b9f840ea7",
             "Flags": 0,
             "Name": "SpawnPoint (3)",
-            "Position": "319.9008,0,0",
+            "Position": "379.8645,0,0",
             "Scale": "0.5,0.5,0.5",
             "Enabled": true
           }

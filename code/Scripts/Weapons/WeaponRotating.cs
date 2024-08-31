@@ -8,6 +8,8 @@ public sealed class WeaponRotating : PlayerWeaponBase {
   [Property] protected override int MaxTargets { get; set; } = -1;
   [Property] protected override int Speed { get; set; } = 150;
   [Property] protected override int SubWeaponSpeed { get; set; } = 0;
+  [Property] protected override float Knockback { get; set; } = 50000f;
+  [Property] protected override float KnockbackDuration { get; set; } = 1f;
 
   protected override void ApplySize(){
     Transform.LocalScale = Size;
