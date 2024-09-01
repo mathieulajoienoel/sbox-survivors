@@ -11,5 +11,6 @@ public sealed class GameOverManager : Component {
   private void OnPlayerDeath(){
     Game.IsPaused = true;
     // @@TODO show gameover screen
+    Log.Info("Game over");
   }
 }

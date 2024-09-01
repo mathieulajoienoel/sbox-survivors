@@ -15,23 +15,35 @@
 @code
 {
 	[Property] public float CurrentExperience { get; set; } = 0;
-	[Property] private float ExperienceForNextLevel { get; set; } = 10; // @@TODO add Leveling system
 	[Property] private int ExperiencePercentage { get; set; }
+
+	private PlayerStats playerStats { get; set; }
+	private PlayerMaster playerMaster { get; set; }
 
 	/// <summary>
 	/// the hash determines if the system should be rebuilt. If it changes, it will be rebuilt
 	/// </summary>
-	protected override int BuildHash() => System.HashCode.Combine( CurrentExperience,ExperienceForNextLevel,ExperiencePercentage );
+	protected override int BuildHash() => System.HashCode.Combine( CurrentExperience,ExperiencePercentage );
 
 	protected override void OnEnabled(){
+		GameObject player = GameMaster.Instance.Player;
+		playerMaster = player.Components.Get<PlayerMaster>();
+		playerStats = player.Components.Get<PlayerStats>();
+
 		GameMaster.Instance.ExperienceGainEvent += UpdateExperienceCounter;
+		playerMaster.EventLevelUp += OnLevelUp;
 	}
 	protected override void OnDisabled(){
 		GameMaster.Instance.ExperienceGainEvent -= UpdateExperienceCounter;
+		playerMaster.EventLevelUp -= OnLevelUp;
 	}
 
 	private void UpdateExperienceCounter(float value){
-		CurrentExperience += value;
-		ExperiencePercentage = ((CurrentExperience * 100) / ExperienceForNextLevel).FloorToInt();
+		//CurrentExperience += value;
+		CurrentExperience = playerStats.Experience;
+		ExperiencePercentage = ((CurrentExperience * 100) / playerStats.ExperienceNeeded).FloorToInt();
+	}
+	private void OnLevelUp(int level){
+		UpdateExperienceCounter(0);
 	}
 }

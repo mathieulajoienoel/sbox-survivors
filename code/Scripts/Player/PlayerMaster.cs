@@ -1,21 +1,22 @@
 public sealed class PlayerMaster : EntityMaster
 {
-  public new PlayerStats Stats { get; set; }
+  [RequireComponent] public new PlayerStats Stats { get; set; }
 
   public delegate void CollectItemEventHandler(Item item);
   public event CollectItemEventHandler EventCollectItem;
-  public void CallCollectItem(Item item){
+  public void CallEventCollectItem(Item item){
 		EventCollectItem?.Invoke( item );
 	}
 
   public delegate void GainExperienceEventHandler(float value);
   public event GainExperienceEventHandler EventGainExperience;
-  public void CallGainExperience(float value){
+  public void CallEventGainExperience(float value){
 		EventGainExperience?.Invoke( value );
 	}
 
-  protected override void OnAwake(){
-    base.OnAwake();
-    Stats = Components.Get<PlayerStats>();
-  }
+  public delegate void LevelUpEventHandler(int level);
+  public event LevelUpEventHandler EventLevelUp;
+  public void CallEventLevelUp(int level){
+		EventLevelUp?.Invoke( level );
+	}
 }

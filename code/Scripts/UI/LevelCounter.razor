@@ -1,0 +1,36 @@
+@using Sandbox;
+@using Sandbox.UI;
+@inherits PanelComponent;
+@using System;
+
+<root>
+	<div class="title">🧘 @CurrentLevel</div>
+</root>
+
+@code
+{
+	[Property] public float CurrentLevel { get; set; } = 0;
+
+	private PlayerStats playerStats { get; set; }
+	private PlayerMaster playerMaster { get; set; }
+
+	/// <summary>
+	/// the hash determines if the system should be rebuilt. If it changes, it will be rebuilt
+	/// </summary>
+	protected override int BuildHash() => System.HashCode.Combine( CurrentLevel );
+
+	protected override void OnEnabled(){
+		GameObject player = GameMaster.Instance.Player;
+		playerMaster = player.Components.Get<PlayerMaster>();
+		playerStats = player.Components.Get<PlayerStats>();
+
+		playerMaster.EventLevelUp += OnLevelUp;
+	}
+	protected override void OnDisabled(){
+		playerMaster.EventLevelUp -= OnLevelUp;
+	}
+
+	private void OnLevelUp(int level){
+		CurrentLevel = playerStats.Level;
+	}
+}

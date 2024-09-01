@@ -109,7 +109,7 @@
         "Position": "0,-26,40",
         "Rotation": "0,0.7071068,0,0.7071068",
         "Enabled": true,
-        "__Prefab": "prefabs/healthscreen.prefab",
+        "__Prefab": "prefabs/ui/healthscreen.prefab",
         "__PrefabVariables": {}
       }
     ],

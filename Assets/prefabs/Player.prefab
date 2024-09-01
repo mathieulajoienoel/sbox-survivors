@@ -38,6 +38,8 @@
         "Alive": true,
         "CollectRadius": 20,
         "Experience": 0,
+        "ExperienceNeeded": 10,
+        "Level": 1,
         "MaxHealth": 100,
         "MoveSpeed": 25
       },
@@ -48,6 +50,10 @@
       {
         "__type": "PlayerKnockback",
         "__guid": "d0502772-aedc-4e3f-a36d-04bb044af1b8"
+      },
+      {
+        "__type": "PlayerLevel",
+        "__guid": "4a2b1dbe-3d94-4e86-b290-dcc325c43998"
       }
     ],
     "Children": [
@@ -505,7 +511,7 @@
         "Position": "0,-26,40",
         "Rotation": "0,0.7071068,0,0.7071068",
         "Enabled": true,
-        "__Prefab": "prefabs/healthscreen.prefab",
+        "__Prefab": "prefabs/ui/healthscreen.prefab",
         "__PrefabVariables": {}
       },
       {

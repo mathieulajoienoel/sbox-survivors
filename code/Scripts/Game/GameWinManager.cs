@@ -11,5 +11,7 @@ public sealed class GameWinManager : Component {
   private void OnGameWin(){
     Game.IsPaused = true;
     // @@TODO show game win screen
+
+    Log.Info("You win!");
   }
 }

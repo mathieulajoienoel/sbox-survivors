@@ -1,7 +1,12 @@
 using System;
 public sealed class GameMaster : Component {
 
-  public static GameMaster Instance;
+  private static GameMaster instance = null;
+  static GameMaster() {
+  }
+  public static GameMaster Instance {
+    get { return instance; }
+  }
 
   [RequireComponent] public LevelData LevelData { get; set; }
 
@@ -47,9 +52,8 @@ public sealed class GameMaster : Component {
 	protected override void OnAwake()
 	{
 		base.OnAwake();
+    instance = this;
     Player = PlayerPrefab.Clone(PlayerSpawnPoint.Transform.Position);
-
-    Instance = this;
 	}
   public int Rand(int min, int max){
     return RandomGenerator.Next(min, max);

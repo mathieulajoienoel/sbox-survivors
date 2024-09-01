@@ -1,0 +1,30 @@
+{
+  "RootObject": {
+    "__guid": "fc08b6cc-037e-4da6-9608-3b7c304e1e0a",
+    "Flags": 0,
+    "Name": "LevelCounter",
+    "Enabled": true,
+    "Components": [
+      {
+        "__type": "Sandbox.ScreenPanel",
+        "__guid": "1bb9a577-d39e-4d43-a452-0b1b71010c6d",
+        "AutoScreenScale": true,
+        "Opacity": 0.55,
+        "Scale": 1,
+        "ScaleStrategy": "ConsistentHeight",
+        "ZIndex": 100
+      },
+      {
+        "__type": "LevelCounter",
+        "__guid": "f98096e5-9e67-4d56-b724-c44976d5e88d",
+        "CurrentLevel": 0
+      }
+    ]
+  },
+  "ShowInMenu": false,
+  "MenuPath": null,
+  "MenuIcon": null,
+  "ResourceVersion": 1,
+  "__references": [],
+  "__version": 1
+}

@@ -28,7 +28,6 @@ public sealed class Teleporter : Component, Component.ITriggerListener {
     if(other.GameObject.IsRoot) obj = other.GameObject;
     if(other.GameObject.Parent.IsRoot) obj = other.GameObject.Parent;
     if(obj == null) return;
-    Log.Info(obj);
 
     OtherEnd.Components.Get<Teleporter>().Teleport(obj);
 

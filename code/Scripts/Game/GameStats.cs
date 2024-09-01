@@ -1,5 +1,4 @@
 public sealed class GameStats : Component {
-  //public GameStats Instance { get; set; }
   [RequireComponent] public GameMaster master { get; set; }
 
   private PlayerMaster playerMaster;
@@ -17,6 +16,7 @@ public sealed class GameStats : Component {
     playerMaster.EventReceiveDamage += OnDamageReceived;
     playerMaster.EventCollectItem += OnItemCollect;
     playerMaster.EventGainExperience += OnExperienceGain;
+    playerMaster.EventLevelUp += OnLevelUp;
 	}
 
   protected override void OnDisabled()
@@ -29,6 +29,7 @@ public sealed class GameStats : Component {
     playerMaster.EventReceiveDamage -= OnDamageReceived;
     playerMaster.EventCollectItem -= OnItemCollect;
     playerMaster.EventGainExperience -= OnExperienceGain;
+    playerMaster.EventLevelUp -= OnLevelUp;
 	}
 
   public void ResetStats(){
@@ -39,6 +40,7 @@ public sealed class GameStats : Component {
     Sandbox.Services.Stats.SetValue( "experience", 0 );
     Sandbox.Services.Stats.SetValue( "items", 0 );
     Sandbox.Services.Stats.SetValue( "teleported", 0 );
+    Sandbox.Services.Stats.SetValue( "level_up", 0 );
   }
 
   private void OnEnemyDeath(){
@@ -54,6 +56,7 @@ public sealed class GameStats : Component {
     Sandbox.Services.Stats.Increment( "damage_received", damage.Damage );
   }
   private void OnItemCollect(Item item){
+    if(item.Type == CollectableType.Experience) return;
     Sandbox.Services.Stats.Increment( "items", item.Value );
   }
   private void OnExperienceGain(float value){
@@ -63,6 +66,9 @@ public sealed class GameStats : Component {
     if(TeleportedObject.Tags.Has("Player")){
       Sandbox.Services.Stats.Increment( "teleported", 1 );
     }
+  }
+  private void OnLevelUp(int level){
+    Sandbox.Services.Stats.Increment( "level_up", 1 );
   }
 
 }

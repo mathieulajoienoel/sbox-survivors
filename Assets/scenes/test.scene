@@ -92,12 +92,12 @@
           "__guid": "7041a6c0-d167-4939-bdf3-238560e1c346",
           "DamagePopupPrefab": {
             "_type": "gameobject",
-            "prefab": "prefabs/damagepopuptemplate.prefab"
+            "prefab": "prefabs/ui/damagepopuptemplate.prefab"
           },
           "DebugMode": true,
           "ExperiencePopupPrefab": {
             "_type": "gameobject",
-            "prefab": "prefabs/experiencepopuptemplate.prefab"
+            "prefab": "prefabs/ui/experiencepopuptemplate.prefab"
           },
           "ExperiencePrefab": {
             "_type": "gameobject",
@@ -133,6 +133,10 @@
           "EnemySpawnPoints": [],
           "MaximumEnemiesOnScreen": 100,
           "TotalEnemiesThisWave": 0
+        },
+        {
+          "__type": "GameStats",
+          "__guid": "ffae256e-5cc6-4a53-a73d-4e1bb7e5ef7a"
         }
       ]
     },
@@ -482,7 +486,7 @@
       "Flags": 0,
       "Name": "KillCounter",
       "Enabled": true,
-      "__Prefab": "prefabs/killcounter.prefab",
+      "__Prefab": "prefabs/ui/killcounter.prefab",
       "__PrefabVariables": {}
     },
     {
@@ -490,7 +494,7 @@
       "Flags": 0,
       "Name": "ExperienceCounter",
       "Enabled": true,
-      "__Prefab": "prefabs/experiencecounter.prefab",
+      "__Prefab": "prefabs/ui/experiencecounter.prefab",
       "__PrefabVariables": {}
     },
     {
@@ -694,6 +698,14 @@
           "__guid": "fe0d650c-2c37-4557-b434-2dfa99ed8a14"
         }
       ]
+    },
+    {
+      "__guid": "fc08b6cc-037e-4da6-9608-3b7c304e1e0a",
+      "Flags": 0,
+      "Name": "LevelCounter",
+      "Enabled": true,
+      "__Prefab": "prefabs/ui/levelcounter.prefab",
+      "__PrefabVariables": {}
     }
   ],
   "SceneProperties": {

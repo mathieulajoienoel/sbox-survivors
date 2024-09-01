@@ -1,4 +1,3 @@
-using System;
 public sealed class PlayerExperience : Component, Component.ITriggerListener {
   private PlayerMaster master;
   protected override void OnEnabled(){
@@ -28,12 +27,11 @@ public sealed class PlayerExperience : Component, Component.ITriggerListener {
   private void OnCollectItem(Item item){
     if(item.Type != CollectableType.Experience) return;
     if(item.Value == 0) return;
-    master.CallGainExperience(item.Value);
+    master.CallEventGainExperience(item.Value);
   }
 
   private void OnExperienceGain(float value){
     master.Stats.Experience += value;
-
     GameMaster.Instance.CallExperienceGainEvent(value);
   }
 
@@ -53,6 +51,6 @@ public sealed class PlayerExperience : Component, Component.ITriggerListener {
     Item item = experience.Collect();
     if(item == null) return;
 
-    master.CallCollectItem(item);
+    master.CallEventCollectItem(item);
 	}
 }
