@@ -36,6 +36,7 @@ public sealed class Teleporter : Component, Component.ITriggerListener {
   }
 
   public void Teleport(GameObject obj){
+    GameMaster.Instance.CallTeleportEvent(obj);
     obj.Transform.Position = Transform.Position + new Vector3(GameMaster.Instance.Rand(-20,20), GameMaster.Instance.Rand(-20,20), Transform.Position.z);
 
     DisableTeleport();

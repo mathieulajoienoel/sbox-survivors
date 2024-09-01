@@ -26,8 +26,13 @@ public sealed class GameMaster : Component {
   public event GameWinEventHandler GameWinEvent;
   public delegate void ExperienceGainEventHandler(float value);
   public event ExperienceGainEventHandler ExperienceGainEvent;
+  public delegate void TeleportEventHandler(GameObject TeleportedObject);
+  public event TeleportEventHandler TeleportEvent;
   public void CallEnemyDeathEvent(){
 		EnemyDeathEvent?.Invoke();
+	}
+  public void CallTeleportEvent(GameObject TeleportedObject){
+		TeleportEvent?.Invoke(TeleportedObject);
 	}
   public void CallPlayerDeathEvent(){
 		PlayerDeathEvent?.Invoke();

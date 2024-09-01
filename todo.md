@@ -76,6 +76,10 @@ Features :
   * [ ] Stats https://docs.facepunch.com/s/sbox-dev/doc/stats-As30shVf3K
     * [ ] Sandbox stats send
     * [ ] Sandbox stats screen
+  * [ ] Game timer
+    * [ ] Timer
+    * [ ] Display
+    * [ ] Boss on end
 
 Maybe :
   * [ ] Beakables with loot
@@ -92,6 +96,8 @@ Maybe :
   * [x] Teleporters
   * [ ] Looping map
   * [ ] Leaderboard https://docs.facepunch.com/s/sbox-dev/doc/leaderboards-HLSCo50GWh
+  * [ ] Events on timer
+  * [ ] Bosses on timer
 
 
 Content :

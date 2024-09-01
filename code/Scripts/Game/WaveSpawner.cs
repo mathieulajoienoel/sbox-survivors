@@ -49,7 +49,7 @@ public sealed class WaveSpawner : Component {
   }
 
 	private int NextWave(int waveNumber){
-    Log.Info("Spawning wave" + waveNumber);
+    Log.Info("Spawning wave " + waveNumber);
     TotalEnemiesThisWave = 0;
 
     LevelData.DifficultyMultiplier += 0.5f;
