@@ -213,8 +213,8 @@
             "Static": false
           },
           {
-            "__type": "PlayerExperience",
-            "__guid": "7a1003a6-819b-4144-b508-7bcac5d1e19e"
+            "__type": "PlayerItemCollector",
+            "__guid": "76081e19-50da-4e4e-8c5a-55b10d7b9aa3"
           }
         ]
       },

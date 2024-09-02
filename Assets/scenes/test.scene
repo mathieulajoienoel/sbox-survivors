@@ -411,7 +411,7 @@
           "__guid": "0098c26b-9c4b-4014-87e3-296d660bc67a",
           "Flags": 0,
           "Name": "Grass (1)",
-          "Position": "141.4955,1.890601,1",
+          "Position": "0,0,0",
           "Enabled": true,
           "Components": [
             {
@@ -435,7 +435,7 @@
           "__guid": "ff5be5c4-1f9c-4219-9b9d-541cf979c49f",
           "Flags": 0,
           "Name": "Grass (2)",
-          "Position": "82.16376,13.40844,1",
+          "Position": "82.16376,13.40844,0",
           "Enabled": true,
           "Components": [
             {
@@ -459,7 +459,7 @@
           "__guid": "9f7bae86-5c25-4d87-a260-a5e8e57bae4b",
           "Flags": 0,
           "Name": "Grass",
-          "Position": "85.09039,-49.65507,1",
+          "Position": "54.9904,-32.25509,0",
           "Enabled": true,
           "Components": [
             {
@@ -705,6 +705,16 @@
       "Name": "LevelCounter",
       "Enabled": true,
       "__Prefab": "prefabs/ui/levelcounter.prefab",
+      "__PrefabVariables": {}
+    },
+    {
+      "__guid": "74ba0e20-5295-46d2-b357-c2d9d2493b4e",
+      "Flags": 0,
+      "Name": "CollectableWeapon",
+      "Position": "-133.1992,169.0185,12.5",
+      "Scale": "0.25,0.25,0.25",
+      "Enabled": true,
+      "__Prefab": "prefabs/collectables/collectableweapon.prefab",
       "__PrefabVariables": {}
     }
   ],

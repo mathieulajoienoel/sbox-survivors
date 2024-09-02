@@ -1,0 +1,84 @@
+{
+  "RootObject": {
+    "__guid": "74ba0e20-5295-46d2-b357-c2d9d2493b4e",
+    "Flags": 0,
+    "Name": "CollectableWeapon",
+    "Position": "19.63815,57.95651,12.5",
+    "Scale": "0.25,0.25,0.25",
+    "Enabled": true,
+    "Children": [
+      {
+        "__guid": "2a6fce30-992e-4cd0-878f-459a63bfda94",
+        "Flags": 0,
+        "Name": "Sphere",
+        "Position": "0,0,0",
+        "Tags": "collectable",
+        "Enabled": true,
+        "Components": [
+          {
+            "__type": "Sandbox.SphereCollider",
+            "__guid": "429856d0-4b25-41be-b428-bc680ef09761",
+            "Center": "0,0,0",
+            "IsTrigger": true,
+            "Radius": 50,
+            "Static": false
+          },
+          {
+            "__type": "Weapon",
+            "__guid": "626c7f25-6980-4ec4-9a0b-5fed265a765c"
+          },
+          {
+            "__type": "Item",
+            "__guid": "43db7354-20e0-463b-85c2-c0056e539586",
+            "Type": "Weapon",
+            "Value": 0,
+            "item": {
+              "_type": "gameobject",
+              "prefab": "prefabs/weaponarea.prefab"
+            }
+          }
+        ]
+      },
+      {
+        "__guid": "3496af5d-1a76-4e16-84b5-b16a7d0abc71",
+        "Flags": 0,
+        "Name": "Attract",
+        "Position": "0,0,0",
+        "Tags": "follow_item_collector",
+        "Enabled": true,
+        "Components": [
+          {
+            "__type": "Sandbox.ModelRenderer",
+            "__guid": "0067959b-87c7-4d0d-a267-c592db44379b",
+            "BodyGroups": 18446744073709551615,
+            "Model": "models/dev/sphere.vmdl",
+            "RenderType": "On",
+            "Tint": "1,0,0.93333,1"
+          },
+          {
+            "__type": "FollowEntity",
+            "__guid": "5621b088-4c08-47aa-9892-0b9a3d4b8e3d",
+            "AttractedTags": "player",
+            "Force": 1,
+            "Size": 150,
+            "Speed": 1
+          },
+          {
+            "__type": "Sandbox.SphereCollider",
+            "__guid": "7f726098-8e51-4a1b-abfa-120f0ebc881a",
+            "Center": "0,0,0",
+            "IsTrigger": true,
+            "Radius": 150,
+            "Static": false
+          }
+        ]
+      }
+    ]
+  },
+  "ShowInMenu": false,
+  "MenuPath": null,
+  "MenuIcon": null,
+  "ResourceVersion": 1,
+  "__references": [],
+  "__version": 1
+}

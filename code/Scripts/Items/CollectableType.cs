@@ -1,1 +1,1 @@
-public enum CollectableType { Experience };
+public enum CollectableType { Experience, Weapon };

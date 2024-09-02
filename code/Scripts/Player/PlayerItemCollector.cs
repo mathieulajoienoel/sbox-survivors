@@ -1,4 +1,4 @@
-public sealed class PlayerExperience : Component, Component.ITriggerListener {
+public sealed class PlayerItemCollector : Component, Component.ITriggerListener {
   private PlayerMaster master;
   protected override void OnEnabled(){
     master = Components.GetInParentOrSelf<PlayerMaster>();
@@ -25,9 +25,21 @@ public sealed class PlayerExperience : Component, Component.ITriggerListener {
 	}
 
   private void OnCollectItem(Item item){
-    if(item.Type != CollectableType.Experience) return;
-    if(item.Value == 0) return;
-    master.CallEventGainExperience(item.Value);
+    //if(item.Value == 0) return;
+    if(item.Type == CollectableType.Experience){
+      master.CallEventGainExperience(item.Value);
+      return;
+    }
+    if(item.Type == CollectableType.Weapon){
+      GameObject weapon = GiveWeapon(item);
+      master.CallEventCollectWeapon(weapon);
+      return;
+    }
+  }
+
+  private GameObject GiveWeapon(Item item){
+    GameObject player = GameMaster.Instance.Player;
+    return item.item.Clone(new CloneConfig(new Transform(player.Transform.Position), player, true));
   }
 
   private void OnExperienceGain(float value){
@@ -46,11 +58,11 @@ public sealed class PlayerExperience : Component, Component.ITriggerListener {
   public void OnTriggerEnter( Collider other )
 	{
 		if(!other.GameObject.Tags.Has("collectable")) return;
-    Experience experience = other.GameObject.Components.Get<Experience>();
-    if(experience == null) return;
-    Item item = experience.Collect();
-    if(item == null) return;
 
+    Collectable collectable = other.GameObject.Components.Get<Collectable>();
+    if(collectable == null) return;
+    Item item = collectable.Collect();
+    if(item == null) return;
     master.CallEventCollectItem(item);
 	}
 }

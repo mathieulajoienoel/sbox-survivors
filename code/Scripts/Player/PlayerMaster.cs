@@ -19,4 +19,10 @@ public sealed class PlayerMaster : EntityMaster
   public void CallEventLevelUp(int level){
 		EventLevelUp?.Invoke( level );
 	}
+
+  public delegate void CollectWeaponEventHandler(GameObject weapon);
+  public event CollectWeaponEventHandler EventCollectWeapon;
+  public void CallEventCollectWeapon(GameObject weapon){
+		EventCollectWeapon?.Invoke( weapon );
+	}
 }

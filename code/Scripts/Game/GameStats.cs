@@ -17,6 +17,7 @@ public sealed class GameStats : Component {
     playerMaster.EventCollectItem += OnItemCollect;
     playerMaster.EventGainExperience += OnExperienceGain;
     playerMaster.EventLevelUp += OnLevelUp;
+    playerMaster.EventCollectWeapon += OnCollectWeapon;
 	}
 
   protected override void OnDisabled()
@@ -30,6 +31,7 @@ public sealed class GameStats : Component {
     playerMaster.EventCollectItem -= OnItemCollect;
     playerMaster.EventGainExperience -= OnExperienceGain;
     playerMaster.EventLevelUp -= OnLevelUp;
+    playerMaster.EventCollectWeapon -= OnCollectWeapon;
 	}
 
   public void ResetStats(){
@@ -41,6 +43,7 @@ public sealed class GameStats : Component {
     Sandbox.Services.Stats.SetValue( "items", 0 );
     Sandbox.Services.Stats.SetValue( "teleported", 0 );
     Sandbox.Services.Stats.SetValue( "level_up", 0 );
+    Sandbox.Services.Stats.SetValue( "collected_weapons", 0 );
   }
 
   private void OnEnemyDeath(){
@@ -69,6 +72,10 @@ public sealed class GameStats : Component {
   }
   private void OnLevelUp(int level){
     Sandbox.Services.Stats.Increment( "level_up", 1 );
+  }
+
+  private void OnCollectWeapon(GameObject weapon){
+    Sandbox.Services.Stats.Increment( "collected_weapons", 1 );
   }
 
 }

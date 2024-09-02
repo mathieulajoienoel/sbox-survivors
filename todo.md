@@ -32,6 +32,8 @@ Basic :
   * [x] Collectable
     * [x] Item
     * [x] Experience
+    * [x] Weapons
+    * [ ] Powerups
   * [ ] States :
     * [x] Win manager
     * [x] Game over manager
@@ -74,7 +76,7 @@ Features :
   * [ ] After game results
     * [ ] Show last game stats panel
   * [ ] Stats https://docs.facepunch.com/s/sbox-dev/doc/stats-As30shVf3K
-    * [ ] Sandbox stats send
+    * [x] Sandbox stats send
     * [ ] Sandbox stats screen
   * [ ] Game timer
     * [ ] Timer
