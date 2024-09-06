@@ -79,12 +79,20 @@ where Y : EntityMaster
       Y otherMaster = GetMasterFromCollider(collider);
       if ( otherMaster == null || otherMaster == master) return false;
 
-      if(Knockback > 0f) ApplyKnockback(otherMaster);
-
-      DamageInfo damage = new DamageInfo(Damage, master.GameObject, GameObject);
-      otherMaster.CallEventReceiveDamage(damage);
-      master.CallEventDealDamage(damage);
+      Swing(otherMaster);
       return true;
+  }
+
+  protected virtual void Swing(Y otherMaster){
+    if(Knockback > 0f) ApplyKnockback(otherMaster);
+
+    DamageInfo damage = OnHit();
+    otherMaster.CallEventReceiveDamage(damage);
+    master.CallEventDealDamage(damage);
+  }
+
+  protected virtual DamageInfo OnHit(){
+    return new DamageInfo(Damage, master.GameObject, GameObject);
   }
 
   protected virtual void ApplyKnockback(Y otherMaster){

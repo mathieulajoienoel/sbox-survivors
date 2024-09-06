@@ -1,0 +1,59 @@
+{
+  "RootObject": {
+    "__guid": "7b67c877-20d6-4463-8efa-b42d74035e68",
+    "Flags": 0,
+    "Name": "playerprojectile",
+    "Scale": "0.15,0.15,0.15",
+    "Tags": "projectile,player_weapon",
+    "Enabled": true,
+    "Components": [
+      {
+        "__type": "Sandbox.ModelRenderer",
+        "__guid": "f24d08e2-ca1a-4ba4-8099-321e5131f3f7",
+        "BodyGroups": 18446744073709551615,
+        "Model": "models/dev/box.vmdl",
+        "RenderType": "On",
+        "Tint": "1,1,1,1"
+      },
+      {
+        "__type": "WeaponBaseProjectile",
+        "__guid": "2b2380a3-0af5-4bdf-9bba-bede6c5a4ff5",
+        "Damage": {},
+        "Direction": "0,0,0",
+        "Speed": 0
+      },
+      {
+        "__type": "Sandbox.BoxCollider",
+        "__guid": "ce51c3f9-30d7-4d59-939f-d3f368086a99",
+        "Center": "0,0,0",
+        "IsTrigger": false,
+        "Scale": "50,50,50",
+        "Static": false
+      },
+      {
+        "__type": "Sandbox.Rigidbody",
+        "__guid": "de67de39-b440-4854-a353-d46ae97cf808",
+        "AngularDamping": 0,
+        "Gravity": true,
+        "LinearDamping": 0,
+        "Locking": {
+          "Z": true
+        },
+        "MassCenterOverride": "0,0,0",
+        "MassOverride": 0,
+        "MotionEnabled": true,
+        "OverrideMassCenter": false,
+        "RigidbodyFlags": 0,
+        "StartAsleep": false
+      }
+    ],
+    "Children": [],
+    "__variables": []
+  },
+  "ShowInMenu": false,
+  "MenuPath": null,
+  "MenuIcon": null,
+  "ResourceVersion": 1,
+  "__references": [],
+  "__version": 1
+}
