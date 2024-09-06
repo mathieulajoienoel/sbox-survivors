@@ -58,7 +58,7 @@
         "Weapons": [
           {
             "_type": "gameobject",
-            "prefab": "prefabs/enemymeleeweapon.prefab"
+            "prefab": "prefabs/weapons/enemymeleeweapon.prefab"
           }
         ]
       },

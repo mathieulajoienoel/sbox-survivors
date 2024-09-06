@@ -37,8 +37,10 @@ Basic :
   * [ ] States :
     * [x] Win manager
     * [x] Game over manager
-    * [ ] Win screen
-    * [ ] Game over screen
+    * [x] Win screen
+    * [x] Game over screen
+    * [ ] Win screen styling
+    * [ ] Game over screen styling
     * [ ] Send player to menu after game end
   * [ ] Scene selection
   * [ ] Sounds
@@ -100,6 +102,7 @@ Maybe :
   * [ ] Leaderboard https://docs.facepunch.com/s/sbox-dev/doc/leaderboards-HLSCo50GWh
   * [ ] Events on timer
   * [ ] Bosses on timer
+  * [ ] Player lives/respawn
 
 
 Content :

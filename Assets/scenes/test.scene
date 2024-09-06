@@ -1,5 +1,5 @@
 {
-  "__guid": "477e90fa-0aaa-4456-a343-3b23af84521c",
+  "__guid": "8ce574f0-6759-4067-bd90-6bc0eb7350a4",
   "GameObjects": [
     {
       "__guid": "bfc59c12-1ed2-4f91-8956-a95a315eac3c",
@@ -45,6 +45,7 @@
           "Feathering": 0.02,
           "FrameInterval": 5,
           "MaxDistance": 512,
+          "MultiBounce": false,
           "Projection": "Sphere",
           "RenderDynamically": false,
           "TintColor": "1,1,1,1",
@@ -101,11 +102,11 @@
           },
           "ExperiencePrefab": {
             "_type": "gameobject",
-            "prefab": "prefabs/experience.prefab"
+            "prefab": "prefabs/collectables/experience.prefab"
           },
           "PlayerPrefab": {
             "_type": "gameobject",
-            "prefab": "prefabs/player.prefab"
+            "prefab": "prefabs/entities/player.prefab"
           },
           "PlayerSpawnPoint": {
             "_type": "gameobject",
@@ -120,7 +121,7 @@
           "EnemyPrefabs": [
             {
               "_type": "gameobject",
-              "prefab": "prefabs/enemy.prefab"
+              "prefab": "prefabs/entities/enemy.prefab"
             }
           ],
           "TotalWaves": 10
@@ -137,6 +138,14 @@
         {
           "__type": "GameStats",
           "__guid": "ffae256e-5cc6-4a53-a73d-4e1bb7e5ef7a"
+        },
+        {
+          "__type": "GameOverManager",
+          "__guid": "664bfaa9-c856-44a1-91bc-417462ed5e15",
+          "GameOverPanel": {
+            "_type": "gameobject",
+            "prefab": "prefabs/ui/gameoverscreen.prefab"
+          }
         }
       ]
     },
@@ -152,14 +161,14 @@
       "__guid": "bd7efef7-91ac-4644-811f-44acd60ac593",
       "Flags": 0,
       "Name": "Obstacles",
-      "Position": "-109.217,13.76151,661.7227",
+      "Position": "0,0,12.5",
       "Enabled": true,
       "Children": [
         {
           "__guid": "bc312549-1526-4183-a05f-2e7d4d501ccd",
           "Flags": 0,
           "Name": "Cube (5)",
-          "Position": "507.6386,108.4594,-636.7227",
+          "Position": "507.6386,108.4594,12.5",
           "Tags": "solid",
           "Enabled": true,
           "Components": [
@@ -201,7 +210,7 @@
           "__guid": "17363c6a-7d4e-4939-a0b5-1fa93b95bce4",
           "Flags": 0,
           "Name": "Cube (4)",
-          "Position": "363.6054,-144.7168,-636.7227",
+          "Position": "363.6054,-144.7168,12.5",
           "Tags": "solid",
           "Enabled": true,
           "Components": [
@@ -243,7 +252,7 @@
           "__guid": "17ca4407-67ba-45a0-ae86-12dffc56b9a0",
           "Flags": 0,
           "Name": "Cube (3)",
-          "Position": "102.3775,226.5488,-636.7227",
+          "Position": "102.3775,226.5488,12.5",
           "Tags": "solid",
           "Enabled": true,
           "Components": [
@@ -285,7 +294,7 @@
           "__guid": "c1523229-d76f-4397-b694-2b1a2513dc4b",
           "Flags": 0,
           "Name": "Cube (2)",
-          "Position": "-222.368,136.1925,-636.7227",
+          "Position": "-222.368,136.1925,12.5",
           "Tags": "solid",
           "Enabled": true,
           "Components": [
@@ -327,7 +336,7 @@
           "__guid": "3948d4dd-6634-48e3-bb07-b35752b7fae7",
           "Flags": 0,
           "Name": "Cube (1)",
-          "Position": "-278.7289,-156.3469,-636.7227",
+          "Position": "-278.7289,-156.3469,12.5",
           "Tags": "solid",
           "Enabled": true,
           "Components": [
@@ -369,7 +378,7 @@
           "__guid": "c3375ee1-d8d0-47da-8bfe-ce9c2478cd1a",
           "Flags": 0,
           "Name": "Cube",
-          "Position": "-8.442802,-320.0616,-636.7227",
+          "Position": "-8.442802,-320.0616,12.5",
           "Tags": "solid",
           "Enabled": true,
           "Components": [
@@ -417,6 +426,222 @@
             {
               "__type": "Sandbox.SpriteRenderer",
               "__guid": "551fe8e7-ab06-48a6-95bd-5a6fc4dd6470",
+              "Additive": false,
+              "CastShadows": false,
+              "Color": "1,1,1,1",
+              "DepthFeather": 0,
+              "FlipHorizontal": false,
+              "FlipVertical": false,
+              "FogStrength": 1,
+              "Lighting": false,
+              "Opaque": false,
+              "Size": "60,60",
+              "Texture": "sprites/grass_patch.vtex"
+            }
+          ]
+        },
+        {
+          "__guid": "1edf92af-cd24-4d9b-b910-7a3c7d4e49a2",
+          "Flags": 0,
+          "Name": "Grass (9)",
+          "Position": "29.95897,-55.859,0",
+          "Enabled": true,
+          "Components": [
+            {
+              "__type": "Sandbox.SpriteRenderer",
+              "__guid": "7656ebfa-cfd7-4138-b5a7-3bbb2c8a5a8f",
+              "Additive": false,
+              "CastShadows": false,
+              "Color": "1,1,1,1",
+              "DepthFeather": 0,
+              "FlipHorizontal": false,
+              "FlipVertical": false,
+              "FogStrength": 1,
+              "Lighting": false,
+              "Opaque": false,
+              "Size": "60,60",
+              "Texture": "sprites/grass_patch.vtex"
+            }
+          ]
+        },
+        {
+          "__guid": "86c4d992-262b-4359-a92c-485878c98636",
+          "Flags": 0,
+          "Name": "Grass (10)",
+          "Position": "-52.20478,-69.26744,0",
+          "Enabled": true,
+          "Components": [
+            {
+              "__type": "Sandbox.SpriteRenderer",
+              "__guid": "fa8b21f9-932c-42f2-bd99-90be8d826af2",
+              "Additive": false,
+              "CastShadows": false,
+              "Color": "1,1,1,1",
+              "DepthFeather": 0,
+              "FlipHorizontal": false,
+              "FlipVertical": false,
+              "FogStrength": 1,
+              "Lighting": false,
+              "Opaque": false,
+              "Size": "60,60",
+              "Texture": "sprites/grass_patch.vtex"
+            }
+          ]
+        },
+        {
+          "__guid": "a30599e3-67e8-4597-a0cd-e11b8d576ed6",
+          "Flags": 0,
+          "Name": "Grass (11)",
+          "Position": "2.785615,-101.5225,0",
+          "Enabled": true,
+          "Components": [
+            {
+              "__type": "Sandbox.SpriteRenderer",
+              "__guid": "7559fb0d-317c-411c-ae42-a8bf70a428ec",
+              "Additive": false,
+              "CastShadows": false,
+              "Color": "1,1,1,1",
+              "DepthFeather": 0,
+              "FlipHorizontal": false,
+              "FlipVertical": false,
+              "FogStrength": 1,
+              "Lighting": false,
+              "Opaque": false,
+              "Size": "60,60",
+              "Texture": "sprites/grass_patch.vtex"
+            }
+          ]
+        },
+        {
+          "__guid": "6e0452a5-9d7e-46db-b225-73f4d93b0a2a",
+          "Flags": 0,
+          "Name": "Grass (6)",
+          "Position": "9.674797,97.59402,0",
+          "Enabled": true,
+          "Components": [
+            {
+              "__type": "Sandbox.SpriteRenderer",
+              "__guid": "d1e9d64c-0f5f-4205-a53f-40f5c62309b6",
+              "Additive": false,
+              "CastShadows": false,
+              "Color": "1,1,1,1",
+              "DepthFeather": 0,
+              "FlipHorizontal": false,
+              "FlipVertical": false,
+              "FogStrength": 1,
+              "Lighting": false,
+              "Opaque": false,
+              "Size": "60,60",
+              "Texture": "sprites/grass_patch.vtex"
+            }
+          ]
+        },
+        {
+          "__guid": "bc290aad-0f0b-4147-8419-8670006513f1",
+          "Flags": 0,
+          "Name": "Grass (7)",
+          "Position": "-72.48896,84.18558,0",
+          "Enabled": true,
+          "Components": [
+            {
+              "__type": "Sandbox.SpriteRenderer",
+              "__guid": "81863075-6e34-4a36-a187-ee0b5ba4e8f6",
+              "Additive": false,
+              "CastShadows": false,
+              "Color": "1,1,1,1",
+              "DepthFeather": 0,
+              "FlipHorizontal": false,
+              "FlipVertical": false,
+              "FogStrength": 1,
+              "Lighting": false,
+              "Opaque": false,
+              "Size": "60,60",
+              "Texture": "sprites/grass_patch.vtex"
+            }
+          ]
+        },
+        {
+          "__guid": "c3348d4c-88c4-49a5-96cc-33bd609604e5",
+          "Flags": 0,
+          "Name": "Grass (8)",
+          "Position": "-17.49856,51.93049,0",
+          "Enabled": true,
+          "Components": [
+            {
+              "__type": "Sandbox.SpriteRenderer",
+              "__guid": "63d90d7b-8b7e-42af-94b4-8a16de59bcf9",
+              "Additive": false,
+              "CastShadows": false,
+              "Color": "1,1,1,1",
+              "DepthFeather": 0,
+              "FlipHorizontal": false,
+              "FlipVertical": false,
+              "FogStrength": 1,
+              "Lighting": false,
+              "Opaque": false,
+              "Size": "60,60",
+              "Texture": "sprites/grass_patch.vtex"
+            }
+          ]
+        },
+        {
+          "__guid": "f97ed053-ddd3-4352-be40-4b63009e8bef",
+          "Flags": 0,
+          "Name": "Grass (3)",
+          "Position": "-48.47559,13.40844,0",
+          "Enabled": true,
+          "Components": [
+            {
+              "__type": "Sandbox.SpriteRenderer",
+              "__guid": "19d529b4-ef44-4a4f-94c8-853576cc9aeb",
+              "Additive": false,
+              "CastShadows": false,
+              "Color": "1,1,1,1",
+              "DepthFeather": 0,
+              "FlipHorizontal": false,
+              "FlipVertical": false,
+              "FogStrength": 1,
+              "Lighting": false,
+              "Opaque": false,
+              "Size": "60,60",
+              "Texture": "sprites/grass_patch.vtex"
+            }
+          ]
+        },
+        {
+          "__guid": "d7cd521d-a7bc-4ed1-a239-b4fd95e51402",
+          "Flags": 0,
+          "Name": "Grass (4)",
+          "Position": "-130.6393,0,0",
+          "Enabled": true,
+          "Components": [
+            {
+              "__type": "Sandbox.SpriteRenderer",
+              "__guid": "dd817530-5894-4f7c-915a-26ba0821f380",
+              "Additive": false,
+              "CastShadows": false,
+              "Color": "1,1,1,1",
+              "DepthFeather": 0,
+              "FlipHorizontal": false,
+              "FlipVertical": false,
+              "FogStrength": 1,
+              "Lighting": false,
+              "Opaque": false,
+              "Size": "60,60",
+              "Texture": "sprites/grass_patch.vtex"
+            }
+          ]
+        },
+        {
+          "__guid": "362050ad-42f8-4ffa-8221-508a21cca379",
+          "Flags": 0,
+          "Name": "Grass (5)",
+          "Position": "-75.64894,-32.25509,0",
+          "Enabled": true,
+          "Components": [
+            {
+              "__type": "Sandbox.SpriteRenderer",
+              "__guid": "6475a72c-8036-4ba5-87a8-dd1868d5ebf7",
               "Additive": false,
               "CastShadows": false,
               "Color": "1,1,1,1",
@@ -501,14 +726,14 @@
       "__guid": "ca84fc4c-99f5-4d01-bd81-1655eb239dfb",
       "Flags": 0,
       "Name": "Entities",
-      "Position": "22.25286,23.3914,231.1123",
+      "Position": "0,0,12.5",
       "Enabled": true,
       "Children": [
         {
           "__guid": "7ddb4abe-878a-469e-a85e-5ccbf583fb9e",
           "Flags": 0,
           "Name": "Teleporter",
-          "Position": "64.26962,-395.4783,-218.6123",
+          "Position": "64.26962,-395.4783,12.5",
           "Tags": "teleporter",
           "Enabled": true,
           "Components": [
@@ -551,7 +776,7 @@
           "__guid": "04da61c0-0eed-496b-9a0d-ab341a892cd4",
           "Flags": 0,
           "Name": "Teleporter (3)",
-          "Position": "-300.7576,-325.345,-218.6123",
+          "Position": "-300.7576,-325.345,12.5",
           "Tags": "teleporter",
           "Enabled": true,
           "Components": [
@@ -594,7 +819,7 @@
           "__guid": "0749b058-4e3f-4e6c-ac54-10abdab01a55",
           "Flags": 0,
           "Name": "Teleporter (2)",
-          "Position": "169.7278,41.44506,-218.6123",
+          "Position": "169.7278,41.44506,12.5",
           "Tags": "teleporter",
           "Enabled": true,
           "Components": [
@@ -637,7 +862,7 @@
           "__guid": "0bc4b0b9-8817-47fe-bfd8-5260ffb165a6",
           "Flags": 0,
           "Name": "Teleporter (1)",
-          "Position": "-219.5551,100.7442,-218.6123",
+          "Position": "-188.3226,29.70227,12.5",
           "Tags": "teleporter",
           "Enabled": true,
           "Components": [
@@ -675,27 +900,6 @@
               "Texture": "sprites/blue.vtex"
             }
           ]
-        }
-      ]
-    },
-    {
-      "__guid": "262b5e2c-97fd-4f5b-aece-c743f2af33b5",
-      "Flags": 0,
-      "Name": "GameWinScreen",
-      "Position": "0.0000000000000000000000006393049,-0.0000000000000000000000007181577,-256.8031",
-      "Components": [
-        {
-          "__type": "Sandbox.ScreenPanel",
-          "__guid": "d6d70cd4-b863-4f72-8a78-fd1950bd7575",
-          "AutoScreenScale": true,
-          "Opacity": 1,
-          "Scale": 1,
-          "ScaleStrategy": "ConsistentHeight",
-          "ZIndex": 100
-        },
-        {
-          "__type": "GameWinPanel",
-          "__guid": "fe0d650c-2c37-4557-b434-2dfa99ed8a14"
         }
       ]
     },

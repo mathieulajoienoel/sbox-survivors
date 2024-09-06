@@ -8,8 +8,7 @@
       {
         "__type": "ExperienceCounter",
         "__guid": "07d615e4-fd01-489d-9840-83296ea67853",
-        "CurrentExperience": 0,
-        "ExperienceForNextLevel": 10,
+        "CurrentExperience": 5,
         "ExperiencePercentage": 0
       },
       {
@@ -18,6 +17,7 @@
         "AutoScreenScale": true,
         "Opacity": 0.55,
         "Scale": 1,
+        "ScaleStrategy": "ConsistentHeight",
         "ZIndex": 100
       }
     ],

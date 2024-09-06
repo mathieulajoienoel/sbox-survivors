@@ -1,6 +1,6 @@
-@import "default.scss";
+//@import "default.scss";
 
-GameWinPanel
+GameOverPanel
 {
 	position: absolute;
 	top: 0;
@@ -14,31 +14,29 @@ GameWinPanel
 	//border-radius: 20px;
 	width:100%;
 	height:100%;
-	h1
+	font-size:16px;
+
+	.victory-message
 	{
 		margin-top: 1rem;
 		margin-bottom:1rem;
-		font-size:256px;
+		font-size:2rem;
+		justify-content: center;
 		font-family: Poppins;
 		color: #fff;
 		width:100%;
 	}
 
-
-	/* General reset */
-	/*body, html {
-		margin: 0;
-		padding: 0;
-		height: 100%;
-		font-family: Arial, sans-serif;
-		background-color: #222;
-		color: #fff;
-		display: flex;
-		justify-content: center;
-		align-items: center;
-	}*/
-
+	.stats-table{
+		//display:table;
+		width: 100%;
+	}
 	.victory-panel {
+		//display:block;
+		width: 100%;
+	}
+
+	/*.victory-panel {
 		position:relative;
 		text-align: center;
 		background-color: rgba(0, 0, 0, 0.7);
@@ -78,7 +76,7 @@ GameWinPanel
 
 	.stats-table tr:hover {
 		background-color: rgba(255, 255, 255, 0.2);
-	}
+	}*/
 
 
 }

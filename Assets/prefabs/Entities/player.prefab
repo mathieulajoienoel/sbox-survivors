@@ -222,9 +222,9 @@
         "__guid": "3908df89-3f32-4aec-8e69-6c3fef138af5",
         "Flags": 0,
         "Name": "WeaponArea",
-        "Tags": "weapon,player_weapon",
+        "Tags": "player_weapon,weapon",
         "Enabled": true,
-        "__Prefab": "prefabs/weaponarea.prefab",
+        "__Prefab": "prefabs/weapons/weaponarea.prefab",
         "__PrefabVariables": {}
       },
       {
@@ -232,7 +232,7 @@
         "Flags": 0,
         "Name": "WeaponRotating",
         "Enabled": true,
-        "__Prefab": "prefabs/weaponrotating.prefab",
+        "__Prefab": "prefabs/weapons/weaponrotating.prefab",
         "__PrefabVariables": {}
       },
       {
@@ -501,7 +501,7 @@
         "Flags": 0,
         "Name": "WeaponMoving",
         "Enabled": true,
-        "__Prefab": "prefabs/weaponmoving.prefab",
+        "__Prefab": "prefabs/weapons/weaponmoving.prefab",
         "__PrefabVariables": {}
       },
       {

@@ -1,0 +1,30 @@
+{
+  "RootObject": {
+    "__guid": "262b5e2c-97fd-4f5b-aece-c743f2af33b5",
+    "Flags": 0,
+    "Name": "GameOverScreen",
+    "Position": "0.0000000000000000000000006393049,-0.0000000000000000000000007181577,-256.8031",
+    "Enabled": true,
+    "Components": [
+      {
+        "__type": "Sandbox.ScreenPanel",
+        "__guid": "d6d70cd4-b863-4f72-8a78-fd1950bd7575",
+        "AutoScreenScale": true,
+        "Opacity": 1,
+        "Scale": 1,
+        "ScaleStrategy": "ConsistentHeight",
+        "ZIndex": 100
+      },
+      {
+        "__type": "GameOverPanel",
+        "__guid": "fa550e17-e3e4-48ba-9560-d6bf674af627"
+      }
+    ]
+  },
+  "ShowInMenu": false,
+  "MenuPath": null,
+  "MenuIcon": null,
+  "ResourceVersion": 1,
+  "__references": [],
+  "__version": 1
+}

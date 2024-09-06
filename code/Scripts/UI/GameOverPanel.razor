@@ -1,0 +1,56 @@
+@using Sandbox;
+@using Sandbox.UI;
+@inherits PanelComponent;
+
+
+<root>
+	<h1 class="message">@Message</h1>
+	<ul class="stats">
+		<li>kills: @kills</li>
+		<li>deaths: @deaths</li>
+		<li>damage_dealt: @damageDealt</li>
+		<li>damage_received: @damageReceived</li>
+		<li>experience: @experience</li>
+		<li>items: @items</li>
+		<li>teleported: @teleported</li>
+		<li>level_up: @levelUp</li>
+		<li>collected_weapons: @collectedWeapons</li>
+	</ul>
+</root>
+
+@code
+{
+	private int kills = 0;
+	private int deaths = 0;
+	private int damageDealt = 0;
+	private int damageReceived = 0;
+	private int experience = 0;
+	private int items = 0;
+	private int teleported = 0;
+	private int levelUp = 0;
+	private int collectedWeapons = 0;
+
+	private string Message = "";
+
+	protected override int BuildHash() => System.HashCode.Combine(
+		kills + deaths + damageDealt + damageReceived + experience + items + teleported + levelUp + collectedWeapons
+	);
+
+	protected override void OnEnabled(){
+		GameMaster.Instance.GameWinEvent += OnGameWin;
+		GameMaster.Instance.PlayerDeathEvent += OnPlayerDeath;
+	}
+
+	protected override void OnDisabled(){
+		GameMaster.Instance.GameWinEvent -= OnGameWin;
+		GameMaster.Instance.PlayerDeathEvent -= OnPlayerDeath;
+	}
+
+	public void OnGameWin(){
+		Message = "🎉You win!🎉";
+	}
+	public void OnPlayerDeath(){
+		Message = "💀Game Over💀";
+	}
+
+}

@@ -16,7 +16,6 @@ public sealed class GameMaster : Component {
   [Property] public GameObject DamagePopupPrefab { get; set; }
   [Property] public GameObject ExperiencePopupPrefab { get; set; }
   [Property] public GameObject ExperiencePrefab { get; set; }
-
   [Property] public GameObject Player { get; set; }
 
   public Random RandomGenerator = new Random();
