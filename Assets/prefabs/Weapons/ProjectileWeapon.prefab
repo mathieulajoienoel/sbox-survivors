@@ -2,7 +2,7 @@
   "RootObject": {
     "__guid": "2688c993-ab83-45c7-a3d4-d684f061dab7",
     "Flags": 0,
-    "Name": "ProjectileWeapon",
+    "Name": "projectileweapon",
     "Scale": "2,2,2",
     "Enabled": true,
     "Components": [
@@ -11,6 +11,7 @@
         "__guid": "99a3632a-5d0f-4821-9b4b-7083932cc0c9",
         "Cooldown": 1,
         "Damage": -3,
+        "ProjectileDuration": 1.5,
         "ProjectileSource": [
           {
             "_type": "gameobject",
@@ -33,7 +34,8 @@
         "Rotation": "0,0,0.7071068,0.7071068",
         "Enabled": true
       }
-    ]
+    ],
+    "__variables": []
   },
   "ShowInMenu": false,
   "MenuPath": null,

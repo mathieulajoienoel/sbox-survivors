@@ -1,14 +1,10 @@
-
 public sealed class WeaponBaseShooter : Component
 {
   private EntityMaster master;
   [Property] public float Damage { get; set; }
   [Property] public float Speed { get; set; }
   [Property] public float Cooldown { get; set; }
-  //protected Vector3 ProjectileRange { get; set; }
-  //protected Vector3 ProjectileSize { get; set; }
-  //protected Vector3 Position { get; set; }
-  //protected Angles StartRotation { get; set; }
+  [Property] public float ProjectileDuration { get; set; } = 5f;
   [Property] public GameObject[] ProjectileSource { get; set; }
   [Property] public GameObject WeaponProjectile { get; set; }
 
@@ -35,15 +31,16 @@ public sealed class WeaponBaseShooter : Component
     if(projectile == null) return;
     WeaponBaseProjectile projectileComponent = projectile.Components.Get<WeaponBaseProjectile>(true);
     if(projectileComponent == null) return;
-    projectileComponent.Damage = OnHit();
-    projectileComponent.Speed = Speed;
-    projectileComponent.Direction = sourceTransform.Rotation.Forward;
-    projectileComponent.master = master;
-    projectile.Enabled = true;
+    projectileComponent.ApplyAttributes(
+      master,
+      OnHit(),
+      Speed,
+      sourceTransform.Rotation.Forward,
+      ProjectileDuration
+    );
   }
 
   private DamageInfo OnHit(){
-    //return new DamageInfo(Damage, null, null);
     return new DamageInfo(Damage, master.GameObject, GameObject);
   }
 }

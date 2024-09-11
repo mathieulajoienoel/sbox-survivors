@@ -69,6 +69,12 @@
           "BodyGroups": 18446744073709551615,
           "MaterialOverride": "materials/default.vmat",
           "Model": "models/dev/plane.vmdl",
+          "RenderOptions": {
+            "GameLayer": true,
+            "OverlayLayer": false,
+            "BloomLayer": false,
+            "AfterUILayer": false
+          },
           "RenderType": "On",
           "Tint": "0.39546,0.51163,0.27128,1"
         },
@@ -178,6 +184,12 @@
               "__enabled": false,
               "BodyGroups": 18446744073709551615,
               "Model": "models/dev/box.vmdl",
+              "RenderOptions": {
+                "GameLayer": true,
+                "OverlayLayer": false,
+                "BloomLayer": false,
+                "AfterUILayer": false
+              },
               "RenderType": "On",
               "Tint": "1,1,1,1"
             },
@@ -201,6 +213,12 @@
               "FogStrength": 1,
               "Lighting": true,
               "Opaque": false,
+              "RenderOptions": {
+                "GameLayer": true,
+                "OverlayLayer": false,
+                "BloomLayer": false,
+                "AfterUILayer": false
+              },
               "Size": "100,100",
               "Texture": "sprites/rock.vtex"
             }
@@ -220,6 +238,12 @@
               "__enabled": false,
               "BodyGroups": 18446744073709551615,
               "Model": "models/dev/box.vmdl",
+              "RenderOptions": {
+                "GameLayer": true,
+                "OverlayLayer": false,
+                "BloomLayer": false,
+                "AfterUILayer": false
+              },
               "RenderType": "On",
               "Tint": "1,1,1,1"
             },
@@ -243,6 +267,12 @@
               "FogStrength": 1,
               "Lighting": true,
               "Opaque": false,
+              "RenderOptions": {
+                "GameLayer": true,
+                "OverlayLayer": false,
+                "BloomLayer": false,
+                "AfterUILayer": false
+              },
               "Size": "100,100",
               "Texture": "sprites/rock.vtex"
             }
@@ -262,6 +292,12 @@
               "__enabled": false,
               "BodyGroups": 18446744073709551615,
               "Model": "models/dev/box.vmdl",
+              "RenderOptions": {
+                "GameLayer": true,
+                "OverlayLayer": false,
+                "BloomLayer": false,
+                "AfterUILayer": false
+              },
               "RenderType": "On",
               "Tint": "1,1,1,1"
             },
@@ -285,6 +321,12 @@
               "FogStrength": 1,
               "Lighting": true,
               "Opaque": false,
+              "RenderOptions": {
+                "GameLayer": true,
+                "OverlayLayer": false,
+                "BloomLayer": false,
+                "AfterUILayer": false
+              },
               "Size": "100,100",
               "Texture": "sprites/rock.vtex"
             }
@@ -304,6 +346,12 @@
               "__enabled": false,
               "BodyGroups": 18446744073709551615,
               "Model": "models/dev/box.vmdl",
+              "RenderOptions": {
+                "GameLayer": true,
+                "OverlayLayer": false,
+                "BloomLayer": false,
+                "AfterUILayer": false
+              },
               "RenderType": "On",
               "Tint": "1,1,1,1"
             },
@@ -327,6 +375,12 @@
               "FogStrength": 1,
               "Lighting": true,
               "Opaque": false,
+              "RenderOptions": {
+                "GameLayer": true,
+                "OverlayLayer": false,
+                "BloomLayer": false,
+                "AfterUILayer": false
+              },
               "Size": "100,100",
               "Texture": "sprites/rock.vtex"
             }
@@ -346,6 +400,12 @@
               "__enabled": false,
               "BodyGroups": 18446744073709551615,
               "Model": "models/dev/box.vmdl",
+              "RenderOptions": {
+                "GameLayer": true,
+                "OverlayLayer": false,
+                "BloomLayer": false,
+                "AfterUILayer": false
+              },
               "RenderType": "On",
               "Tint": "1,1,1,1"
             },
@@ -369,6 +429,12 @@
               "FogStrength": 1,
               "Lighting": true,
               "Opaque": false,
+              "RenderOptions": {
+                "GameLayer": true,
+                "OverlayLayer": false,
+                "BloomLayer": false,
+                "AfterUILayer": false
+              },
               "Size": "100,100",
               "Texture": "sprites/rock.vtex"
             }
@@ -388,6 +454,12 @@
               "__enabled": false,
               "BodyGroups": 18446744073709551615,
               "Model": "models/dev/box.vmdl",
+              "RenderOptions": {
+                "GameLayer": true,
+                "OverlayLayer": false,
+                "BloomLayer": false,
+                "AfterUILayer": false
+              },
               "RenderType": "On",
               "Tint": "1,1,1,1"
             },
@@ -411,6 +483,12 @@
               "FogStrength": 1,
               "Lighting": true,
               "Opaque": false,
+              "RenderOptions": {
+                "GameLayer": true,
+                "OverlayLayer": false,
+                "BloomLayer": false,
+                "AfterUILayer": false
+              },
               "Size": "100,100",
               "Texture": "sprites/rock.vtex"
             }
@@ -435,6 +513,12 @@
               "FogStrength": 1,
               "Lighting": false,
               "Opaque": false,
+              "RenderOptions": {
+                "GameLayer": true,
+                "OverlayLayer": false,
+                "BloomLayer": false,
+                "AfterUILayer": false
+              },
               "Size": "60,60",
               "Texture": "sprites/grass_patch.vtex"
             }
@@ -459,6 +543,12 @@
               "FogStrength": 1,
               "Lighting": false,
               "Opaque": false,
+              "RenderOptions": {
+                "GameLayer": true,
+                "OverlayLayer": false,
+                "BloomLayer": false,
+                "AfterUILayer": false
+              },
               "Size": "60,60",
               "Texture": "sprites/grass_patch.vtex"
             }
@@ -483,6 +573,12 @@
               "FogStrength": 1,
               "Lighting": false,
               "Opaque": false,
+              "RenderOptions": {
+                "GameLayer": true,
+                "OverlayLayer": false,
+                "BloomLayer": false,
+                "AfterUILayer": false
+              },
               "Size": "60,60",
               "Texture": "sprites/grass_patch.vtex"
             }
@@ -507,6 +603,12 @@
               "FogStrength": 1,
               "Lighting": false,
               "Opaque": false,
+              "RenderOptions": {
+                "GameLayer": true,
+                "OverlayLayer": false,
+                "BloomLayer": false,
+                "AfterUILayer": false
+              },
               "Size": "60,60",
               "Texture": "sprites/grass_patch.vtex"
             }
@@ -531,6 +633,12 @@
               "FogStrength": 1,
               "Lighting": false,
               "Opaque": false,
+              "RenderOptions": {
+                "GameLayer": true,
+                "OverlayLayer": false,
+                "BloomLayer": false,
+                "AfterUILayer": false
+              },
               "Size": "60,60",
               "Texture": "sprites/grass_patch.vtex"
             }
@@ -555,6 +663,12 @@
               "FogStrength": 1,
               "Lighting": false,
               "Opaque": false,
+              "RenderOptions": {
+                "GameLayer": true,
+                "OverlayLayer": false,
+                "BloomLayer": false,
+                "AfterUILayer": false
+              },
               "Size": "60,60",
               "Texture": "sprites/grass_patch.vtex"
             }
@@ -579,6 +693,12 @@
               "FogStrength": 1,
               "Lighting": false,
               "Opaque": false,
+              "RenderOptions": {
+                "GameLayer": true,
+                "OverlayLayer": false,
+                "BloomLayer": false,
+                "AfterUILayer": false
+              },
               "Size": "60,60",
               "Texture": "sprites/grass_patch.vtex"
             }
@@ -603,6 +723,12 @@
               "FogStrength": 1,
               "Lighting": false,
               "Opaque": false,
+              "RenderOptions": {
+                "GameLayer": true,
+                "OverlayLayer": false,
+                "BloomLayer": false,
+                "AfterUILayer": false
+              },
               "Size": "60,60",
               "Texture": "sprites/grass_patch.vtex"
             }
@@ -627,6 +753,12 @@
               "FogStrength": 1,
               "Lighting": false,
               "Opaque": false,
+              "RenderOptions": {
+                "GameLayer": true,
+                "OverlayLayer": false,
+                "BloomLayer": false,
+                "AfterUILayer": false
+              },
               "Size": "60,60",
               "Texture": "sprites/grass_patch.vtex"
             }
@@ -651,6 +783,12 @@
               "FogStrength": 1,
               "Lighting": false,
               "Opaque": false,
+              "RenderOptions": {
+                "GameLayer": true,
+                "OverlayLayer": false,
+                "BloomLayer": false,
+                "AfterUILayer": false
+              },
               "Size": "60,60",
               "Texture": "sprites/grass_patch.vtex"
             }
@@ -675,6 +813,12 @@
               "FogStrength": 1,
               "Lighting": false,
               "Opaque": false,
+              "RenderOptions": {
+                "GameLayer": true,
+                "OverlayLayer": false,
+                "BloomLayer": false,
+                "AfterUILayer": false
+              },
               "Size": "60,60",
               "Texture": "sprites/grass_patch.vtex"
             }
@@ -699,6 +843,12 @@
               "FogStrength": 1,
               "Lighting": false,
               "Opaque": false,
+              "RenderOptions": {
+                "GameLayer": true,
+                "OverlayLayer": false,
+                "BloomLayer": false,
+                "AfterUILayer": false
+              },
               "Size": "60,60",
               "Texture": "sprites/grass_patch.vtex"
             }
@@ -767,6 +917,12 @@
               "FogStrength": 1,
               "Lighting": false,
               "Opaque": false,
+              "RenderOptions": {
+                "GameLayer": true,
+                "OverlayLayer": false,
+                "BloomLayer": false,
+                "AfterUILayer": false
+              },
               "Size": "49.10001,30",
               "Texture": "sprites/blue.vtex"
             }
@@ -810,6 +966,12 @@
               "FogStrength": 1,
               "Lighting": false,
               "Opaque": false,
+              "RenderOptions": {
+                "GameLayer": true,
+                "OverlayLayer": false,
+                "BloomLayer": false,
+                "AfterUILayer": false
+              },
               "Size": "49.10001,30",
               "Texture": "sprites/blue.vtex"
             }
@@ -853,6 +1015,12 @@
               "FogStrength": 1,
               "Lighting": false,
               "Opaque": false,
+              "RenderOptions": {
+                "GameLayer": true,
+                "OverlayLayer": false,
+                "BloomLayer": false,
+                "AfterUILayer": false
+              },
               "Size": "49.10001,30",
               "Texture": "sprites/blue.vtex"
             }
@@ -896,6 +1064,12 @@
               "FogStrength": 1,
               "Lighting": false,
               "Opaque": false,
+              "RenderOptions": {
+                "GameLayer": true,
+                "OverlayLayer": false,
+                "BloomLayer": false,
+                "AfterUILayer": false
+              },
               "Size": "49.10001,30",
               "Texture": "sprites/blue.vtex"
             }
