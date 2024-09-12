@@ -1,4 +1,6 @@
-public abstract class WeaponBase<T, Y> : Component, Component.ITriggerListener
+public enum HolsterType { FixedWeaponHolster, AimedWeaponHolster }
+
+public abstract class WeaponBase<T, Y> : Component, Component.ITriggerListener, IHolsteredWeapon
 where T : EntityMaster
 where Y : EntityMaster
 {
@@ -21,6 +23,8 @@ where Y : EntityMaster
   protected float NextHit { get; set; } = 0f;
   protected HashSet<Collider> Colliders = new HashSet<Collider>();
   protected T master;
+
+  [Property] public virtual HolsterType WeaponHolster { get; set; } = HolsterType.FixedWeaponHolster;
 
   protected override void OnEnabled(){
     master = Components.GetInAncestorsOrSelf<T>();

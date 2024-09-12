@@ -39,7 +39,19 @@ public sealed class PlayerItemCollector : Component, Component.ITriggerListener 
 
   private GameObject GiveWeapon(Item item){
     GameObject player = GameMaster.Instance.Player;
-    return item.item.Clone(new CloneConfig(new Transform(player.Transform.Position), player, true));
+    GameObject weapon = item.item.Clone(new CloneConfig(new Transform(player.Transform.Position), player, false));
+    IHolsteredWeapon weaponMaster = weapon.Components.GetInChildrenOrSelf<IHolsteredWeapon>(true);
+    // Set Weapon in proper holster
+    switch(weaponMaster.WeaponHolster){
+      case HolsterType.FixedWeaponHolster:
+      weapon.SetParent(master.FixedWeaponHolster);
+      break;
+      case HolsterType.AimedWeaponHolster:
+      weapon.SetParent(master.AimedWeaponHolster);
+      break;
+    }
+		weapon.Enabled = true;
+    return weapon;
   }
 
   private void OnExperienceGain(float value){

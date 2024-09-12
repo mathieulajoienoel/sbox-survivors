@@ -19,6 +19,7 @@
           }
         ],
         "Speed": 100,
+        "WeaponHolster": "AimedWeaponHolster",
         "WeaponProjectile": {
           "_type": "gameobject",
           "prefab": "prefabs/weapons/playerprojectile.prefab"

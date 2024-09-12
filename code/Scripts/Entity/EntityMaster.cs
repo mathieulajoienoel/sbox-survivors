@@ -4,6 +4,9 @@ public abstract class EntityMaster : Component
   public EntityCharacter Character { get; set; }
   public IEntityHealth Health { get; set; }
 
+  [Property] public GameObject FixedWeaponHolster { get; set; }
+  [Property] public GameObject AimedWeaponHolster { get; set; }
+
   // Events & Delegates
   public delegate void KnockbackEventHandler(float KnockbackDuration);
 	public event KnockbackEventHandler EventKnockback;

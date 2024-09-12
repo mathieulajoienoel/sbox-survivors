@@ -34,7 +34,15 @@
       },
       {
         "__type": "EnemyMaster",
-        "__guid": "352e42ea-a943-496f-9497-d47cbb175315"
+        "__guid": "352e42ea-a943-496f-9497-d47cbb175315",
+        "AimedWeaponHolster": {
+          "_type": "gameobject",
+          "go": "4c6590ae-759d-4ad5-9d45-fe9e64f0b457"
+        },
+        "FixedWeaponHolster": {
+          "_type": "gameobject",
+          "go": "0b65b994-3f58-4be9-b00d-d155aa32ffe0"
+        }
       },
       {
         "__type": "EnemyController",
@@ -69,36 +77,58 @@
     ],
     "Children": [
       {
-        "__guid": "0e94c637-d6c9-40ce-ac4a-a162d1f907f6",
+        "__guid": "1f8c5a7e-1ea0-4284-b729-76d4c19acec0",
         "Flags": 0,
-        "Name": "EnemyCharacter",
-        "Scale": "0.5,0.5,0.5",
-        "Tags": "enemy_character",
+        "Name": "RotatedItems",
         "Enabled": true,
         "Components": [
           {
-            "__type": "Sandbox.ModelRenderer",
-            "__guid": "eaed7be6-f434-4e73-9643-ecafcb389176",
-            "BodyGroups": 18446744073709551615,
-            "Model": "models/dev/box.vmdl",
-            "RenderType": "On",
-            "Tint": "1,1,1,1"
-          },
-          {
-            "__type": "Sandbox.BoxCollider",
-            "__guid": "f1329c24-5d21-414c-8f67-30587cc94839",
-            "Center": "0,0,0",
-            "IsTrigger": false,
-            "Scale": "50,50,50",
-            "Static": false
-          },
-          {
             "__type": "EntityCharacter",
-            "__guid": "368f9dd2-1dab-44da-a6ae-e448a5c8be7a"
+            "__guid": "5aadd177-28b3-423a-9201-617504afab3e"
+          }
+        ],
+        "Children": [
+          {
+            "__guid": "4c6590ae-759d-4ad5-9d45-fe9e64f0b457",
+            "Flags": 0,
+            "Name": "AimedWeaponHolster",
+            "Enabled": true
           },
           {
-            "__type": "ColorActor",
-            "__guid": "75e7b17a-b276-48b9-8767-ca0607648d9d"
+            "__guid": "0e94c637-d6c9-40ce-ac4a-a162d1f907f6",
+            "Flags": 0,
+            "Name": "EnemyCharacter",
+            "Scale": "0.5,0.5,0.5",
+            "Tags": "enemy_character",
+            "Enabled": true,
+            "Components": [
+              {
+                "__type": "Sandbox.ModelRenderer",
+                "__guid": "eaed7be6-f434-4e73-9643-ecafcb389176",
+                "BodyGroups": 18446744073709551615,
+                "Model": "models/dev/box.vmdl",
+                "RenderOptions": {
+                  "GameLayer": true,
+                  "OverlayLayer": false,
+                  "BloomLayer": false,
+                  "AfterUILayer": false
+                },
+                "RenderType": "On",
+                "Tint": "1,1,1,1"
+              },
+              {
+                "__type": "Sandbox.BoxCollider",
+                "__guid": "f1329c24-5d21-414c-8f67-30587cc94839",
+                "Center": "0,0,0",
+                "IsTrigger": false,
+                "Scale": "50,50,50",
+                "Static": false
+              },
+              {
+                "__type": "ColorActor",
+                "__guid": "75e7b17a-b276-48b9-8767-ca0607648d9d"
+              }
+            ]
           }
         ]
       },
@@ -111,6 +141,12 @@
         "Enabled": true,
         "__Prefab": "prefabs/ui/healthscreen.prefab",
         "__PrefabVariables": {}
+      },
+      {
+        "__guid": "0b65b994-3f58-4be9-b00d-d155aa32ffe0",
+        "Flags": 0,
+        "Name": "FixedWeaponHolster",
+        "Enabled": true
       }
     ],
     "__variables": []

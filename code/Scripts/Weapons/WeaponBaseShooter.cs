@@ -1,4 +1,4 @@
-public sealed class WeaponBaseShooter : Component
+public sealed class WeaponBaseShooter : Component, IHolsteredWeapon
 {
   private EntityMaster master;
   [Property] public float Damage { get; set; }
@@ -7,6 +7,7 @@ public sealed class WeaponBaseShooter : Component
   [Property] public float ProjectileDuration { get; set; } = 5f;
   [Property] public GameObject[] ProjectileSource { get; set; }
   [Property] public GameObject WeaponProjectile { get; set; }
+  [Property] public HolsterType WeaponHolster { get; set; } = HolsterType.AimedWeaponHolster;
 
   private float NextHit { get; set; } = 0f;
 

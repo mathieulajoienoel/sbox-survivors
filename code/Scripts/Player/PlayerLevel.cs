@@ -3,7 +3,6 @@ public sealed class PlayerLevel : Component {
 
 	protected override void OnEnabled()
 	{
-    Log.Info(GameMaster.Instance);
     GameMaster.Instance.ExperienceGainEvent += OnExperienceGain;
 	}
   protected override void OnDisabled()
