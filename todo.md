@@ -1,3 +1,6 @@
+Bugs :
+  * [ ] Camera movement jitter/shake when colliding with solid object
+
 Basic :
   * [x] GameMaster
   * [x] Player
@@ -11,10 +14,11 @@ Basic :
     * [x] LineWeapon
     * [x] AreaWeapon
     * [x] RotatingWeapon
-    * [ ] ProjectileWeapon
+    * [x] ProjectileWeapon
     * [ ] BarWeapon
     * [ ] CircleWeapon
     * [ ] Raycast Weapon
+    * [ ] One way swing weapon
   * [ ] Experience
     * [x] Attract
     * [x] Drop
@@ -47,7 +51,6 @@ Basic :
   * [ ] Menus
     * [ ] Main menu
     * [ ] Level selection
-
 
 Features :
   * [ ] Modifiers :
@@ -84,6 +87,15 @@ Features :
     * [ ] Timer
     * [ ] Display
     * [ ] Boss on end
+  * [ ] Achievements
+    * [ ] Get
+    * [ ] List
+    * [ ] Popup
+    * [ ] Unlock
+  * [x] Healing
+    * [x] Player
+    * [x] Enemy
+  * [x] Invincibility frames
 
 Maybe :
   * [ ] Beakables with loot
