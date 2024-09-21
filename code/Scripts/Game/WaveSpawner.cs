@@ -17,6 +17,7 @@ public sealed class WaveSpawner : Component {
 		//if(CurrentEnemyCount > 1) return; //
     if(CurrentWave > LevelData.TotalWaves && CurrentEnemyCount < 1){ // check win state. end wave, with no more enemies
       //@@TODO win state
+      GameMaster.Instance.CallGameWinEvent();
       return;
     }
     if(TotalEnemiesThisWave < LevelData.EnemiesPerWave) // if we need more enemies to spawn

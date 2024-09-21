@@ -29,6 +29,8 @@
         "__guid": "1ace4e8c-06e4-48bf-9746-948d0a9b6861",
         "Alive": true,
         "ExperienceDrop": 1,
+        "HealthRegenerationRate": 0,
+        "InvincibilityTime": 0.01,
         "MaxHealth": 10,
         "MoveSpeed": 7
       },
@@ -54,7 +56,8 @@
       },
       {
         "__type": "EnemyHealth",
-        "__guid": "4477da72-0c93-40ec-8872-c56edc89548d"
+        "__guid": "4477da72-0c93-40ec-8872-c56edc89548d",
+        "CanBeDamaged": false
       },
       {
         "__type": "DropExperience",
@@ -73,6 +76,10 @@
       {
         "__type": "EnemyKnockback",
         "__guid": "461b5502-4798-4afe-9455-e78dc8380de5"
+      },
+      {
+        "__type": "EnemyHealer",
+        "__guid": "f4a3b544-8319-495c-bd93-4b25d73803f7"
       }
     ],
     "Children": [
@@ -154,6 +161,7 @@
   "ShowInMenu": false,
   "MenuPath": null,
   "MenuIcon": null,
+  "DontBreakAsTemplate": false,
   "ResourceVersion": 1,
   "__references": [],
   "__version": 1

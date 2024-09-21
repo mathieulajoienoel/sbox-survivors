@@ -22,12 +22,12 @@ public sealed class GameOverManager : Component {
   }
 
   private void ShowGameOverPanel(bool HasWon = false){
-    Game.IsPaused = true;
     GameObject panel = GameOverPanel.Clone(Vector3.Zero);
     if(HasWon){
       panel.Components.Get<GameOverPanel>().OnGameWin();
     } else {
       panel.Components.Get<GameOverPanel>().OnPlayerDeath();
     }
+    Game.IsPaused = true;
   }
 }

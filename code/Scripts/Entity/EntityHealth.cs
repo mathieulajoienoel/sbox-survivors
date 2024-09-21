@@ -1,14 +1,18 @@
-using System;
-
 public abstract class EntityHealth<T> : Component, IEntityHealth where T : EntityMaster
 {
-  private T master;
+  protected T master;
 
   public float CurrentHealth { get; set; }
+  [Property] public bool CanBeDamaged { get; set; } = true;
+  private float NextCanBeDamaged = 0f;
+  private float InvincibilityTime = 0f;
   protected override void OnEnabled(){
     master = Components.Get<T>();
     float maxHealth = master.Stats.MaxHealth;
     CurrentHealth = master.Stats.MaxHealth;
+    InvincibilityTime = master.Stats.InvincibilityTime;
+
+    // @@TODO On stats update
 
     master.EventReceiveDamage += OnReceiveDamage;
     master.EventHealthChanged += OnHealthChanged;
@@ -35,10 +39,18 @@ public abstract class EntityHealth<T> : Component, IEntityHealth where T : Entit
     CheckDeath();
   }
   public void OnReceiveDamage(DamageInfo damage){
-    master.CallEventHealthChanged(damage.Damage);
+    if(CanBeDamaged) master.CallEventHealthChanged(damage.Damage);
   }
 
-  private void DisplayDamageReceived(float damage){
+	protected override void OnFixedUpdate()
+	{
+    if(!CanBeDamaged && (NextCanBeDamaged == 0f || NextCanBeDamaged < Time.Now)){
+      CanBeDamaged = true;
+      NextCanBeDamaged = Time.Now + InvincibilityTime;
+    }
+	}
+
+	private void DisplayDamageReceived(float damage){
     Vector3 position = master.GameObject.Transform.Position;
     position.z = 15;
     position += new Vector3(GameMaster.Instance.Rand(-20,20),GameMaster.Instance.Rand(-20,20), 0);
@@ -46,7 +58,7 @@ public abstract class EntityHealth<T> : Component, IEntityHealth where T : Entit
     damagePopup.Components.Get<DamagePopup>().Display(damage);
   }
 
-  public void CheckDeath(){
+  public virtual void CheckDeath(){
     if(CurrentHealth < 1 && master.Stats.Alive){
       master.CallEventDeath();
     }
