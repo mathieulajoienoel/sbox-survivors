@@ -5,13 +5,15 @@ public sealed class WeaponBaseProjectile : Component, Component.ICollisionListen
 	[Property] public Vector3 Direction { get; set; }
 	[Property] public float Duration { get; set; } = 5;
 	private float DeleteAt { get; set; }
+	public string ProjectilePool { get; set; }
 
-	public void ApplyAttributes(EntityMaster attrMaster, DamageInfo attrDamage, float attrSpeed, Vector3 attrDirection, float attrDuration){
+	public void ApplyAttributes(EntityMaster attrMaster, DamageInfo attrDamage, float attrSpeed, Vector3 attrDirection, float attrDuration, string projectilePool){
 		master = attrMaster;
 		Damage = attrDamage;
 		Speed = attrSpeed;
 		Direction = attrDirection;
 		Duration = attrDuration;
+		ProjectilePool = projectilePool;
 
 		GameObject.Enabled = true;
 	}
@@ -32,7 +34,7 @@ public sealed class WeaponBaseProjectile : Component, Component.ICollisionListen
 		position.z = 12.5f;
 		Transform.Position = position;
 		if(Time.Now > DeleteAt){
-			GameObject.Destroy();
+			ReturnToPool();
 		}
 	}
 
@@ -44,7 +46,12 @@ public sealed class WeaponBaseProjectile : Component, Component.ICollisionListen
 			master.CallEventDealDamage(Damage);
 		}
 
-    GameObject.Destroy();
+		ReturnToPool();
   }
+
+	public void ReturnToPool(){
+		//GameObject.Enabled = false;
+		ObjectPool.Instance.ReturnToPool(ProjectilePool, GameObject);
+	}
 
 }

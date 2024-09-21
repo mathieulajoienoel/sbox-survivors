@@ -12,6 +12,12 @@
         "__guid": "f24d08e2-ca1a-4ba4-8099-321e5131f3f7",
         "BodyGroups": 18446744073709551615,
         "Model": "models/dev/box.vmdl",
+        "RenderOptions": {
+          "GameLayer": true,
+          "OverlayLayer": false,
+          "BloomLayer": false,
+          "AfterUILayer": false
+        },
         "RenderType": "On",
         "Tint": "1,1,1,1"
       },
@@ -20,6 +26,7 @@
         "__guid": "2b2380a3-0af5-4bdf-9bba-bede6c5a4ff5",
         "Damage": {},
         "Direction": "0,0,0",
+        "Duration": 5,
         "Speed": 0
       },
       {
@@ -45,6 +52,10 @@
         "OverrideMassCenter": false,
         "RigidbodyFlags": 0,
         "StartAsleep": false
+      },
+      {
+        "__type": "Resetter",
+        "__guid": "44a72a7c-aa7f-48e4-a107-b5ff3a03829f"
       }
     ],
     "Children": [],
@@ -53,6 +64,7 @@
   "ShowInMenu": false,
   "MenuPath": null,
   "MenuIcon": null,
+  "DontBreakAsTemplate": false,
   "ResourceVersion": 1,
   "__references": [],
   "__version": 1

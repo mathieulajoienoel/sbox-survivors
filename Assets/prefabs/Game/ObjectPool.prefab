@@ -1,0 +1,33 @@
+{
+  "RootObject": {
+    "__guid": "f217261b-4479-4f0c-9f09-9006f015a89c",
+    "Flags": 0,
+    "Name": "ObjectPool",
+    "Enabled": true,
+    "Components": [
+      {
+        "__type": "ObjectPool",
+        "__guid": "a9ec7da0-3bc5-49bb-840f-296b6c007655",
+        "PrefabPools": {
+          "PlayerProjectile": {
+            "Prefab": {
+              "_type": "gameobject",
+              "prefab": "prefabs/weapons/playerprojectile.prefab"
+            },
+            "Amount": 500,
+            "InstanciatedPrefabs": [],
+            "LoanedPrefabs": []
+          }
+        },
+        "ResetLocation": "0,0,0"
+      }
+    ]
+  },
+  "ShowInMenu": false,
+  "MenuPath": null,
+  "MenuIcon": null,
+  "DontBreakAsTemplate": false,
+  "ResourceVersion": 1,
+  "__references": [],
+  "__version": 1
+}

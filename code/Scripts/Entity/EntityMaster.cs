@@ -8,6 +8,8 @@ public abstract class EntityMaster : Component
   [Property] public GameObject AimedWeaponHolster { get; set; }
 
   // Events & Delegates
+  public delegate void ResetEventHandler();
+	public event ResetEventHandler EventReset;
   public delegate void KnockbackEventHandler(float KnockbackDuration);
 	public event KnockbackEventHandler EventKnockback;
   public delegate void KnockbackReleaseEventHandler();
@@ -42,6 +44,9 @@ public abstract class EntityMaster : Component
 	}
   public void CallEventReceiveDamage(DamageInfo damage){
 		EventReceiveDamage?.Invoke(damage);
+	}
+  public void CallEventReset(){
+		EventReset?.Invoke();
 	}
 
   protected override void OnAwake(){

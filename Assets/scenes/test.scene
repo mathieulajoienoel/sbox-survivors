@@ -1094,6 +1094,14 @@
       "Enabled": true,
       "__Prefab": "prefabs/collectables/collectableweapon.prefab",
       "__PrefabVariables": {}
+    },
+    {
+      "__guid": "f217261b-4479-4f0c-9f09-9006f015a89c",
+      "Flags": 0,
+      "Name": "ObjectPool",
+      "Enabled": true,
+      "__Prefab": "prefabs/game/objectpool.prefab",
+      "__PrefabVariables": {}
     }
   ],
   "SceneProperties": {
