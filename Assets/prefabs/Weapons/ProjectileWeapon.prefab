@@ -10,15 +10,15 @@
         "__type": "PlayerWeaponShooter",
         "__guid": "688d5759-9604-475f-9e4b-ed23354090d9",
         "Cooldown": 1.5,
-        "Damage": 3,
-        "ProjectileDuration": 1,
+        "Damage": -3,
+        "ProjectileDuration": 2.5,
         "ProjectileSource": [
           {
             "_type": "gameobject",
             "go": "60584cc1-6280-44a7-b41e-786dcfe3ccb5"
           }
         ],
-        "Speed": 30,
+        "Speed": 50,
         "WeaponHolster": "AimedWeaponHolster",
         "WeaponProjectile": {
           "_type": "gameobject",
@@ -44,5 +44,6 @@
   "DontBreakAsTemplate": false,
   "ResourceVersion": 1,
   "__references": [],
+  "IsValid": true,
   "__version": 1
 }

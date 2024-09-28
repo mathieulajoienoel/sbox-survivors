@@ -75,7 +75,7 @@ Features :
     * [ ] Powerups
   * [x] Weapon knockback
   * [ ] Object pooling
-    * [ ] Projectiles
+    * [x] Projectiles
     * [ ] Enemies
     * [ ] Popups
   * [ ] After game results

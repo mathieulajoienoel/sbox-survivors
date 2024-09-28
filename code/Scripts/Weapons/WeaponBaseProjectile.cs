@@ -15,6 +15,10 @@ public sealed class WeaponBaseProjectile : Component, Component.ICollisionListen
 		Duration = attrDuration;
 		ProjectilePool = projectilePool;
 
+		ModelRenderer renderer = Components.Get<ModelRenderer>(true);
+		renderer.Model = Model.Cube;
+		renderer.Tint = Color.White;
+
 		GameObject.Enabled = true;
 	}
 

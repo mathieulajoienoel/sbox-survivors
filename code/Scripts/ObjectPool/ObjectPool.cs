@@ -20,7 +20,9 @@ public sealed class ObjectPool : Component {
     {
       for (int i = 0; i < pool.Amount; i++)
       {
-        pool.InstanciatedPrefabs.Push(pool.Prefab.Clone(cloneConfig));
+        GameObject obj = pool.Prefab.Clone(cloneConfig);
+        obj.BreakFromPrefab();
+        pool.InstanciatedPrefabs.Push(obj);
       }
     }
   }

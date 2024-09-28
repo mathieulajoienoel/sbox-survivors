@@ -31,7 +31,6 @@ public abstract class WeaponBaseShooter : Component, IHolsteredWeapon
     position.z = 12.5f;
     GameObject projectile = ObjectPool.Instance.GetObjectFromPool(ProjectilePool);
     //GameObject projectile = WeaponProjectile.Clone(new CloneConfig(new Transform(position), null, false));
-    // @@TODO bug here, projectile doesn't reset properly
     if(projectile == null) return;
     projectile.Transform.Position = position;
     WeaponBaseProjectile projectileComponent = projectile.Components.Get<WeaponBaseProjectile>(true);
