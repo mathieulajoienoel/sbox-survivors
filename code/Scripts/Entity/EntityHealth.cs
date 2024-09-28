@@ -6,6 +6,8 @@ public abstract class EntityHealth<T> : Component, IEntityHealth where T : Entit
   [Property] public bool CanBeDamaged { get; set; } = true;
   private float NextCanBeDamaged = 0f;
   private float InvincibilityTime = 0f;
+  public string DamagePopupPool { get; set; } = "DamagePopup";
+
   protected override void OnEnabled(){
     master = Components.Get<T>();
     float maxHealth = master.Stats.MaxHealth;
@@ -54,8 +56,12 @@ public abstract class EntityHealth<T> : Component, IEntityHealth where T : Entit
     Vector3 position = master.GameObject.Transform.Position;
     position.z = 15;
     position += new Vector3(GameMaster.Instance.Rand(-20,20),GameMaster.Instance.Rand(-20,20), 0);
-    GameObject damagePopup = GameMaster.Instance.DamagePopupPrefab.Clone(position);
-    damagePopup.Components.Get<DamagePopup>().Display(damage);
+
+    GameObject damagePopup = ObjectPool.Instance.GetObjectFromPool(DamagePopupPool);
+    if(damagePopup == null) return;
+    damagePopup.Transform.Position = position;
+    //GameObject damagePopup = GameMaster.Instance.DamagePopupPrefab.Clone(position);
+    damagePopup.Components.Get<DamagePopup>(true).Display(damage);
   }
 
   public virtual void CheckDeath(){

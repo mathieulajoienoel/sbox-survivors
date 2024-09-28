@@ -1,5 +1,7 @@
 public sealed class PlayerItemCollector : Component, Component.ITriggerListener {
   private PlayerMaster master;
+  public string ExperiencePopupPool { get; set; } = "ExperiencePopup";
+
   protected override void OnEnabled(){
     master = Components.GetInParentOrSelf<PlayerMaster>();
 
@@ -63,8 +65,12 @@ public sealed class PlayerItemCollector : Component, Component.ITriggerListener 
     Vector3 position = master.GameObject.Transform.Position;
     position.z = 15;
     position += new Vector3(GameMaster.Instance.Rand(-20,20),GameMaster.Instance.Rand(-20,20), 0);
-    GameObject experiencePopup = GameMaster.Instance.ExperiencePopupPrefab.Clone(position);
-    experiencePopup.Components.Get<ExperiencePopup>().Display(value);
+
+    GameObject experiencePopup = ObjectPool.Instance.GetObjectFromPool(ExperiencePopupPool);
+    if(experiencePopup == null) return;
+    experiencePopup.Transform.Position = position;
+    //GameObject experiencePopup = GameMaster.Instance.ExperiencePopupPrefab.Clone(position);
+    experiencePopup.Components.Get<ExperiencePopup>(true).Display(value);
   }
 
   public void OnTriggerEnter( Collider other )

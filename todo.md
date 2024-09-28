@@ -77,7 +77,8 @@ Features :
   * [ ] Object pooling
     * [x] Projectiles
     * [ ] Enemies
-    * [ ] Popups
+    * [x] Damage Popups
+    * [x] Experience Popups
   * [ ] After game results
     * [ ] Show last game stats panel
   * [ ] Stats https://docs.facepunch.com/s/sbox-dev/doc/stats-As30shVf3K

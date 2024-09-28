@@ -2,7 +2,7 @@
   "RootObject": {
     "__guid": "f217261b-4479-4f0c-9f09-9006f015a89c",
     "Flags": 0,
-    "Name": "ObjectPool",
+    "Name": "objectpool",
     "Enabled": true,
     "Components": [
       {
@@ -17,11 +17,31 @@
             "Amount": 500,
             "InstanciatedPrefabs": [],
             "LoanedPrefabs": []
+          },
+          "DamagePopup": {
+            "Prefab": {
+              "_type": "gameobject",
+              "prefab": "prefabs/ui/damagepopuptemplate.prefab"
+            },
+            "Amount": 500,
+            "InstanciatedPrefabs": [],
+            "LoanedPrefabs": []
+          },
+          "ExperiencePopup": {
+            "Prefab": {
+              "_type": "gameobject",
+              "prefab": "prefabs/ui/experiencepopuptemplate.prefab"
+            },
+            "Amount": 100,
+            "InstanciatedPrefabs": [],
+            "LoanedPrefabs": []
           }
         },
         "ResetLocation": "0,0,0"
       }
-    ]
+    ],
+    "Children": [],
+    "__variables": []
   },
   "ShowInMenu": false,
   "MenuPath": null,
@@ -29,5 +49,6 @@
   "DontBreakAsTemplate": false,
   "ResourceVersion": 1,
   "__references": [],
+  "IsValid": true,
   "__version": 1
 }

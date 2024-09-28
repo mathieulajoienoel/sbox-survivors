@@ -3,29 +3,42 @@
     "__guid": "4eaa13bb-77e4-43c8-92c7-b864bbe53289",
     "Flags": 0,
     "Name": "experiencepopuptemplate",
+    "Tags": "ignore_all",
     "Enabled": true,
     "Components": [
       {
         "__type": "Sandbox.TextRenderer",
         "__guid": "19f205d3-925e-4c46-857b-c5b60c481ea5",
+        "BlendMode": "Normal",
         "Color": "1,0,0,1",
         "FontFamily": "Roboto",
         "FontSize": 32,
         "FontWeight": 800,
+        "RenderOptions": {
+          "GameLayer": true,
+          "OverlayLayer": false,
+          "BloomLayer": false,
+          "AfterUILayer": false
+        },
         "Scale": 0.25,
         "Text": "",
         "TextAlignment": "Center"
       },
       {
-        "__type": "FadeOutAfterTime",
-        "__guid": "9f5fd56b-74d3-4056-9e35-0b11219e4cb7",
+        "__type": "ExperiencePopup",
+        "__guid": "b59dfa1b-69ed-4eb7-a516-ad66886208d9",
+        "PopupPool": "ExperiencePopup"
+      },
+      {
+        "__type": "PopupFadeOutAfterTime",
+        "__guid": "d4437514-4daa-43fc-a95e-f9eff57d15dc",
         "DestroyAfter": 0.25,
         "Speed": 10,
         "TimeToWait": 1
       },
       {
-        "__type": "ExperiencePopup",
-        "__guid": "b59dfa1b-69ed-4eb7-a516-ad66886208d9"
+        "__type": "Resetter",
+        "__guid": "e40f0c33-e96f-4444-a54c-b5a97f35c682"
       }
     ],
     "Children": [],
@@ -34,7 +47,9 @@
   "ShowInMenu": false,
   "MenuPath": null,
   "MenuIcon": null,
+  "DontBreakAsTemplate": false,
   "ResourceVersion": 1,
   "__references": [],
+  "IsValid": true,
   "__version": 1
 }

@@ -11,6 +11,7 @@ public sealed class ObjectPool : Component {
   protected override void OnAwake()
 	{
     instance = this;
+    GameObject.BreakFromPrefab();
     InstanciatePool();
 	}
 
