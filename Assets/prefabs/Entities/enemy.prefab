@@ -80,6 +80,18 @@
       {
         "__type": "EnemyHealer",
         "__guid": "f4a3b544-8319-495c-bd93-4b25d73803f7"
+      },
+      {
+        "__type": "EnemyDeathAnimation",
+        "__guid": "05514277-77a9-4a3c-a003-9f4583cc68c9",
+        "DestroyAfter": 2,
+        "EnemyPool": "EnemyPool",
+        "Speed": 20,
+        "TimeToWait": -1
+      },
+      {
+        "__type": "Resetter",
+        "__guid": "983fd35c-8a50-4952-a4b7-454e5252e382"
       }
     ],
     "Children": [
@@ -164,5 +176,6 @@
   "DontBreakAsTemplate": false,
   "ResourceVersion": 1,
   "__references": [],
+  "IsValid": true,
   "__version": 1
 }

@@ -8,7 +8,7 @@ public sealed class ObjectPool : Component {
   [Property] public Vector3 ResetLocation { get; set; } = Vector3.Zero;
   [Property] public Dictionary<string, PrefabPool> PrefabPools { get; set; }
 
-  protected override void OnAwake()
+  protected override void OnEnabled()
 	{
     instance = this;
     GameObject.BreakFromPrefab();
@@ -46,6 +46,9 @@ public sealed class ObjectPool : Component {
     }
     GameObject resettedObject = resetter.ResetAll();
     resettedObject.WorldPosition = ResetLocation;
+    resettedObject.Enabled = false;
+    resettedObject.Parent = GameObject;
+    resettedObject.WorldPosition = WorldPosition;
     pool.InstanciatedPrefabs.Push(resettedObject);
   }
 }

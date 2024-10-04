@@ -76,9 +76,10 @@ Features :
   * [x] Weapon knockback
   * [ ] Object pooling
     * [x] Projectiles
-    * [ ] Enemies
+    * [x] Enemies
     * [x] Damage Popups
     * [x] Experience Popups
+    * [ ] Experience
   * [ ] After game results
     * [ ] Show last game stats panel
   * [ ] Stats https://docs.facepunch.com/s/sbox-dev/doc/stats-As30shVf3K

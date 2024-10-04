@@ -10,15 +10,12 @@ public abstract class EntityHealth<T> : Component, IEntityHealth where T : Entit
 
   protected override void OnEnabled(){
     master = Components.Get<T>();
-    float maxHealth = master.Stats.MaxHealth;
-    CurrentHealth = master.Stats.MaxHealth;
-    InvincibilityTime = master.Stats.InvincibilityTime;
-
     // @@TODO On stats update
 
     master.EventReceiveDamage += OnReceiveDamage;
     master.EventHealthChanged += OnHealthChanged;
     master.EventDeath += OnDeath;
+    master.EventStart += Start;
   }
 
 	protected override void OnDisabled()
@@ -27,7 +24,14 @@ public abstract class EntityHealth<T> : Component, IEntityHealth where T : Entit
     master.EventReceiveDamage -= OnReceiveDamage;
     master.EventHealthChanged -= OnHealthChanged;
     master.EventDeath -= OnDeath;
+    master.EventStart -= Start;
 	}
+
+  private void Start(){
+    //float maxHealth = master.Stats.MaxHealth;
+    CurrentHealth = master.Stats.MaxHealth;
+    InvincibilityTime = master.Stats.InvincibilityTime;
+  }
 
 	public void ChangeHealth(float value){
     CurrentHealth += value;
@@ -73,10 +77,10 @@ public abstract class EntityHealth<T> : Component, IEntityHealth where T : Entit
   public virtual void OnDeath(){
     if(!master.Stats.Alive) return;
     master.Stats.Alive = false;
-    FadeOutAfterTime comp = Components.Create<FadeOutAfterTime>(false);
-    comp.TimeToWait = -1f;
-    comp.DestroyAfter = 2f;
-    comp.Speed = 20f;
-    comp.Enabled = true;
+    //FadeOutAfterTime comp = Components.Create<FadeOutAfterTime>(false);
+    //comp.TimeToWait = -1f;
+    //comp.DestroyAfter = 2f;
+    //comp.Speed = 20f;
+    //comp.Enabled = true;
   }
 }

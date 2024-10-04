@@ -3,14 +3,19 @@ public sealed class DropExperience : Component {
   private float ExperienceDrop;
   protected override void OnEnabled(){
     master = Components.Get<EnemyMaster>();
-    ExperienceDrop = master.Stats.ExperienceDrop;
 
     master.EventDeath += OnDeath;
+    master.EventStart += Start;
   }
   protected override void OnDisabled()
 	{
     master.EventDeath -= OnDeath;
+    master.EventStart -= Start;
 	}
+
+  private void Start(){
+    ExperienceDrop = master.Stats.ExperienceDrop;
+  }
 
   public void OnDeath(){
     // Spawn experience

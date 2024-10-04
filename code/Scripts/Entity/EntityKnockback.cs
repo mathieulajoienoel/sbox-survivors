@@ -1,9 +1,10 @@
 public abstract class EntityKnockback<T> : Component  where T : EntityMaster {
-  public bool IsKnockedback = false;
-  public float ReleaseTime;
+  public bool IsKnockedback { get; set; } = false;
+  public float ReleaseTime { get; set; } = 0f;
   private T master;
 
   protected override void OnEnabled(){
+    IsKnockedback = false;
     master = Components.GetInParentOrSelf<T>();
     master.EventKnockback += OnKnockback;
   }

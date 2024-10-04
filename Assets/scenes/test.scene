@@ -123,7 +123,7 @@
           "__type": "LevelData",
           "__guid": "11e6e78a-73ea-46da-8aa6-4794a6c8d9ba",
           "DifficultyMultiplier": 1.5,
-          "EnemiesPerWave": 50,
+          "EnemiesPerWave": 75,
           "EnemyPrefabs": [
             {
               "_type": "gameobject",
@@ -137,8 +137,9 @@
           "__guid": "9e066e46-5351-4a3a-8901-05aefb73d093",
           "CurrentEnemyCount": 0,
           "CurrentWave": 0,
+          "EnemyPool": "EnemyPool",
           "EnemySpawnPoints": [],
-          "MaximumEnemiesOnScreen": 100,
+          "MaximumEnemiesOnScreen": 200,
           "TotalEnemiesThisWave": 0
         },
         {
@@ -498,7 +499,6 @@
           "__guid": "0098c26b-9c4b-4014-87e3-296d660bc67a",
           "Flags": 0,
           "Name": "Grass (1)",
-          "Position": "0,0,0",
           "Enabled": true,
           "Components": [
             {
@@ -1109,6 +1109,7 @@
     "MaxFixedUpdates": 5,
     "NetworkFrequency": 60,
     "NetworkInterpolation": true,
+    "PhysicsSubSteps": 1,
     "ThreadedAnimation": true,
     "TimeScale": 1,
     "UseFixedUpdate": true,
@@ -1129,5 +1130,6 @@
   "Description": "",
   "ResourceVersion": 1,
   "__references": [],
+  "IsValid": true,
   "__version": 1
 }

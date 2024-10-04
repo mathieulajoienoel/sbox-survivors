@@ -12,10 +12,18 @@ public sealed class EnemyMeleeWeapon : EnemyWeaponBase {
   [Property] protected override float Knockback { get; set; } = 0f;
   [Property] protected override float KnockbackDuration { get; set; } = 0f;
 
-  protected override void OnAwake()
-	{
-		float difficulty = (float)GameMaster.Instance.LevelData.DifficultyMultiplier;
+  private void Prepare(){
+    float difficulty = (float)GameMaster.Instance.LevelData.DifficultyMultiplier;
     Damage = (float)Math.Floor(Damage * difficulty);
-		base.OnAwake();
+  }
+  protected override void OnEnabled()
+	{
+    base.OnEnabled();
+    master.EventPrepare += Prepare;
+	}
+  protected override void OnDisabled()
+	{
+    base.OnDisabled();
+    master.EventPrepare -= Prepare;
 	}
 }

@@ -24,6 +24,10 @@ public abstract class EntityMaster : Component
   public event DealDamageEventHandler EventDealDamage;
   public delegate void ReceiveDamageEventHandler(DamageInfo damage);
   public event ReceiveDamageEventHandler EventReceiveDamage;
+  public delegate void StartEventHandler();
+  public event StartEventHandler EventStart;
+  public delegate void PrepareEventHandler();
+  public event PrepareEventHandler EventPrepare;
   public void CallEventHealthChanged(float healthChange){
 		EventHealthChanged?.Invoke( healthChange );
 	}
@@ -45,14 +49,34 @@ public abstract class EntityMaster : Component
   public void CallEventReceiveDamage(DamageInfo damage){
 		EventReceiveDamage?.Invoke(damage);
 	}
+  public void CallEventStart(){
+		EventStart?.Invoke();
+	}
+  public void CallEventPrepare(){
+		EventPrepare?.Invoke();
+	}
   public void CallEventReset(){
 		EventReset?.Invoke();
 	}
 
-  protected override void OnAwake(){
+  private void OnPrepare(){
     Character = Components.GetInChildrenOrSelf<EntityCharacter>();
     Health = Components.Get<IEntityHealth>();
     Stats = Components.Get<IEntityStats>();
   }
+  protected override void OnEnabled(){
+    base.OnEnabled();
+
+    this.EventPrepare += OnPrepare;
+
+    this.CallEventPrepare();
+    this.CallEventStart();
+  }
+  protected override void OnDisabled()
+	{
+		base.OnDisabled();
+
+    this.EventPrepare -= OnPrepare;
+	}
 
 }

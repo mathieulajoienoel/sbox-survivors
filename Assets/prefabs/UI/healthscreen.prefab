@@ -19,6 +19,12 @@
         "InteractionRange": 1000,
         "LookAtCamera": true,
         "PanelSize": "512,512",
+        "RenderOptions": {
+          "GameLayer": true,
+          "OverlayLayer": false,
+          "BloomLayer": false,
+          "AfterUILayer": false
+        },
         "RenderScale": 1,
         "VerticalAlign": "Center"
       }
@@ -29,7 +35,9 @@
   "ShowInMenu": false,
   "MenuPath": null,
   "MenuIcon": null,
+  "DontBreakAsTemplate": false,
   "ResourceVersion": 1,
   "__references": [],
+  "IsValid": true,
   "__version": 1
 }

@@ -14,7 +14,7 @@
               "_type": "gameobject",
               "prefab": "prefabs/weapons/playerprojectile.prefab"
             },
-            "Amount": 500,
+            "Amount": 100,
             "InstanciatedPrefabs": [],
             "LoanedPrefabs": []
           },
@@ -23,7 +23,7 @@
               "_type": "gameobject",
               "prefab": "prefabs/ui/damagepopuptemplate.prefab"
             },
-            "Amount": 500,
+            "Amount": 150,
             "InstanciatedPrefabs": [],
             "LoanedPrefabs": []
           },
@@ -32,7 +32,16 @@
               "_type": "gameobject",
               "prefab": "prefabs/ui/experiencepopuptemplate.prefab"
             },
-            "Amount": 100,
+            "Amount": 75,
+            "InstanciatedPrefabs": [],
+            "LoanedPrefabs": []
+          },
+          "EnemyPool": {
+            "Prefab": {
+              "_type": "gameobject",
+              "prefab": "prefabs/entities/enemy.prefab"
+            },
+            "Amount": 150,
             "InstanciatedPrefabs": [],
             "LoanedPrefabs": []
           }

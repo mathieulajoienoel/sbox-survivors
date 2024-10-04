@@ -11,6 +11,8 @@ public sealed class WaveSpawner : Component {
   [Property] public int CurrentWave { get; set; } = 1;
   [Property] public int TotalEnemiesThisWave { get; set; } = 0;
 
+  [Property] public string EnemyPool { get; set; } = "EnemyPool";
+
 
 	protected override void OnFixedUpdate()
 	{
@@ -38,11 +40,17 @@ public sealed class WaveSpawner : Component {
     for (int i = 0; i < total; i++)
     {
       Vector3 position = EnemySpawnPoints[GameMaster.Instance.Rand(0,EnemySpawnPoints.Length - 1)].WorldPosition;
-      position += new Vector3(GameMaster.Instance.Rand(-100,100),GameMaster.Instance.Rand(-100,100), 0);
+      position += new Vector3(GameMaster.Instance.Rand(-100,100), GameMaster.Instance.Rand(-100,100), 12.5f);
       // Spawn a random enemy from the possible enemies for this level
       /*GameObject enemy = LevelData.EnemyPrefabs[GameMaster.Instance.Rand(0, LevelData.EnemyPrefabs.Length - 1)].Clone(new CloneConfig(new Transform(position), null, false));
       enemy.Enabled = true;*/
-      LevelData.EnemyPrefabs[GameMaster.Instance.Rand(0, LevelData.EnemyPrefabs.Length - 1)].Clone(position);
+      //LevelData.EnemyPrefabs[GameMaster.Instance.Rand(0, LevelData.EnemyPrefabs.Length - 1)].Clone(position);
+
+      GameObject enemy = ObjectPool.Instance.GetObjectFromPool(EnemyPool);
+      enemy.WorldPosition = position;
+      enemy.Parent = null;
+      enemy.Enabled = true;
+      // @@TODO apply enemy type and loadout
 
       CurrentEnemyCount++;
       TotalEnemiesThisWave++;

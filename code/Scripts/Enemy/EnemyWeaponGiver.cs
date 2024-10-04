@@ -5,6 +5,7 @@ public sealed class EnemyWeaponGiver : Component {
 
 	protected override void OnEnabled()
 	{
+		HasWeapon = master.FixedWeaponHolster.Children.Any() || master.AimedWeaponHolster.Children.Any();
 		if(!HasWeapon) GiveWeapon();
 	}
 
@@ -26,5 +27,10 @@ public sealed class EnemyWeaponGiver : Component {
 
 		HasWeapon = true;
 		this.Enabled = false;
+	}
+
+	public override void Reset()
+	{
+
 	}
 }

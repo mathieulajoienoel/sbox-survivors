@@ -4,23 +4,29 @@ public abstract class EntityController<T> : Component where T : EntityMaster
 
   protected Vector3 Speed;
   protected Angles forcedRotation = Rotation.From(new Angles(0, -90, 0));
-  protected bool canMove = true;
+  [Property] protected bool canMove { get; set; } = true;
+
 
   protected override void OnEnabled(){
-
     master = Components.Get<T>();
-
-    float step = master.Stats.MoveSpeed;
-    // Set the move speed to use
-    Speed = new Vector3(step, step, 0);
+    //WorldPosition = new Vector3(WorldPosition.x, WorldPosition.y, 12.5f);
 
     master.EventKnockback += OnKnockback;
     master.EventKnockbackRelease += OnKnockbackRelease;
+    master.EventStart += Start;
+  }
+
+  private void Start(){
+    float step = master.Stats.MoveSpeed;
+    // Set the move speed to use
+    Speed = new Vector3(step, step, 0);
+    canMove = true;
   }
 
   protected override void OnDisabled(){
     master.EventKnockback -= OnKnockback;
     master.EventKnockbackRelease -= OnKnockbackRelease;
+    master.EventStart -= Start;
   }
 
   private void OnKnockback (float KnockbackDuration){
