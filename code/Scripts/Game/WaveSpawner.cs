@@ -37,7 +37,7 @@ public sealed class WaveSpawner : Component {
     Log.Info("Spawning " + total + " Enemies");
     for (int i = 0; i < total; i++)
     {
-      Vector3 position = EnemySpawnPoints[GameMaster.Instance.Rand(0,EnemySpawnPoints.Length - 1)].Transform.Position;
+      Vector3 position = EnemySpawnPoints[GameMaster.Instance.Rand(0,EnemySpawnPoints.Length - 1)].WorldPosition;
       position += new Vector3(GameMaster.Instance.Rand(-100,100),GameMaster.Instance.Rand(-100,100), 0);
       // Spawn a random enemy from the possible enemies for this level
       /*GameObject enemy = LevelData.EnemyPrefabs[GameMaster.Instance.Rand(0, LevelData.EnemyPrefabs.Length - 1)].Clone(new CloneConfig(new Transform(position), null, false));

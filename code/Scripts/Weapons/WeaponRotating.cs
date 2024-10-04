@@ -12,10 +12,10 @@ public sealed class WeaponRotating : PlayerWeaponBase {
   [Property] protected override float KnockbackDuration { get; set; } = 1f;
 
   protected override void ApplySize(){
-    Transform.LocalScale = Size;
+    LocalScale = Size;
   }
   protected override void ApplyRange(){
-    Transform.LocalPosition = Range;
+    LocalPosition = Range;
   }
 
   protected override void ApplySpeed(){

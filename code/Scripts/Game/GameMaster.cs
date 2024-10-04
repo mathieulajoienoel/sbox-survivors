@@ -52,7 +52,7 @@ public sealed class GameMaster : Component {
 	{
 		base.OnAwake();
     instance = this;
-    Player = PlayerPrefab.Clone(PlayerSpawnPoint.Transform.Position);
+    Player = PlayerPrefab.Clone(PlayerSpawnPoint.WorldPosition);
 	}
   public int Rand(int min, int max){
     return RandomGenerator.Next(min, max);

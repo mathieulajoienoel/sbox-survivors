@@ -37,9 +37,9 @@ public sealed class FollowEntity : Component, Component.ITriggerListener {
       }
   }
   private void OnTriggerUpdate(Collider item){
-    Vector3 position = item.GameObject.Transform.Position;
-    Vector3 direction = (position - Transform.Position).Normal;
+    Vector3 position = item.GameObject.WorldPosition;
+    Vector3 direction = (position - WorldPosition).Normal;
     Force *= 1.1f;
-    GameObject.Parent.Transform.Position = GameObject.Parent.Transform.Position.LerpTo(position + direction * Force, Time.Delta * Speed);
+    GameObject.Parent.WorldPosition = GameObject.Parent.WorldPosition.LerpTo(position + direction * Force, Time.Delta * Speed);
   }
 }

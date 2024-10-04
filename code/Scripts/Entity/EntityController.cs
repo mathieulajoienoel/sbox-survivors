@@ -54,11 +54,11 @@ public abstract class EntityController<T> : Component where T : EntityMaster
     }
 
     // Move character
-    Vector3 moveTo = Transform.Position.LerpTo(Transform.Position + (direction * Speed), Time.Delta);
+    Vector3 moveTo = WorldPosition.LerpTo(WorldPosition + (direction * Speed), Time.Delta);
     moveTo.z = 12.5f;
-    Transform.Position = moveTo;
+    WorldPosition = moveTo;
     // Force game object rotation
-    Transform.LocalRotation = forcedRotation;
+    LocalRotation = forcedRotation;
   }
 
 }

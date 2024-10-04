@@ -14,7 +14,7 @@ public sealed class DropExperience : Component {
 
   public void OnDeath(){
     // Spawn experience
-    GameObject experienceObj = GameMaster.Instance.ExperiencePrefab.Clone(GameObject.Transform.Position);
+    GameObject experienceObj = GameMaster.Instance.ExperiencePrefab.Clone(GameObject.WorldPosition);
     Item item = experienceObj.Components.GetInChildrenOrSelf<Item>();
     item.Type = CollectableType.Experience;
     item.Value = ExperienceDrop;

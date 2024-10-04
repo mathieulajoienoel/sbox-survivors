@@ -9,16 +9,16 @@ public abstract class InfoPopup : Component
 
 	// OnUpdate is called every frame
   protected override void OnEnabled(){
-    Vector3 position = Transform.Position;
+    Vector3 position = WorldPosition;
     position.z = 25;
-    Transform.Position = position;
-    Transform.Rotation = Rotation.From(new Angles(90,0,0));
+    WorldPosition = position;
+    WorldRotation = Rotation.From(new Angles(90,0,0));
   }
 
 	protected void ResetDisplay(){
     TextDisplay.Scale = 0.25f;
     TextDisplay.FontSize = 32f;
-    Transform.Scale = new Vector3(1,1,1);
+    WorldScale = new Vector3(1,1,1);
   }
 
   public abstract void Display(float value);

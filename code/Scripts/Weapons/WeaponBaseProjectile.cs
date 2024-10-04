@@ -24,7 +24,7 @@ public sealed class WeaponBaseProjectile : Component, Component.ICollisionListen
 
 	protected override void OnEnabled()
 	{
-		Transform.Rotation = Rotation.LookAt(Direction);
+		WorldRotation = Rotation.LookAt(Direction);
 		DeleteAt = Time.Now + Duration;
 	}
 
@@ -34,9 +34,9 @@ public sealed class WeaponBaseProjectile : Component, Component.ICollisionListen
 
 	protected override void OnFixedUpdate()
 	{
-		Vector3 position = Transform.Position.LerpTo(Transform.Position + (Speed * Transform.Rotation.Forward) + 1, Time.Delta);
+		Vector3 position = WorldPosition.LerpTo(WorldPosition + (Speed * WorldRotation.Forward) + 1, Time.Delta);
 		position.z = 12.5f;
-		Transform.Position = position;
+		WorldPosition = position;
 		if(Time.Now > DeleteAt){
 			ReturnToPool();
 		}

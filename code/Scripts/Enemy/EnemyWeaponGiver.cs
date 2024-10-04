@@ -10,7 +10,7 @@ public sealed class EnemyWeaponGiver : Component {
 
 	public void GiveWeapon(){
 		// Select a random weapon and give it to the enemy
-		GameObject weapon = Weapons[GameMaster.Instance.Rand(0,Weapons.Length - 1)].Clone(new CloneConfig(new Transform(Transform.Position), GameObject, false));
+		GameObject weapon = Weapons[GameMaster.Instance.Rand(0,Weapons.Length - 1)].Clone(new CloneConfig(new Transform(WorldPosition), GameObject, false));
 		IHolsteredWeapon weaponMaster = weapon.Components.GetInChildrenOrSelf<IHolsteredWeapon>(true);
     // Set Weapon in proper holster
     switch(weaponMaster.WeaponHolster){
@@ -21,7 +21,7 @@ public sealed class EnemyWeaponGiver : Component {
       weapon.SetParent(master.AimedWeaponHolster);
       break;
     }
-		weapon.Transform.Position = Transform.Position;
+		weapon.WorldPosition = WorldPosition;
 		weapon.Enabled = true;
 
 		HasWeapon = true;

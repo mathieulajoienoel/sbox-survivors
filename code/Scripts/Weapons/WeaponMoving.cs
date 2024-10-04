@@ -12,13 +12,13 @@ public sealed class WeaponMoving : PlayerWeaponBase {
   [Property] protected override float KnockbackDuration { get; set; } = 1f;
 
   protected override void ApplyStartingRotation(){
-   GameObject.Parent.Transform.LocalRotation = Rotation.From(StartRotation);
+   GameObject.Parent.LocalRotation = Rotation.From(StartRotation);
   }
   protected override void ApplySize(){
-    Transform.LocalScale = Size;
+    LocalScale = Size;
   }
   protected override void ApplyRange(){
-    Transform.LocalPosition = Range;
+    LocalPosition = Range;
   }
 
   protected override void ApplySpeed(){

@@ -11,7 +11,7 @@ public sealed class EnemyController : EntityController<EnemyMaster>
     Vector3 direction = Vector3.Forward;
     PlayerMaster target = master.Target.Target;
     if(target != null){
-      direction = (Transform.Position - target.Transform.Position).Normal * -1;
+      direction = (WorldPosition - target.WorldPosition).Normal * -1;
     }
 
     return direction;

@@ -16,7 +16,7 @@ public sealed class ObjectPool : Component {
 	}
 
   private void InstanciatePool(){
-    CloneConfig cloneConfig = new CloneConfig(new Transform(Transform.Position), GameObject, false);
+    CloneConfig cloneConfig = new CloneConfig(new Transform(WorldPosition), GameObject, false);
     foreach (PrefabPool pool in PrefabPools.Values)
     {
       for (int i = 0; i < pool.Amount; i++)
@@ -45,7 +45,7 @@ public sealed class ObjectPool : Component {
       return;
     }
     GameObject resettedObject = resetter.ResetAll();
-    resettedObject.Transform.Position = ResetLocation;
+    resettedObject.WorldPosition = ResetLocation;
     pool.InstanciatedPrefabs.Push(resettedObject);
   }
 }

@@ -27,19 +27,19 @@ public abstract class WeaponBaseShooter : Component, IHolsteredWeapon
   }
 
   private void Shoot(GameTransform sourceTransform){
-    Vector3 position = sourceTransform.Position;
+    Vector3 position = sourceTransform.GameObject.WorldPosition;
     position.z = 12.5f;
     GameObject projectile = ObjectPool.Instance.GetObjectFromPool(ProjectilePool);
     //GameObject projectile = WeaponProjectile.Clone(new CloneConfig(new Transform(position), null, false));
     if(projectile == null) return;
-    projectile.Transform.Position = position;
+    projectile.WorldPosition = position;
     WeaponBaseProjectile projectileComponent = projectile.Components.Get<WeaponBaseProjectile>(true);
     if(projectileComponent == null) return;
     projectileComponent.ApplyAttributes(
       master,
       OnHit(),
       Speed,
-      sourceTransform.Rotation.Forward,
+      sourceTransform.GameObject.WorldRotation.Forward,
       ProjectileDuration,
       ProjectilePool
     );

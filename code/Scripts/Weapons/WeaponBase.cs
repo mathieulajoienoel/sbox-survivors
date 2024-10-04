@@ -36,19 +36,19 @@ where Y : EntityMaster
     ApplySize();
   }
   protected virtual void ApplyStartingPosition(){
-    Transform.LocalPosition = Position;
+    LocalPosition = Position;
   }
   protected virtual void ApplyStartingRotation(){
-    Transform.LocalRotation = Rotation.From(StartRotation);
+    LocalRotation = Rotation.From(StartRotation);
   }
   protected virtual void ApplyRange(){
-    //Transform.LocalScale = Range;
+    //LocalScale = Range;
   }
   protected virtual void ApplySpeed(){
   }
 
   protected virtual void ApplySize(){
-    Transform.LocalScale = Size;
+    LocalScale = Size;
   }
 
   public virtual void OnTriggerEnter( Collider other )
@@ -104,7 +104,7 @@ where Y : EntityMaster
     Rigidbody rigidbody = otherGameObject.Components.Get<Rigidbody>();
     if(rigidbody == null) return;
 
-    Vector3 direction = (otherGameObject.Transform.Position - master.GameObject.Transform.Position).Normal;
+    Vector3 direction = (otherGameObject.WorldPosition - master.GameObject.WorldPosition).Normal;
     direction.z = 0;
 
     otherMaster.CallEventKnockback(KnockbackDuration);

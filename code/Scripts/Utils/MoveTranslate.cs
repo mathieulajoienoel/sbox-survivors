@@ -11,11 +11,11 @@ public sealed class MoveTranslate : Component {
 	}
 
 	private void Translate(){
-    Vector3 moveTo = Transform.LocalPosition.LerpTo(new Vector3(
+    Vector3 moveTo = LocalPosition.LerpTo(new Vector3(
       Step.x == 0 ? 0 : MathF.Sin(Time.Now * Speed ) * Step.x * Length.x,
       Step.y == 0 ? 0 : MathF.Sin(Time.Now * Speed ) * Step.y * Length.y,
       0
     ), Time.Delta);
-    Transform.LocalPosition = moveTo;
+    LocalPosition = moveTo;
   }
 }

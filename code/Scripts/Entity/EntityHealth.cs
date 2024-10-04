@@ -53,13 +53,13 @@ public abstract class EntityHealth<T> : Component, IEntityHealth where T : Entit
 	}
 
 	private void DisplayDamageReceived(float damage){
-    Vector3 position = master.GameObject.Transform.Position;
+    Vector3 position = master.GameObject.WorldPosition;
     position.z = 15;
     position += new Vector3(GameMaster.Instance.Rand(-20,20),GameMaster.Instance.Rand(-20,20), 0);
 
     GameObject damagePopup = ObjectPool.Instance.GetObjectFromPool(DamagePopupPool);
     if(damagePopup == null) return;
-    damagePopup.Transform.Position = position;
+    damagePopup.WorldPosition = position;
     //GameObject damagePopup = GameMaster.Instance.DamagePopupPrefab.Clone(position);
     damagePopup.Components.Get<DamagePopup>(true).Display(damage);
   }

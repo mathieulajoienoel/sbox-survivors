@@ -20,7 +20,7 @@ public sealed class PopupFadeOutAfterTime : Component {
 
   protected override void OnUpdate() {
     if(Time.Now > WaitTo) {
-      Transform.Scale = Transform.Scale.LerpTo(Transform.Scale - Transform.Scale * 0.1f, Time.Delta * Speed);
+      WorldScale = WorldScale.LerpTo(WorldScale - WorldScale * 0.1f, Time.Delta * Speed);
     }
 
     if(Time.Now > DestroyAt){

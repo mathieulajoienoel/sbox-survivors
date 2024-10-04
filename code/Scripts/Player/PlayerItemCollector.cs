@@ -41,7 +41,7 @@ public sealed class PlayerItemCollector : Component, Component.ITriggerListener 
 
   private GameObject GiveWeapon(Item item){
     GameObject player = GameMaster.Instance.Player;
-    GameObject weapon = item.item.Clone(new CloneConfig(new Transform(player.Transform.Position), player, false));
+    GameObject weapon = item.item.Clone(new CloneConfig(new Transform(player.WorldPosition), player, false));
     IHolsteredWeapon weaponMaster = weapon.Components.GetInChildrenOrSelf<IHolsteredWeapon>(true);
     // Set Weapon in proper holster
     switch(weaponMaster.WeaponHolster){
@@ -62,13 +62,13 @@ public sealed class PlayerItemCollector : Component, Component.ITriggerListener 
   }
 
   private void ShowExperiencePopup(float value){
-    Vector3 position = master.GameObject.Transform.Position;
+    Vector3 position = master.GameObject.WorldPosition;
     position.z = 15;
     position += new Vector3(GameMaster.Instance.Rand(-20,20),GameMaster.Instance.Rand(-20,20), 0);
 
     GameObject experiencePopup = ObjectPool.Instance.GetObjectFromPool(ExperiencePopupPool);
     if(experiencePopup == null) return;
-    experiencePopup.Transform.Position = position;
+    experiencePopup.WorldPosition = position;
     //GameObject experiencePopup = GameMaster.Instance.ExperiencePopupPrefab.Clone(position);
     experiencePopup.Components.Get<ExperiencePopup>(true).Display(value);
   }
