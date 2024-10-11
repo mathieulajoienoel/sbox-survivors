@@ -22,6 +22,8 @@ public sealed class WaveSpawner : Component {
       GameMaster.Instance.CallGameWinEvent();
       return;
     }
+
+    // @@TODO kinda sucks when there's a handful of enemies and you have to chase them off. Maybe fix by removing the enemies ? or starting next wave earlier ?
     if(TotalEnemiesThisWave < LevelData.EnemiesPerWave) // if we need more enemies to spawn
     {
       if(CurrentEnemyCount < MaximumEnemiesOnScreen) SpawnEnemies(); // if we can spawn more enemies
