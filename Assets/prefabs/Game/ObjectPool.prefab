@@ -41,7 +41,16 @@
               "_type": "gameobject",
               "prefab": "prefabs/entities/enemy.prefab"
             },
-            "Amount": 150,
+            "Amount": 250,
+            "InstanciatedPrefabs": [],
+            "LoanedPrefabs": []
+          },
+          "Experience": {
+            "Prefab": {
+              "_type": "gameobject",
+              "prefab": "prefabs/collectables/experience.prefab"
+            },
+            "Amount": 250,
             "InstanciatedPrefabs": [],
             "LoanedPrefabs": []
           }
@@ -58,6 +67,5 @@
   "DontBreakAsTemplate": false,
   "ResourceVersion": 1,
   "__references": [],
-  "IsValid": true,
   "__version": 1
 }

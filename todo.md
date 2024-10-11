@@ -79,7 +79,7 @@ Features :
     * [x] Enemies
     * [x] Damage Popups
     * [x] Experience Popups
-    * [ ] Experience
+    * [x] Experience
   * [ ] After game results
     * [ ] Show last game stats panel
   * [ ] Stats https://docs.facepunch.com/s/sbox-dev/doc/stats-As30shVf3K

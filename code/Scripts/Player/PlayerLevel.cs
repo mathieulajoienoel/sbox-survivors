@@ -1,3 +1,5 @@
+using System;
+
 public sealed class PlayerLevel : Component {
   [RequireComponent] private PlayerMaster master { get; set; }
 
@@ -20,7 +22,7 @@ public sealed class PlayerLevel : Component {
 
     playerStats.Level += 1;
     playerStats.Experience = 0;
-    playerStats.ExperienceNeeded *= (float)GameMaster.Instance.LevelData.DifficultyMultiplier;
+    playerStats.ExperienceNeeded *= (float)Math.Floor(playerStats.ExperienceNeeded / 8); //(float)GameMaster.Instance.LevelData.DifficultyMultiplier;
     Log.Info("Level up to level " + playerStats.Level);
     Log.Info("Needs " + playerStats.ExperienceNeeded + " xp for next level");
     master.CallEventLevelUp(playerStats.Level);

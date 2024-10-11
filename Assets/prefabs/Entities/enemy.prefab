@@ -48,7 +48,8 @@
       },
       {
         "__type": "EnemyController",
-        "__guid": "b7f35e69-e55a-49e9-8c48-76d4421af2e1"
+        "__guid": "b7f35e69-e55a-49e9-8c48-76d4421af2e1",
+        "canMove": true
       },
       {
         "__type": "EnemyTarget",
@@ -61,7 +62,8 @@
       },
       {
         "__type": "DropExperience",
-        "__guid": "b234cacd-9610-4958-a80d-d911f65e9670"
+        "__guid": "b234cacd-9610-4958-a80d-d911f65e9670",
+        "ExperiencePool": "Experience"
       },
       {
         "__type": "EnemyWeaponGiver",
@@ -75,7 +77,8 @@
       },
       {
         "__type": "EnemyKnockback",
-        "__guid": "461b5502-4798-4afe-9455-e78dc8380de5"
+        "__guid": "461b5502-4798-4afe-9455-e78dc8380de5",
+        "IsKnockedback": false
       },
       {
         "__type": "EnemyHealer",
@@ -176,6 +179,5 @@
   "DontBreakAsTemplate": false,
   "ResourceVersion": 1,
   "__references": [],
-  "IsValid": true,
   "__version": 1
 }

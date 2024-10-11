@@ -27,7 +27,7 @@ where Y : EntityMaster
   [Property] public virtual HolsterType WeaponHolster { get; set; } = HolsterType.FixedWeaponHolster;
 
   protected override void OnEnabled(){
-    master = Components.GetInAncestorsOrSelf<T>();
+    master ??= Components.GetInAncestorsOrSelf<T>();
 
     ApplyStartingPosition();
     ApplyStartingRotation();

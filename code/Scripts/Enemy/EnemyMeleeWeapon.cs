@@ -18,6 +18,7 @@ public sealed class EnemyMeleeWeapon : EnemyWeaponBase {
   }
   protected override void OnEnabled()
 	{
+    Prepare();
     base.OnEnabled();
     master.EventPrepare += Prepare;
 	}

@@ -30,6 +30,7 @@
         {
           "__type": "Sandbox.SkyBox2D",
           "__guid": "de79e9e0-5c37-4c54-ac67-bfcdb1d5483b",
+          "SkyIndirectLighting": true,
           "SkyMaterial": "materials/skybox/skybox_day_01.vmat",
           "Tint": "1,1,1,1"
         },
@@ -122,7 +123,7 @@
         {
           "__type": "LevelData",
           "__guid": "11e6e78a-73ea-46da-8aa6-4794a6c8d9ba",
-          "DifficultyMultiplier": 1.5,
+          "DifficultyMultiplier": 1,
           "EnemiesPerWave": 75,
           "EnemyPrefabs": [
             {
@@ -1130,6 +1131,5 @@
   "Description": "",
   "ResourceVersion": 1,
   "__references": [],
-  "IsValid": true,
   "__version": 1
 }

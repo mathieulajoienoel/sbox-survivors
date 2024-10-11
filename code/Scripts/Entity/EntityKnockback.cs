@@ -1,5 +1,5 @@
 public abstract class EntityKnockback<T> : Component  where T : EntityMaster {
-  public bool IsKnockedback { get; set; } = false;
+  [Property] public bool IsKnockedback { get; set; } = false;
   public float ReleaseTime { get; set; } = 0f;
   private T master;
 
@@ -14,12 +14,13 @@ public abstract class EntityKnockback<T> : Component  where T : EntityMaster {
 	}
 
   public void OnKnockback (float knockbackDuration = 1f){
+    if(!master.Health.CanBeDamaged) return;
     IsKnockedback = true;
     ReleaseTime = Time.Now + knockbackDuration;
   }
 
   protected override void OnUpdate (){
-    if(IsKnockedback && Time.Now > ReleaseTime) {
+    if(Enabled && IsKnockedback && Time.Now > ReleaseTime) {
       IsKnockedback = false;
       master.CallEventKnockbackRelease();
     }

@@ -1,12 +1,16 @@
 public sealed class FollowEntity : Component, Component.ITriggerListener {
-  [Property] public float Force = 1f;
-  [Property] public float Speed = 1f;
-  [Property] public TagSet AttractedTags;
-  [Property] public float Size = 400f;
-  private Collider Target;
+  [Property] public float Force { get; set; } = 1f;
+  [Property] public float Speed { get; set; } = 1f;
+  [Property] public TagSet AttractedTags { get; set; } = new TagSet();
+  [Property] public float Size { get; set; } = 400f;
+  private Collider Target { get; set; }
 
 	protected override void OnEnabled()
 	{
+    AttractedTags ??= new TagSet();
+    if(AttractedTags.IsEmpty){
+      AttractedTags.Add("player");
+    }
 		SphereCollider collider = Components.Get<SphereCollider>();
     collider.Radius = Size;
 	}
@@ -23,6 +27,7 @@ public sealed class FollowEntity : Component, Component.ITriggerListener {
   }
 
   private bool HasAttractedTag(GameTags tags){
+    if(!Enabled || AttractedTags.IsEmpty) return false;
     foreach (var tag in tags.ToArray())
     {
       if(AttractedTags.Contains(tag)) return true;
