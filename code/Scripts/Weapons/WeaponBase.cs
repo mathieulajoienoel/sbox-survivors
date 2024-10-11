@@ -103,12 +103,12 @@ where Y : EntityMaster
     GameObject otherGameObject = otherMaster.GameObject;
     Rigidbody rigidbody = otherGameObject.Components.Get<Rigidbody>();
     if(rigidbody == null) return;
+    if(!otherMaster.Health.CanBeDamaged || !otherMaster.Stats.Alive) return;
 
     Vector3 direction = (otherGameObject.WorldPosition - master.GameObject.WorldPosition).Normal;
     direction.z = 0;
 
     otherMaster.CallEventKnockback(KnockbackDuration);
-
     rigidbody.ApplyImpulse(direction * Knockback);
   }
 

@@ -20,7 +20,8 @@
       },
       {
         "__type": "PlayerController",
-        "__guid": "ce195659-f35f-46a5-8f17-7c0a7ef97f2f"
+        "__guid": "ce195659-f35f-46a5-8f17-7c0a7ef97f2f",
+        "canMove": true
       },
       {
         "__type": "Sandbox.Rigidbody",
@@ -60,7 +61,8 @@
       },
       {
         "__type": "PlayerKnockback",
-        "__guid": "d0502772-aedc-4e3f-a36d-04bb044af1b8"
+        "__guid": "d0502772-aedc-4e3f-a36d-04bb044af1b8",
+        "IsKnockedback": false
       },
       {
         "__type": "PlayerLevel",
@@ -127,7 +129,6 @@
                 "Name": "Spot Light",
                 "Position": "30.8389,0,0",
                 "Tags": "light_spot,light",
-                "Enabled": true,
                 "Components": [
                   {
                     "__type": "Sandbox.SpotLight",
@@ -694,6 +695,5 @@
   "DontBreakAsTemplate": false,
   "ResourceVersion": 1,
   "__references": [],
-  "IsValid": true,
   "__version": 1
 }

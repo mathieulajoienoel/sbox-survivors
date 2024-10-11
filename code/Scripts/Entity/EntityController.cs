@@ -30,6 +30,7 @@ public abstract class EntityController<T> : Component where T : EntityMaster
   }
 
   private void OnKnockback (float KnockbackDuration){
+    if(!master.Stats.Alive && !master.Health.CanBeDamaged) return;
     canMove = false;
   }
   private void OnKnockbackRelease (){

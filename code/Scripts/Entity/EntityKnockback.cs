@@ -14,13 +14,13 @@ public abstract class EntityKnockback<T> : Component  where T : EntityMaster {
 	}
 
   public void OnKnockback (float knockbackDuration = 1f){
-    if(!master.Health.CanBeDamaged) return;
+    if(!master.Stats.Alive && !master.Health.CanBeDamaged) return;
     IsKnockedback = true;
     ReleaseTime = Time.Now + knockbackDuration;
   }
 
   protected override void OnUpdate (){
-    if(Enabled && IsKnockedback && Time.Now > ReleaseTime) {
+    if(IsKnockedback && Time.Now > ReleaseTime) {
       IsKnockedback = false;
       master.CallEventKnockbackRelease();
     }
