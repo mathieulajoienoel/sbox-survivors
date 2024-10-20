@@ -3,7 +3,7 @@
 @inherits PanelComponent
 
 <root>
-	<div class="health_bar">
+	<div class="health_bar" style="display: @Display;">
 		<span class="text">@Health/@MaxHealth</span>
 		<span class="health">
 			<span class="current_health" style="width:@HealthPercentage%;"></span>
@@ -17,6 +17,7 @@
 	[Property] private string Health { get; set; } = "100";
 	[Property] private string MaxHealth { get; set; } = "100";
 	[Property] private int HealthPercentage { get; set; } = 100;
+	[Property] private string Display { get; set; } = "flex";
 
 	/// <summary>
 	/// the hash determines if the system should be rebuilt. If it changes, it will be rebuilt
@@ -39,6 +40,11 @@
 		Health = currentHealth.ToString();
 		MaxHealth = maxHealth.ToString();
 		HealthPercentage = (currentHealth * 100 / maxHealth).FloorToInt();
+		if(currentHealth < maxHealth){
+			Display = "flex";
+		} else {
+			Display = "none";
+		}
 	}
 
 	//public override void Reset(){

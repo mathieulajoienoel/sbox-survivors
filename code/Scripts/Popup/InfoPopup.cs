@@ -19,6 +19,14 @@ public abstract class InfoPopup : Component
     TextDisplay.Scale = 0.25f;
     TextDisplay.FontSize = 32f;
     WorldScale = new Vector3(1,1,1);
+
+    TextRendering.Scope TextScope = new TextRendering.Scope();
+    TextScope.FontWeight = 400;
+    TextScope.LineHeight = 1f;
+    TextScope.FontSize = 32f;
+    TextScope.FontName = "Roboto";
+    TextScope.TextColor = Color.White;
+    TextDisplay.TextScope = TextScope;
   }
 
   public abstract void Display(float value);

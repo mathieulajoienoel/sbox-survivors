@@ -5,19 +5,21 @@ public sealed class DamagePopup : InfoPopup {
   [Property] public override float Speed { get; set; } = 10f;
   public override void Display(float value){
     ResetDisplay();
+    Color color;
     string toDisplay = "";
     if(value == 0){
-      TextDisplay.Color = Color.White;
+      color = Color.White;
       toDisplay += "🛡️";
     } else if(value > 0){
-      TextDisplay.Color = Color.Green;
+      color = Color.Green;
       toDisplay += "➕";
     } else {
-      TextDisplay.Color = Color.Red;
+      color = Color.Red;
       toDisplay += "🗡️";
     }
+
     TextDisplay.Text = toDisplay + value.ToString();
-    TextDisplay.FontFamily = "Roboto";
+    TextDisplay.Color = color;
 
     PopupFadeOutAfterTime fader = Components.Get<PopupFadeOutAfterTime>(true);
     fader?.SetTimings(TimeToWait, DestroyAfter, Speed);
