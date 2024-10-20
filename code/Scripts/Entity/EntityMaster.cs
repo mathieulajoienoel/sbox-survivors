@@ -28,6 +28,11 @@ public abstract class EntityMaster : Component
   public event StartEventHandler EventStart;
   public delegate void PrepareEventHandler();
   public event PrepareEventHandler EventPrepare;
+  public delegate void AttributesChangedEventHandler();
+  public event AttributesChangedEventHandler EventAttributesChanged;
+  public void CallEventAttributesChanged(){
+		EventAttributesChanged?.Invoke();
+	}
   public void CallEventHealthChanged(float healthChange){
 		EventHealthChanged?.Invoke( healthChange );
 	}

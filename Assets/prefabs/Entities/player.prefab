@@ -51,7 +51,9 @@
         "HealthRegenerationRate": 0.25,
         "InvincibilityTime": 0.1,
         "Level": 1,
+        "MaxBoons": 6,
         "MaxHealth": 100,
+        "MaxWeapons": 6,
         "MoveSpeed": 25
       },
       {
@@ -71,6 +73,12 @@
       {
         "__type": "PlayerHealer",
         "__guid": "84020a83-505a-4fa9-a6d2-3a89eb56305a"
+      },
+      {
+        "__type": "PlayerEquipment",
+        "__guid": "2cb16644-83fd-4488-a454-64821f63d1ea",
+        "Boons": [],
+        "Weapons": []
       }
     ],
     "Children": [
@@ -115,7 +123,8 @@
                 "Center": "0,0,0",
                 "IsTrigger": false,
                 "Scale": "50,50,50",
-                "Static": false
+                "Static": false,
+                "SurfaceVelocity": "0,0,0"
               },
               {
                 "__type": "ColorActor",
@@ -259,7 +268,8 @@
             "Center": "0,0,0",
             "IsTrigger": true,
             "Radius": 30,
-            "Static": false
+            "Static": false,
+            "SurfaceVelocity": "0,0,0"
           },
           {
             "__type": "PlayerItemCollector",
@@ -331,7 +341,8 @@
                     "Center": "0,0,0",
                     "IsTrigger": true,
                     "Scale": "50,50,50",
-                    "Static": false
+                    "Static": false,
+                    "SurfaceVelocity": "0,0,0"
                   },
                   {
                     "__type": "WeaponMoving",
@@ -432,7 +443,8 @@
                     "Center": "0,0,0",
                     "IsTrigger": true,
                     "Scale": "50,50,50",
-                    "Static": false
+                    "Static": false,
+                    "SurfaceVelocity": "0,0,0"
                   },
                   {
                     "__type": "WeaponMoving",
@@ -541,7 +553,8 @@
                     "Center": "0,0,0",
                     "IsTrigger": true,
                     "Scale": "50,50,50",
-                    "Static": false
+                    "Static": false,
+                    "SurfaceVelocity": "0,0,0"
                   },
                   {
                     "__type": "WeaponMoving",

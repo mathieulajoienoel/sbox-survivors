@@ -38,4 +38,10 @@ public sealed class EnemyStats : EntityStats
 		Alive = true;
 		ExperienceDrop = 1f;
   }
+
+	protected override void OnAttributeChange(Dictionary<string, float> AttributesValues){
+		// @@TODO change attributes ?
+
+		master.CallEventAttributesChanged();
+	}
 }

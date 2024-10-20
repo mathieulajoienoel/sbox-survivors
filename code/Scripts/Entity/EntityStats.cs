@@ -1,5 +1,5 @@
 
-public abstract class EntityStats : Component, IEntityStats
+public abstract class EntityStats : ModifiableComponent, IEntityStats
 {
 	[Property] public bool Alive { get; set; } = true;
 	[Property] public float MaxHealth { get; set; } = 100f;

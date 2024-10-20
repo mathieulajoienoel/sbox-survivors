@@ -1,4 +1,4 @@
-public abstract class EntityHealth<T> : Component, IEntityHealth where T : EntityMaster
+public abstract class EntityHealth<T> : Component, IEntityHealth, IExternalAttributes where T : EntityMaster
 {
   protected T master;
 
@@ -16,6 +16,7 @@ public abstract class EntityHealth<T> : Component, IEntityHealth where T : Entit
     master.EventHealthChanged += OnHealthChanged;
     master.EventDeath += OnDeath;
     master.EventStart += Start;
+    master.EventAttributesChanged += OnAttributesChanged;
   }
 
 	protected override void OnDisabled()
@@ -25,9 +26,16 @@ public abstract class EntityHealth<T> : Component, IEntityHealth where T : Entit
     master.EventHealthChanged -= OnHealthChanged;
     master.EventDeath -= OnDeath;
     master.EventStart -= Start;
+    master.EventAttributesChanged -= OnAttributesChanged;
 	}
 
+  public virtual void OnAttributesChanged(){
+    CurrentHealth = master.Stats.MaxHealth;
+    InvincibilityTime = master.Stats.InvincibilityTime;
+  }
+
   private void Start(){
+    OnAttributesChanged();
     //float maxHealth = master.Stats.MaxHealth;
     CurrentHealth = master.Stats.MaxHealth;
     InvincibilityTime = master.Stats.InvincibilityTime;

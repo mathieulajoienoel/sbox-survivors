@@ -1,6 +1,7 @@
 public sealed class PlayerMaster : EntityMaster
 {
   [RequireComponent] public new PlayerStats Stats { get; set; }
+  [RequireComponent] public PlayerEquipment Equipment { get; set; }
 
   public delegate void CollectItemEventHandler(Item item);
   public event CollectItemEventHandler EventCollectItem;
@@ -25,4 +26,10 @@ public sealed class PlayerMaster : EntityMaster
   public void CallEventCollectWeapon(GameObject weapon){
 		EventCollectWeapon?.Invoke( weapon );
 	}
+
+  public delegate void UpgradeSelectEventHandler(GameObject upgrade);
+  public event UpgradeSelectEventHandler EventUpgradeSelect;
+  public void CallEventUpgradeSelect(GameObject upgrade){
+    EventUpgradeSelect?.Invoke(upgrade);
+  }
 }

@@ -33,27 +33,10 @@ public sealed class PlayerItemCollector : Component, Component.ITriggerListener 
       return;
     }
     if(item.Type == CollectableType.Weapon){
-      GameObject weapon = GiveWeapon(item);
+      GameObject weapon = master.Equipment.GiveWeaponFromPrefab(item.item);
       master.CallEventCollectWeapon(weapon);
       return;
     }
-  }
-
-  private GameObject GiveWeapon(Item item){
-    GameObject player = GameMaster.Instance.Player;
-    GameObject weapon = item.item.Clone(new CloneConfig(new Transform(player.WorldPosition), player, false));
-    IHolsteredWeapon weaponMaster = weapon.Components.GetInChildrenOrSelf<IHolsteredWeapon>(true);
-    // Set Weapon in proper holster
-    switch(weaponMaster.WeaponHolster){
-      case HolsterType.FixedWeaponHolster:
-      weapon.SetParent(master.FixedWeaponHolster);
-      break;
-      case HolsterType.AimedWeaponHolster:
-      weapon.SetParent(master.AimedWeaponHolster);
-      break;
-    }
-		weapon.Enabled = true;
-    return weapon;
   }
 
   private void OnExperienceGain(float value){

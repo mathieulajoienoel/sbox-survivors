@@ -1,6 +1,34 @@
 Bugs :
   * [ ] Camera movement jitter/shake when colliding with solid object
 
+
+
+AttributesUpgrades :
+  * [ ] Player:
+    * [x] X Weapon slots
+    * [x] Y Boons slots
+  * [ ] OnLevelUp
+    * [ ] Show LevelUpLightbox
+    * [ ] Show X amount of :
+      * [ ] Boons
+      * [ ] new Weapons
+      * [ ] UpgradeWeapon
+      * [ ] UpgradeBoon
+  * [ ] EventUpgradeSelect
+    * [ ] GameMaster event
+      * [ ] GameStats increment
+    * [ ] Player change attributes
+      * [ ] PlayerMaster.CallOnAttributesChanged
+    * [ ] Add boon to list of boons
+    * [ ] close upgrade menu
+  * [ ] OnAttributesChanged
+    * [ ] reload all external attributes from sources
+  * [ ] player equipment
+    * [x] add weapon
+    * [ ] remove weapon
+    * [x] add boon
+    * [ ] remove boon
+
 Basic :
   * [x] GameMaster
   * [x] Player

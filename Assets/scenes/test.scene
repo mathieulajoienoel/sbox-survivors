@@ -85,7 +85,8 @@
           "Center": "0,0,-5",
           "IsTrigger": false,
           "Scale": "100,100,10",
-          "Static": false
+          "Static": false,
+          "SurfaceVelocity": "0,0,0"
         }
       ]
     },
@@ -201,7 +202,8 @@
               "Center": "0,0,0",
               "IsTrigger": false,
               "Scale": "50,50,50",
-              "Static": true
+              "Static": true,
+              "SurfaceVelocity": "0,0,0"
             },
             {
               "__type": "Sandbox.SpriteRenderer",
@@ -255,7 +257,8 @@
               "Center": "0,0,0",
               "IsTrigger": false,
               "Scale": "50,50,50",
-              "Static": true
+              "Static": true,
+              "SurfaceVelocity": "0,0,0"
             },
             {
               "__type": "Sandbox.SpriteRenderer",
@@ -309,7 +312,8 @@
               "Center": "0,0,0",
               "IsTrigger": false,
               "Scale": "50,50,50",
-              "Static": true
+              "Static": true,
+              "SurfaceVelocity": "0,0,0"
             },
             {
               "__type": "Sandbox.SpriteRenderer",
@@ -363,7 +367,8 @@
               "Center": "0,0,0",
               "IsTrigger": false,
               "Scale": "50,50,50",
-              "Static": true
+              "Static": true,
+              "SurfaceVelocity": "0,0,0"
             },
             {
               "__type": "Sandbox.SpriteRenderer",
@@ -417,7 +422,8 @@
               "Center": "0,0,0",
               "IsTrigger": false,
               "Scale": "50,50,50",
-              "Static": true
+              "Static": true,
+              "SurfaceVelocity": "0,0,0"
             },
             {
               "__type": "Sandbox.SpriteRenderer",
@@ -471,7 +477,8 @@
               "Center": "0,0,0",
               "IsTrigger": false,
               "Scale": "50,50,50",
-              "Static": true
+              "Static": true,
+              "SurfaceVelocity": "0,0,0"
             },
             {
               "__type": "Sandbox.SpriteRenderer",
@@ -904,7 +911,8 @@
               "IsTrigger": true,
               "Radius": 10,
               "Start": "0,0,0",
-              "Static": false
+              "Static": false,
+              "SurfaceVelocity": "0,0,0"
             },
             {
               "__type": "Sandbox.SpriteRenderer",
@@ -953,7 +961,8 @@
               "IsTrigger": true,
               "Radius": 10,
               "Start": "0,0,0",
-              "Static": false
+              "Static": false,
+              "SurfaceVelocity": "0,0,0"
             },
             {
               "__type": "Sandbox.SpriteRenderer",
@@ -1002,7 +1011,8 @@
               "IsTrigger": true,
               "Radius": 10,
               "Start": "0,0,0",
-              "Static": false
+              "Static": false,
+              "SurfaceVelocity": "0,0,0"
             },
             {
               "__type": "Sandbox.SpriteRenderer",
@@ -1051,7 +1061,8 @@
               "IsTrigger": true,
               "Radius": 10,
               "Start": "0,0,0",
-              "Static": false
+              "Static": false,
+              "SurfaceVelocity": "0,0,0"
             },
             {
               "__type": "Sandbox.SpriteRenderer",
