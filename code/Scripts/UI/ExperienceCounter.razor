@@ -32,6 +32,7 @@
 
 		GameMaster.Instance.ExperienceGainEvent += UpdateExperienceCounter;
 		playerMaster.EventLevelUp += OnLevelUp;
+		UpdateExperienceCounter(0);
 	}
 	protected override void OnDisabled(){
 		GameMaster.Instance.ExperienceGainEvent -= UpdateExperienceCounter;

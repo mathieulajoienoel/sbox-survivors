@@ -1,3 +1,3 @@
 public sealed class UpgradeWeapon : Component {
-  [Property] public GameObject weaponPrefab { get; set; }
+  [Property] public GameObject WeaponPrefab { get; set; }
 }

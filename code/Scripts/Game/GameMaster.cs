@@ -18,7 +18,7 @@ public sealed class GameMaster : Component {
   [Property] public GameObject ExperiencePrefab { get; set; }
   [Property] public GameObject Player { get; set; }
 
-  public Random RandomGenerator = new Random();
+  public Random RandomGenerator { get; } = new Random();
 
   //private Vector3 ObjectPoolSpawnPoint { get; set; } = new Vector3(-100,-100,-100);
 

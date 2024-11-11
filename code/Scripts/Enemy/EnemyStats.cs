@@ -39,9 +39,9 @@ public sealed class EnemyStats : EntityStats
 		ExperienceDrop = 1f;
   }
 
-	protected override void OnAttributeChange(Dictionary<string, float> AttributesValues){
+	/*protected override void OnAttributeChange(Dictionary<string, float> AttributesValues){
 		// @@TODO change attributes ?
 
 		master.CallEventAttributesChanged();
-	}
+	}*/
 }

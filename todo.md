@@ -1,6 +1,8 @@
 Bugs :
   * [ ] Camera movement jitter/shake when colliding with solid object
 
+Changes :
+ * [ ] Implement info popups as text particles
 
 
 AttributesUpgrades :
@@ -28,6 +30,13 @@ AttributesUpgrades :
     * [ ] remove weapon
     * [x] add boon
     * [ ] remove boon
+
+Main mechanic
+  * [ ] Timer
+    * [ ] counter goes up
+    * [ ] timer display
+  * [ ] Time based waves and difficulty
+  * [ ] despawn/remove enemies when new wave starts ?
 
 Basic :
   * [x] GameMaster
@@ -117,6 +126,7 @@ Features :
     * [ ] Timer
     * [ ] Display
     * [ ] Boss on end
+    * [ ] Boss on x time
   * [ ] Achievements
     * [ ] Get
     * [ ] List
@@ -126,6 +136,7 @@ Features :
     * [x] Player
     * [x] Enemy
   * [x] Invincibility frames
+  * [ ] PlayerProgress
 
 Maybe :
   * [ ] Beakables with loot

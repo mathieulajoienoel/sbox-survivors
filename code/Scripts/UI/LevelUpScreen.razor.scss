@@ -1,0 +1,49 @@
+LevelUpScreen {
+  position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-color: gray;
+	//justify-content: center;
+	align-items: center;
+	font-weight: bold;
+	//border-radius: 0 0 20px 0;
+	//min-width:100px;
+	//max-width:200px;
+	width:100%;
+	height:100%;
+
+	//height:80px;
+	//padding-left: 10px;
+
+	//.title
+	//{
+	//	font-size: 24px;
+	//	font-family: Poppins;
+	//	color: #fff;
+	//}
+
+	.boons {
+		width:100%;
+		padding:2rem;
+		background-color: green;
+		position:relative;
+	}
+	.boon {
+		background-color: red;
+		color: black;
+		padding: 1rem;
+		display: flex;
+		width: 33%;
+		h2 {
+			font-size:60%;
+		}
+		img {
+
+		}
+		div {
+			width:100%;
+		}
+	}
+}

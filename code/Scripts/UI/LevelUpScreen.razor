@@ -1,0 +1,86 @@
+@using Sandbox;
+@using Sandbox.UI;
+@inherits PanelComponent;
+@using System;
+
+<root style="display: @Display;">
+	<ul class="boons">
+		@{int i = 0;}
+		@foreach (var item in Boons)
+		{
+			<li class="boon row" onclick="@OnUpgradeSelect">
+				<div><h2>@item.Name</h2></div>
+				<div><img src="@item.Image" /></div>
+				<div>@item.Description</div>
+				<div>@item.GetRarity()</div>
+				<div>@item.ComputedValue</div>
+			</li>
+			i++;
+		}
+	</ul>
+</root>
+
+@code
+{
+	[Property] public List<UpgradeBoon> Boons { get; set; }
+	[Property] public string Display { get; set; } = "none";
+
+	private PlayerMaster playerMaster { get; set; }
+
+	/// <summary>
+	/// the hash determines if the system should be rebuilt. If it changes, it will be rebuilt
+	/// </summary>
+	protected override int BuildHash() => System.HashCode.Combine( Boons, Display );
+
+	protected override void OnEnabled(){
+		GameObject player = GameMaster.Instance.Player;
+		playerMaster = player.Components.Get<PlayerMaster>();
+
+		playerMaster.EventLevelUp += OnLevelUp;
+	}
+	protected override void OnDisabled(){
+		playerMaster.EventLevelUp -= OnLevelUp;
+	}
+
+	private void OnLevelUp(int level){
+    // @@TODO
+    // Generate list of possible upgrades
+    int totalToOffer = playerMaster.Stats.PossibleUpgradesOffered;
+    List<UpgradeBoon> offeredUpgrades = new List<UpgradeBoon>();
+    // Randomly determine the number of items to pick
+    List<UpgradeBoon> availableBoons = UpgradePool.Instance.AvailableBoons;
+
+    // Shuffle the original list and take the first 'numberOfItemsToPick' items
+    offeredUpgrades.AddRange(availableBoons.OrderBy(x => GameMaster.Instance.RandomGenerator.Next()).Take(totalToOffer));
+      // @@TODO Check if Prerequisite is valid
+      //UpgradeBoon
+      //UpgradeWeapon
+    //LevelUpScreen.Components.Get<LevelUpScreen>(true).OfferUpgrades(offeredUpgrades);
+		foreach(var upgrade in offeredUpgrades){
+			upgrade.Enabled = true;
+			upgrade.PrepareDisplayValue();
+		}
+
+		//offeredUpgrades.ForEach(p => p.Enabled = truep.PrepareDisplayValue());
+
+		// Display the upgrades
+		Boons = offeredUpgrades;
+		Display = "flex";
+		Game.IsPaused = true;
+		Mouse.Visible = true;
+  }
+
+	//public void OfferUpgrades(List<UpgradeBoon> boons){
+	//	Boons = boons;
+	//	GameObject.Enabled = true;
+	//}
+
+	public void OnUpgradeSelect() {
+		//@@TODO
+		Display = "none";
+		Mouse.Visible = false;
+		//playerMaster.CallEventUpgradeSelect(Boons[index]);
+	}
+
+	//private void OnLevelUp(int level){ }
+}

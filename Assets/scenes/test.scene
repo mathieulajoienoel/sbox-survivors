@@ -2,6 +2,21 @@
   "__guid": "8ce574f0-6759-4067-bd90-6bc0eb7350a4",
   "GameObjects": [
     {
+      "__guid": "6bc649ba-2976-4fbb-98ec-f67c1802f00b",
+      "Flags": 0,
+      "Name": "Scene Information",
+      "Enabled": true,
+      "Components": [
+        {
+          "__type": "Sandbox.SceneInformation",
+          "__guid": "4ab8c47d-5f6b-4931-9170-9c38872a313e",
+          "Description": "",
+          "SceneTags": "",
+          "Title": "minimal"
+        }
+      ]
+    },
+    {
       "__guid": "bfc59c12-1ed2-4f91-8956-a95a315eac3c",
       "Flags": 0,
       "Name": "Sun",
@@ -68,6 +83,7 @@
           "__type": "Sandbox.ModelRenderer",
           "__guid": "0b6a18bf-fdb8-4661-970e-ef635bfa9baa",
           "BodyGroups": 18446744073709551615,
+          "CreateAttachments": false,
           "MaterialOverride": "materials/default.vmat",
           "Model": "models/dev/plane.vmdl",
           "RenderOptions": {
@@ -155,6 +171,14 @@
             "_type": "gameobject",
             "prefab": "prefabs/ui/gameoverscreen.prefab"
           }
+        },
+        {
+          "__type": "UpgradePool",
+          "__guid": "def3b352-f196-40da-b26c-e31abaf6402c",
+          "AvailableBoons": [],
+          "AvailableWeapons": [],
+          "UsedBoons": [],
+          "UsedWeapons": []
         }
       ]
     },
@@ -186,6 +210,7 @@
               "__guid": "27b9207e-41b8-483f-ac77-11a18d64e6c4",
               "__enabled": false,
               "BodyGroups": 18446744073709551615,
+              "CreateAttachments": false,
               "Model": "models/dev/box.vmdl",
               "RenderOptions": {
                 "GameLayer": true,
@@ -217,6 +242,7 @@
               "FogStrength": 1,
               "Lighting": true,
               "Opaque": false,
+              "Pivot": "0.5,0.5",
               "RenderOptions": {
                 "GameLayer": true,
                 "OverlayLayer": false,
@@ -241,6 +267,7 @@
               "__guid": "f0da47f8-ad14-4fff-af9a-0d23c7164a23",
               "__enabled": false,
               "BodyGroups": 18446744073709551615,
+              "CreateAttachments": false,
               "Model": "models/dev/box.vmdl",
               "RenderOptions": {
                 "GameLayer": true,
@@ -272,6 +299,7 @@
               "FogStrength": 1,
               "Lighting": true,
               "Opaque": false,
+              "Pivot": "0.5,0.5",
               "RenderOptions": {
                 "GameLayer": true,
                 "OverlayLayer": false,
@@ -296,6 +324,7 @@
               "__guid": "d1053650-4498-4cb8-8db0-0f8d9441d904",
               "__enabled": false,
               "BodyGroups": 18446744073709551615,
+              "CreateAttachments": false,
               "Model": "models/dev/box.vmdl",
               "RenderOptions": {
                 "GameLayer": true,
@@ -327,6 +356,7 @@
               "FogStrength": 1,
               "Lighting": true,
               "Opaque": false,
+              "Pivot": "0.5,0.5",
               "RenderOptions": {
                 "GameLayer": true,
                 "OverlayLayer": false,
@@ -351,6 +381,7 @@
               "__guid": "2f8d63d1-cfb6-499c-8ae7-fb36a9c4f8c5",
               "__enabled": false,
               "BodyGroups": 18446744073709551615,
+              "CreateAttachments": false,
               "Model": "models/dev/box.vmdl",
               "RenderOptions": {
                 "GameLayer": true,
@@ -382,6 +413,7 @@
               "FogStrength": 1,
               "Lighting": true,
               "Opaque": false,
+              "Pivot": "0.5,0.5",
               "RenderOptions": {
                 "GameLayer": true,
                 "OverlayLayer": false,
@@ -406,6 +438,7 @@
               "__guid": "1672bbe2-fe6f-43d3-9253-61a24137d6d5",
               "__enabled": false,
               "BodyGroups": 18446744073709551615,
+              "CreateAttachments": false,
               "Model": "models/dev/box.vmdl",
               "RenderOptions": {
                 "GameLayer": true,
@@ -437,6 +470,7 @@
               "FogStrength": 1,
               "Lighting": true,
               "Opaque": false,
+              "Pivot": "0.5,0.5",
               "RenderOptions": {
                 "GameLayer": true,
                 "OverlayLayer": false,
@@ -461,6 +495,7 @@
               "__guid": "ee6ef943-54ce-4fde-9085-e9f38e8942fd",
               "__enabled": false,
               "BodyGroups": 18446744073709551615,
+              "CreateAttachments": false,
               "Model": "models/dev/box.vmdl",
               "RenderOptions": {
                 "GameLayer": true,
@@ -492,6 +527,7 @@
               "FogStrength": 1,
               "Lighting": true,
               "Opaque": false,
+              "Pivot": "0.5,0.5",
               "RenderOptions": {
                 "GameLayer": true,
                 "OverlayLayer": false,
@@ -521,6 +557,7 @@
               "FogStrength": 1,
               "Lighting": false,
               "Opaque": false,
+              "Pivot": "0.5,0.5",
               "RenderOptions": {
                 "GameLayer": true,
                 "OverlayLayer": false,
@@ -551,6 +588,7 @@
               "FogStrength": 1,
               "Lighting": false,
               "Opaque": false,
+              "Pivot": "0.5,0.5",
               "RenderOptions": {
                 "GameLayer": true,
                 "OverlayLayer": false,
@@ -581,6 +619,7 @@
               "FogStrength": 1,
               "Lighting": false,
               "Opaque": false,
+              "Pivot": "0.5,0.5",
               "RenderOptions": {
                 "GameLayer": true,
                 "OverlayLayer": false,
@@ -611,6 +650,7 @@
               "FogStrength": 1,
               "Lighting": false,
               "Opaque": false,
+              "Pivot": "0.5,0.5",
               "RenderOptions": {
                 "GameLayer": true,
                 "OverlayLayer": false,
@@ -641,6 +681,7 @@
               "FogStrength": 1,
               "Lighting": false,
               "Opaque": false,
+              "Pivot": "0.5,0.5",
               "RenderOptions": {
                 "GameLayer": true,
                 "OverlayLayer": false,
@@ -671,6 +712,7 @@
               "FogStrength": 1,
               "Lighting": false,
               "Opaque": false,
+              "Pivot": "0.5,0.5",
               "RenderOptions": {
                 "GameLayer": true,
                 "OverlayLayer": false,
@@ -701,6 +743,7 @@
               "FogStrength": 1,
               "Lighting": false,
               "Opaque": false,
+              "Pivot": "0.5,0.5",
               "RenderOptions": {
                 "GameLayer": true,
                 "OverlayLayer": false,
@@ -731,6 +774,7 @@
               "FogStrength": 1,
               "Lighting": false,
               "Opaque": false,
+              "Pivot": "0.5,0.5",
               "RenderOptions": {
                 "GameLayer": true,
                 "OverlayLayer": false,
@@ -761,6 +805,7 @@
               "FogStrength": 1,
               "Lighting": false,
               "Opaque": false,
+              "Pivot": "0.5,0.5",
               "RenderOptions": {
                 "GameLayer": true,
                 "OverlayLayer": false,
@@ -791,6 +836,7 @@
               "FogStrength": 1,
               "Lighting": false,
               "Opaque": false,
+              "Pivot": "0.5,0.5",
               "RenderOptions": {
                 "GameLayer": true,
                 "OverlayLayer": false,
@@ -821,6 +867,7 @@
               "FogStrength": 1,
               "Lighting": false,
               "Opaque": false,
+              "Pivot": "0.5,0.5",
               "RenderOptions": {
                 "GameLayer": true,
                 "OverlayLayer": false,
@@ -851,6 +898,7 @@
               "FogStrength": 1,
               "Lighting": false,
               "Opaque": false,
+              "Pivot": "0.5,0.5",
               "RenderOptions": {
                 "GameLayer": true,
                 "OverlayLayer": false,
@@ -926,6 +974,7 @@
               "FogStrength": 1,
               "Lighting": false,
               "Opaque": false,
+              "Pivot": "0.5,0.5",
               "RenderOptions": {
                 "GameLayer": true,
                 "OverlayLayer": false,
@@ -976,6 +1025,7 @@
               "FogStrength": 1,
               "Lighting": false,
               "Opaque": false,
+              "Pivot": "0.5,0.5",
               "RenderOptions": {
                 "GameLayer": true,
                 "OverlayLayer": false,
@@ -1026,6 +1076,7 @@
               "FogStrength": 1,
               "Lighting": false,
               "Opaque": false,
+              "Pivot": "0.5,0.5",
               "RenderOptions": {
                 "GameLayer": true,
                 "OverlayLayer": false,
@@ -1076,6 +1127,7 @@
               "FogStrength": 1,
               "Lighting": false,
               "Opaque": false,
+              "Pivot": "0.5,0.5",
               "RenderOptions": {
                 "GameLayer": true,
                 "OverlayLayer": false,
@@ -1114,6 +1166,29 @@
       "Enabled": true,
       "__Prefab": "prefabs/game/objectpool.prefab",
       "__PrefabVariables": {}
+    },
+    {
+      "__guid": "561d4350-68dd-4135-a651-ecf57db8f333",
+      "Flags": 0,
+      "Name": "LevelUpScreen",
+      "Enabled": true,
+      "Components": [
+        {
+          "__type": "Sandbox.ScreenPanel",
+          "__guid": "e5392823-e2cb-44cd-887b-1392b685ef17",
+          "AutoScreenScale": true,
+          "Opacity": 1,
+          "Scale": 1,
+          "ScaleStrategy": "FollowDesktopScaling",
+          "ZIndex": 100
+        },
+        {
+          "__type": "LevelUpScreen",
+          "__guid": "96eebd58-364e-4073-8d8a-aea305d11607",
+          "Boons": [],
+          "Display": "none"
+        }
+      ]
     }
   ],
   "SceneProperties": {
@@ -1125,6 +1200,9 @@
     "ThreadedAnimation": true,
     "TimeScale": 1,
     "UseFixedUpdate": true,
+    "Metadata": {
+      "Title": "minimal"
+    },
     "NavMesh": {
       "Enabled": false,
       "IncludeStaticBodies": true,
@@ -1138,9 +1216,9 @@
       "IncludedBodies": ""
     }
   },
+  "ResourceVersion": 2,
   "Title": "minimal",
-  "Description": "",
-  "ResourceVersion": 1,
+  "Description": null,
   "__references": [],
-  "__version": 1
+  "__version": 2
 }

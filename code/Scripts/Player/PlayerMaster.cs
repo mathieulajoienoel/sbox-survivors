@@ -3,7 +3,16 @@ public sealed class PlayerMaster : EntityMaster
   [RequireComponent] public new PlayerStats Stats { get; set; }
   [RequireComponent] public PlayerEquipment Equipment { get; set; }
 
-  public delegate void CollectItemEventHandler(Item item);
+  [Property] public BoonMaster Boons { get; set; }
+
+	protected override void OnEnabled()
+	{
+		base.OnEnabled();
+
+    Boons = GetComponentInChildren<BoonMaster>();
+	}
+
+	public delegate void CollectItemEventHandler(Item item);
   public event CollectItemEventHandler EventCollectItem;
   public void CallEventCollectItem(Item item){
 		EventCollectItem?.Invoke( item );
@@ -27,9 +36,9 @@ public sealed class PlayerMaster : EntityMaster
 		EventCollectWeapon?.Invoke( weapon );
 	}
 
-  public delegate void UpgradeSelectEventHandler(GameObject upgrade);
+  public delegate void UpgradeSelectEventHandler(UpgradeBoon upgrade);
   public event UpgradeSelectEventHandler EventUpgradeSelect;
-  public void CallEventUpgradeSelect(GameObject upgrade){
+  public void CallEventUpgradeSelect(UpgradeBoon upgrade){
     EventUpgradeSelect?.Invoke(upgrade);
   }
 }

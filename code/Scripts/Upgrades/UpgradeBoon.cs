@@ -1,3 +1,3 @@
-public sealed class UpgradeBoon : StatsAttributeUpgrade {
+public abstract class UpgradeBoon : StatsAttributeUpgrade {
 
 }
